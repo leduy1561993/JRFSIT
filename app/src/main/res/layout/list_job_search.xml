@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@color/colorItemList"
+    android:padding="5dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/ripple"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_keyword_search_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_weight="2"
+            android:text="Truong phong It"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/title_job_normal_text_size" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_location_search_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_weight="2"
+            android:text="Cong hoa, ho chi minh"
+            android:textColor="@color/colorTextSub"
+            android:textSize="@dimen/title_job_normal_text_size" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="100">
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_special_search_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_weight="30"
+                android:text="Java"
+                android:textColor="@color/colorTextSub"
+                android:textSize="14dp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_weight="40"
+                android:text="/"
+                android:textColor="@color/colorTextSub"
+                android:textSize="@dimen/title_job_normal_text_size" />
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_search_mode_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_weight="30"
+                android:text="Mac dinh"
+                android:textColor="@color/colorTextSub"
+                android:textSize="14dp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

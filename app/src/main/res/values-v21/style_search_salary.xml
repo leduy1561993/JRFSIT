@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="style_search_array">
+        <item>Chọn chế độ sắp xếp</item>
+        <item>Mặc định</item>
+        <item>Theo đánh giá</item>
+        <item>Theo lượt lưu</item>
+        <item>Theo lượt xem</item>
+    </string-array>
+</resources>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="specialy_array">
+        <item>Chọn chuyên ngành</item>
+        <item>Mặc định</item>
+        <item>Agile</item>
+        <item>Android</item>
+        <item>AngularJS</item>
+        <item>ASP.NET</item>
+        <item>Bridge Engineer</item>
+        <item>Business Analyst</item>
+        <item>C</item>
+        <item>C++</item>
+        <item>C language</item>
+        <item>CSS</item>
+        <item>Database</item>
+        <item>Designer</item>
+        <item>Django</item>
+        <item>Drupal</item>
+        <item>Embedded</item>
+        <item>English</item>
+        <item>ERP</item>
+        <item>Flash</item>
+        <item>Games</item>
+        <item>HTML5</item>
+        <item>iOS</item>
+        <item>IT Support</item>
+        <item>J2EE</item>
+        <item>Japanese</item>
+        <item>Java</item>
+        <item>JavaScript</item>
+        <item>JQuery</item>
+        <item>JSON</item>
+        <item>Linux</item>
+        <item>Magento</item>
+        <item>Manager</item>
+        <item>Mobile Apps</item>
+        <item>MVC</item>
+        <item>MySQL</item>
+        <item>.NET</item>
+        <item>Networking</item>
+        <item>NodeJS</item>
+        <item>Objective C</item>
+        <item>OOP</item>
+        <item>Oracle</item>
+        <item>PHP</item>
+        <item>PostgreSql</item>
+        <item>Product Manager</item>
+        <item>Project Manager</item>
+        <item>Python</item>
+        <item>QA QC</item>
+        <item>Ruby</item>
+        <item>Ruby on Rails</item>
+        <item>Sales Engineer</item>
+        <item>Sharepoint</item>
+        <item>Software Architect</item>
+        <item>SQL</item>
+        <item>System Admin</item>
+        <item>System Engineer</item>
+        <item>Team Leader</item>
+        <item>Tester</item>
+        <item>UI-UX</item>
+        <item>Unity</item>
+        <item>Windows Phone</item>
+        <item>Wordpress</item>
+        <item>XML</item>
+    </string-array>
+</resources>

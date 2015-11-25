@@ -1,0 +1,220 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".JobDetail"
+    tools:showIn="@layout/app_bar_register">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FF5722"
+        android:layout_weight="45">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Đăng kí thông tin"
+            android:textColor="@android:color/white"
+            android:textSize="30dp"
+            android:gravity="center"/>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_weight="9"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+
+            android:weightSum="100">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="100"
+                android:layout_weight="25">
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="60"
+                    android:textSize="25dp"
+                    android:text="Họ tên người dùng:"/>
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/dktt_et_ten"
+                    android:layout_width="match_parent"
+                    android:layout_weight="40"
+                    android:hint="Họ tên đầy đủ"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="100"
+                android:layout_weight="25">
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="60"
+                    android:textSize="25dp"
+                    android:text="Email:"/>
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/dktt_et_email"
+                    android:layout_width="match_parent"
+                    android:layout_weight="40"
+                    android:hint="Email"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="100"
+                android:layout_weight="25">
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="60"
+                    android:textSize="25dp"
+                    android:text="Password:"/>
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/dktt_et_password"
+                    android:layout_width="match_parent"
+                    android:layout_weight="40"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="100"
+                android:layout_weight="25">
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="60"
+                    android:textSize="25dp"
+                    android:text="Nhập lại password:"/>
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/dktt_et_nhaplaiPassword"
+                    android:layout_width="match_parent"
+                    android:layout_weight="40"
+                    android:hint="Nhập lại password"
+                    android:inputType="textPassword"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="100"
+                android:layout_weight="25">
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="60"
+                    android:textSize="25dp"
+                    android:text="Giới tính:"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="40">
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:weightSum="100"
+                        android:orientation="horizontal"
+                        android:layout_height="match_parent">
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/dktt_rb_Nam"
+                            android:layout_width="match_parent"
+                            android:layout_weight="50"
+                            android:text="Nam"
+                            android:layout_height="match_parent" />
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/dktt_rb_Nu"
+                            android:layout_width="match_parent"
+                            android:layout_weight="50"
+                            android:text="Nữ"
+                            android:layout_height="match_parent" />
+                    </RadioGroup>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="100"
+                android:layout_weight="25">
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="60"
+                    android:textSize="25dp"
+                    android:text="Số điện thoại:"/>
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/dktt_et_sdt"
+                    android:layout_width="match_parent"
+                    android:layout_weight="40"
+                    android:hint="Nhập số điện thoại"
+                    android:inputType="number"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="100"
+                android:layout_weight="25">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="60"
+                    android:textSize="25dp"
+                    android:text="Ngày sinh:"/>
+                <EditText
+                    android:id="@+id/dktt_et_ngaysinh"
+                    android:layout_width="match_parent"
+                    android:layout_weight="40"
+                    android:hint="Chạm để nhập"
+                    android:editable="false"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="100"
+                android:layout_weight="25">
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="60"
+                    android:textSize="25dp"
+                    android:text="Địa chỉ:"/>
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/dktt_et_diachi"
+                    android:layout_width="match_parent"
+                    android:layout_weight="40"
+                    android:hint="Chạm để nhập"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="46">
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/dktt_bt_dangKi"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:background="@drawable/ripple"
+            android:text="Đăng kí"/>
+    </LinearLayout>
+</LinearLayout>

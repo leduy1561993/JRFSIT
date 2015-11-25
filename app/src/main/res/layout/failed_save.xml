@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/ln_job_save_failed"
+    android:layout_height="match_parent"
+    tools:showIn="@layout/app_bar_job_save"
+    tools:context=".JobResultSearchActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:padding="50dp"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="10"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:text="Xin lỗi ..."
+                android:textSize="40dp"
+                android:gravity="center_vertical"
+                android:layout_weight="3"
+                android:textStyle="bold"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="7"
+                android:src="@drawable/sad"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:text="Xin lỗi, không tìm thấy công việc nào được lưu"/>
+    </LinearLayout>
+</LinearLayout>

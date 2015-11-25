@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="H:\ThucHanh\Android\JRFSIT\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="565a01f90f1529f73362707c4c185d0623a68782">
+        <dex dex="H:\ThucHanh\Android\JRFSIT\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-panorama-7.3.0_3104d4b5d9f89a0e19ea72b416f5bfd2bcd3db88.jar" />
+    </item>
+    <item
+        jar="H:\ThucHanh\Android\JRFSIT\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="H:\ThucHanh\Android\JRFSIT\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.0.1_6738fe78a8e45e78318e8e4aa647d4315771e191.jar" />
+    </item>
+    <item
+        jar="H:\ThucHanh\Android\JRFSIT\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="59652857a825fff0de62166fca1bc9553cc01abb">
+        <dex dex="H:\ThucHanh\Android\JRFSIT\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-plus-7.3.0_bb95bd70c59f77dfe37b67091a3888229328c16c.jar" />
+    </item>
+    <item
+        jar="H:\ThucHanh\Android\JRFSIT\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="fe3e0c6de7cceed888b277487238b6af9a1cc299">
+        <dex dex="H:\ThucHanh\Android\JRFSIT\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-maps-7.3.0_694786a8cba30c802239f8e7cc1f5d9e4d0b5f55.jar" />
+    </item>
+    <item
+        jar="H:\ThucHanh\Android\JRFSIT\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="a0ce76dfaccbfbd6c551ed2174280aaabe60fe47">
+        <dex dex="H:\ThucHanh\Android\JRFSIT\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-drive-7.3.0_e509f2ccafd56ce5bb69c6ca2dac69a3a0dd226c.jar" />
+    </item>
+    <item
+        jar="H:\ThucHanh\Android\JRFSIT\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="e5b9f5b0aa8dee788beb63d23832cb29ce771343">
+        <dex dex="H:\ThucHanh\Android\JRFSIT\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-cast-7.3.0_a8e49473c75be27b83972458f7def1427a12331e.jar" />
+    </item>
+    <item
+        jar="H:\ThucHanh\Android\JRFSIT\app\build\intermediates\exploded-aar\com.android.support\design\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="e5c61a3169221a89654ffcaaed47bba51cf071ad">
+        <dex dex="H:\ThucHanh\Android\JRFSIT\app\build\intermediates\pre-dexed\debug\com.android.support-design-23.0.1_7af219f0eed790da396f69bdb8da71bd7938abfd.jar" />
+    </item>
+    <item
+        jar="H:\ThucHanh\Android\JRFSIT\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="0708ef60917bf94913fe9ef972a655b99462dca7">
+        <dex dex="H:\ThucHanh\Android\JRFSIT\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-safetynet-7.3.0_232cdf9d0f47d0ee53ff28dceace217786d93665.jar" />
+    </item>
+    <item
+        jar="H:\ThucHanh\Android\JRFSIT\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="f2f7ec211ce4d244ee97a57523eeb4526dc3cf8a">
+        <dex dex="H:\ThucHanh\Android\JRFSIT\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-base-7.3.0_d21a27072a2fe7e13c5cd64d8c3e6bf96abf9838.jar" />
+    </item>
+    <item
+        jar="C:\Users\LeDuy\.gradle\caches\modules-2\files-2.1\cz.msebera.android\httpclient\4.3.6\526a9f794eab830eae4f23a62c572878b3f491ab\httpclient-4.3.6.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="526a9f794eab830eae4f23a62c572878b3f491ab">
+        <dex dex="H:\ThucHanh\Android\JRFSIT\app\build\intermediates\pre-dexed\debug\httpclient-4.3.6_cd47df41d8e01eb1186722de1cb8cb9b2deb80d0.jar" />
+    </item>
+    <item
+        jar="H:\ThucHanh\Android\JRFSIT\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="5ea948d825957be6c4358c48422bee60eef2d487">
+        <dex dex="H:\ThucHanh\Android\JRFSIT\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-nearby-7.3.0_d27a95220a519ce590443cd410625faa311c9da7.jar" />
+    </item>
+    <item
+        jar="H:\ThucHanh\Android\JRFSIT\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appstate\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="0180d031a7b54dabb93b4af3869468b55dc938bd">
+        <dex dex="H:\ThucHanh\Android\JRFSIT\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-appstate-7.3.0_061fa316d25d4a221d751baeeaa3842529f73f35.jar" />
+    </item>
+    <item
+        jar="H:\ThucHanh\Android\JRFSIT\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="9c9dea9e85aceb09d95df5e6f7bc8a43fc286068">
+        <dex dex="H:\ThucHanh\Android\JRFSIT\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-analytics-7.3.0_0f2366c0d59e2c0c9d2f3b44e4558e74ad86c541.jar" />
+    </item>
+    <item
+        jar="H:\ThucHanh\Android\JRFSIT\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
+        <dex dex="H:\ThucHanh\Android\JRFSIT\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.1.0_8230bb4d598ea853b11f83a84f7f95a1a73a701a.jar" />
+    </item>
+    <item
+        jar="H:\ThucHanh\Android\JRFSIT\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="3f151e49c316a5ab2c065969a3b3b55ef9b393fc">
+        <dex dex="H:\ThucHanh\Android\JRFSIT\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-23.1.0_6d0568317496e30484fa870d5d17d6375a8f4090.jar" />
+    </item>
+    <item
+        jar="H:\ThucHanh\Android\JRFSIT\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="e35fae1b377c23aa5fd2d309a190c2d0f73d54ec">
+        <dex dex="H:\ThucHanh\Android\JRFSIT\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-appindexing-7.3.0_07ba9c5b7c745403f3be0510778562137e278cb6.jar" />
+    </item>
+    <item
+        jar="H:\ThucHanh\Android\JRFSIT\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="b48d5c51a9a9e329005106b4667f54948de4d4d8">
+        <dex dex="H:\ThucHanh\Android\JRFSIT\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-identity-7.3.0_78874888e12cade5c6d070d7a43459b04d52cb87.jar" />
+    </item>
+    <item
+        jar="H:\ThucHanh\Android\JRFSIT\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="3b4ff5c39dace8f3b4ab4cab8191785547a0815f">
+        <dex dex="H:\ThucHanh\Android\JRFSIT\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-games-7.3.0_436303bfa7c4c62649c842dcd4caaab014cd4a88.jar" />
+    </item>
+    <item
+        jar="H:\ThucHanh\Android\JRFSIT\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="6046e5cdaf799120b7c56a5a061d80e8854c4d34">
+        <dex dex="H:\ThucHanh\Android\JRFSIT\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-wallet-7.3.0_1be81c1bf83e5d5a82af5934ab751f7fc0aae1ec.jar" />
+    </item>
+    <item
+        jar="H:\ThucHanh\Android\JRFSIT\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="3988694bf9d8186ff97ad5cdfa4ed88b5010fe08">
+        <dex dex="H:\ThucHanh\Android\JRFSIT\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-ads-7.3.0_678686a367fa231c14116c56ff4a944adc7d51af.jar" />
+    </item>
+    <item
+        jar="H:\ThucHanh\Android\JRFSIT\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="4f4fe3c23776540625f3c2844152a7510fddf9f1">
+        <dex dex="H:\ThucHanh\Android\JRFSIT\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-fitness-7.3.0_7eafba021998a4ee50a92cc2845cf6dec964e488.jar" />
+    </item>
+    <item
+        jar="H:\ThucHanh\Android\JRFSIT\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="e5bf453b070c1e39297986144960e45afa0fdfad">
+        <dex dex="H:\ThucHanh\Android\JRFSIT\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-wearable-7.3.0_e3714891fa9fc4a1a4905244d35a54821d0a656e.jar" />
+    </item>
+    <item
+        jar="H:\ThucHanh\Android\JRFSIT\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="7215ac1f2fca947b9415a6ee2a1bf991364aab24">
+        <dex dex="H:\ThucHanh\Android\JRFSIT\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-gcm-7.3.0_738d3e4208a8c1a721f2c5544b57814a80ce2b6d.jar" />
+    </item>
+    <item
+        jar="H:\ThucHanh\Android\JRFSIT\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\7.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="b2c07cdb814fe988ad05f7b4d767a841514a5991">
+        <dex dex="H:\ThucHanh\Android\JRFSIT\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-location-7.3.0_59d2f7f371d4c106f2a3865e3a022a7325d2772f.jar" />
+    </item>
+    <item
+        jar="E:\android-sdk-windows\extras\android\m2repository\com\android\support\support-annotations\23.1.0\support-annotations-23.1.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="92e3fc113ec3ee36b64603a38857b95700025633">
+        <dex dex="H:\ThucHanh\Android\JRFSIT\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.0_dd42530613323ba18e05e580495a5e213bfa8a58.jar" />
+    </item>
+    <item
+        jar="H:\ThucHanh\Android\JRFSIT\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\libs\internal_impl-23.1.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
+        <dex dex="H:\ThucHanh\Android\JRFSIT\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.0_696d9a4b8cb9e93a424d9229b9f0ba508c2669c4.jar" />
+    </item>
+    <item
+        jar="C:\Users\LeDuy\.gradle\caches\modules-2\files-2.1\com.loopj.android\android-async-http\1.4.9\386a4339ffe52d5d63e80f9bed8d2b1d1a418249\android-async-http-1.4.9.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="386a4339ffe52d5d63e80f9bed8d2b1d1a418249">
+        <dex dex="H:\ThucHanh\Android\JRFSIT\app\build\intermediates\pre-dexed\debug\android-async-http-1.4.9_51c573d4094e8f42c9f87f4b0052a21052c31220.jar" />
+    </item>
+
+</items>

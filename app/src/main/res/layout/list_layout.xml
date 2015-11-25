@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:weightSum="100"
+    tools:context=".DanhSachCongViec">
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F5F5F5"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:weightSum="100"
+        tools:context=".DanhSachCongViec">
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/listItem_margin"
+            android:background="@drawable/ripple"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:weightSum="100"
+            tools:context=".DanhSachCongViec">
+            <ProgressBar
+                android:id="@+id/progressBar1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/image"
+                android:layout_marginRight="10dp"
+                android:layout_weight="70">
+            </ImageView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="100"
+                android:divider="#03A9F4"
+                android:layout_weight="30">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/etDscv_TenCV"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:text="Giam doc cong ty CCC"
+                    android:layout_weight="20"
+                    android:textSize="14sp">
+                </android.support.v7.widget.AppCompatTextView>
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/etDscv_TenCT"
+                    android:textColor="#616161"
+                    android:layout_weight="20"
+                    android:layout_marginTop="2dp"
+                    android:text="Cong ty CCC"
+                    android:textSize="12sp">
+                </android.support.v7.widget.AppCompatTextView>
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/etDscv_ViTri"
+                    android:layout_marginTop="2dp"
+                    android:textColor="#757575"
+                    android:text="Thanh pho HCM"
+                    android:layout_weight="20"
+                    android:textSize="12sp">
+                </android.support.v7.widget.AppCompatTextView>
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/etDscv_information"
+                    android:layout_marginTop="2dp"
+                    android:textColor="#757575"
+                    android:text="Rate: 1000/ Save: 1000/ See: 14255"
+                    android:layout_weight="20"
+                    android:textSize="12sp">
+                </android.support.v7.widget.AppCompatTextView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
+
