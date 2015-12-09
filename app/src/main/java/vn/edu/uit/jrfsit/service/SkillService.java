@@ -25,7 +25,7 @@ public class SkillService extends BaseService
         List<Skill> listSkill;
         Connect connect = super.initConnection("doan/getListSkill.php");
         ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
-        nameValuePairs.add(new BasicNameValuePair("userId", userId));
+        nameValuePairs.add(new BasicNameValuePair("UserId", userId));
         JSONArray array = null;
         try {
             array = connect.getArrayObject(nameValuePairs, "listskill");
@@ -35,9 +35,9 @@ public class SkillService extends BaseService
                     JSONObject last;
                     last = new JSONObject(array.getString(i));
                     Skill skill = new Skill();
-                    skill.setId(last.getString("skillId"));
+                    skill.setId(last.getString("SkillId"));
                     skill.setSkill(last.getString("SkillName"));
-                    skill.setExperience(last.getString("experience_year"));
+                    skill.setExperience(last.getString("Experience_Year"));
                     listSkill.add(skill);
                 }
             } else {
@@ -55,9 +55,9 @@ public class SkillService extends BaseService
     public boolean insertSkill(String idUser, String idSkill, String experienceYear) {
         Connect connect = super.initConnection("doan/insertSkill.php");
         ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
-        nameValuePairs.add(new BasicNameValuePair("userId", idUser));
-        nameValuePairs.add(new BasicNameValuePair("skillId", idSkill));
-        nameValuePairs.add(new BasicNameValuePair("experience_year", experienceYear));
+        nameValuePairs.add(new BasicNameValuePair("UserId", idUser));
+        nameValuePairs.add(new BasicNameValuePair("SkillId", idSkill));
+        nameValuePairs.add(new BasicNameValuePair("Experience_Year", experienceYear));
         boolean result;
         String check;
         try {
@@ -74,9 +74,9 @@ public class SkillService extends BaseService
     public boolean updateSkill(String idUser, String idSkill, String experienceYear) {
         Connect connect = super.initConnection("doan/updateSkill.php");
         ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
-        nameValuePairs.add(new BasicNameValuePair("userId", idUser));
-        nameValuePairs.add(new BasicNameValuePair("skillId", idSkill));
-        nameValuePairs.add(new BasicNameValuePair("experience_year", experienceYear));
+        nameValuePairs.add(new BasicNameValuePair("UserId", idUser));
+        nameValuePairs.add(new BasicNameValuePair("SkillId", idSkill));
+        nameValuePairs.add(new BasicNameValuePair("Experience_Year", experienceYear));
         boolean result;
         String check;
         try {

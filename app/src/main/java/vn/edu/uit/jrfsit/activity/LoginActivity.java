@@ -181,15 +181,15 @@ public class LoginActivity extends AppCompatActivity
                 login();
             }
         });
-        mEtPassword.setOnTouchListener(new android.view.View.OnTouchListener() {
+        mEtPassword.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public boolean onTouch(View view, MotionEvent motionevent) {
+            public boolean onTouch(View v, MotionEvent event) {
                 if (Utils.isValidEmail(mEtEmail.getText().toString())) {
                     mEtEmail.setCompoundDrawablesWithIntrinsicBounds(null, null, getResources().getDrawable(R.drawable.ic_check_ok), null);
                     mEtEmail.setTag("1");
                 } else {
                     mEtEmail.setCompoundDrawablesWithIntrinsicBounds(null, null, getResources().getDrawable(R.drawable.ic_delete), null);
-                    Utils.print(LoginActivity.this, "Email kh\364ng h\u1EE3p l\u1EC7");
+                    Utils.print(LoginActivity.this, "Email không hợp lệ");
                     mEtEmail.setTag("0");
                 }
                 return false;
@@ -225,13 +225,17 @@ public class LoginActivity extends AppCompatActivity
         final String email = mEtEmail.getText().toString();
         final String password = mEtPassword.getText().toString();
         if (!email.equals("") && !password.equals("")) {
-            if (Utils.isValidEmail(email) && password.length() > 5 && mEtEmail.getTag().equals("1")) {
+            if (Utils.isValidEmail(email) && password.length() > 5) {
                 progressdialog.show();
                 new Thread(new Runnable() {
                     public void run() {
                         Account account = loginService.LoginUser(email, password);
                         if (account != null) {
-                            accountPreferences.putAccount(account.getUserId(), account.getEmail(), account.getPassword(), account.isGoogle(), account.getImageUrl());
+                            String imageUrl = account.getImageUrl();
+                            if(imageUrl.length()<10){
+                                imageUrl=null;
+                            }
+                            accountPreferences.putAccount(account.getUserId(), account.getEmail(), account.getPassword(), account.isGoogle(), imageUrl);
                             finish();
                             startActivity(new Intent(getApplicationContext(),MainActivity.class));
                         } else {

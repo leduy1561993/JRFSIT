@@ -3,13 +3,10 @@
 // Decompiler options: braces fieldsfirst space lnc 
 
 package vn.edu.uit.jrfsit.fragment;
-
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.internal.widget.ListViewCompat;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -35,7 +32,7 @@ public class SaveFragment extends BaseFragment
     implements android.widget.AdapterView.OnItemClickListener
 {
 
-    public int NUMBER_JOB_GET;
+    public int NUMBER_JOB_GET = 10;
     Account account;
     AccountPreferences accountPreferences;
     JobArrayAdapter adapter;
@@ -47,12 +44,10 @@ public class SaveFragment extends BaseFragment
     List<JobSearch> listadd = new ArrayList<JobSearch>();
     LinearLayout lnJobSearchFailed;
     LinearLayout lnJobSearchTrue;
-    Boolean loadingMore;
+    Boolean loadingMore = false;
     ListViewCompat lvDSCV;
     int offset;
-    private int total;
     View v;
-    ProgressDialog pDialog;
 
     @Override
     public View onCreateView(LayoutInflater layoutinflater, ViewGroup viewgroup, Bundle bundle)
@@ -67,21 +62,17 @@ public class SaveFragment extends BaseFragment
         super.loadActivity(R.string.title_activity_save_job);
         accountPreferences = new AccountPreferences(activity);
         account = accountPreferences.getAccount();
-        pDialog = new ProgressDialog(activity);
-        pDialog.setMessage("Vui lòng chờ....");
-        pDialog.setIndeterminate(true);
-        pDialog.setCancelable(false);
-        pDialog.show();
         initControlOnView();
         initListener();
         jobService = new JobService();
         lvDSCV.addFooterView(footerView);
-        (new Thread(new Runnable() {
+        final ProgressDialog dialog = ProgressDialog.show(activity,
+                "", "Vui lòng chờ....", true);
+        new Thread(new Runnable() {
             public void run()
             {
                 list = new ArrayList();
                 list = jobService.getSaveJob(account.getUserId(), String.valueOf(offset));
-                dismissDialog(pDialog);
                 activity.runOnUiThread(new Runnable() {
                     public void run()
                     {
@@ -94,28 +85,16 @@ public class SaveFragment extends BaseFragment
                             }
                             lvDSCV.setAdapter(adapter);
                             firtsStart = Boolean.valueOf(false);
-                            return;
                         } else
                         {
                             lnJobSearchTrue.setVisibility(View.INVISIBLE);
                             lnJobSearchFailed.setVisibility(View.VISIBLE);
-                            return;
                         }
                     }
                 });
-            }
-        })).start();
-    }
-
-    public void dismissDialog(final ProgressDialog dialog)
-    {
-        activity.runOnUiThread(new Runnable() {
-            @Override
-            public void run()
-            {
                 dialog.dismiss();
             }
-        });
+        }).start();
     }
 
     public void initControlOnView()
@@ -128,21 +107,23 @@ public class SaveFragment extends BaseFragment
         footerView = ((LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.listfooter, null, false);
     }
 
-    public void initListener()
-    {
+    public void initListener() {
         lvDSCV.setOnItemClickListener(this);
-        lvDSCV.setOnScrollListener(new android.widget.AbsListView.OnScrollListener() {
+        lvDSCV.setOnScrollListener(new AbsListView.OnScrollListener() {
             @Override
-            public void onScroll(AbsListView abslistview, int i, int j, int k) {
-                if (i + j == k && !loadingMore.booleanValue() && k >= NUMBER_JOB_GET) {
-                    total = k;
-                    offset = offset + NUMBER_JOB_GET;
-                    footerView.setVisibility(View.VISIBLE);
-                    (new Thread(null, loadMoreListItems)).start();
-                }
+            public void onScrollStateChanged(AbsListView view, int scrollState) {
+
             }
+
             @Override
-            public void onScrollStateChanged(AbsListView abslistview, int i) {
+            public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
+                int lastInScreen = firstVisibleItem + visibleItemCount;
+                if ((lastInScreen == totalItemCount) && !loadingMore && totalItemCount >= NUMBER_JOB_GET) {
+                    offset += 10;
+                    footerView.setVisibility(View.VISIBLE);
+                    Thread thread = new Thread(null, loadMoreListItems);
+                    thread.start();
+                }
             }
         });
     }

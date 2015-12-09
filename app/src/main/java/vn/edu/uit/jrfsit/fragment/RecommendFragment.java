@@ -35,7 +35,7 @@ public class RecommendFragment extends BaseFragment
     implements android.widget.AdapterView.OnItemClickListener
 {
 
-    public int NUMBER_JOB_GET;
+    public int NUMBER_JOB_GET = 10;
     Account account;
     AccountPreferences accountPreferences;
     JobArrayAdapter adapter;
@@ -44,7 +44,7 @@ public class RecommendFragment extends BaseFragment
     List<JobSearch> listadd = new ArrayList<JobSearch>();
     LinearLayout lnJobSearchFailed;
     LinearLayout lnJobSearchTrue;
-    Boolean loadingMore;
+    Boolean loadingMore =false;
     ListViewCompat lvDSCV;
     int offset;
     RecService recService;
@@ -65,8 +65,6 @@ public class RecommendFragment extends BaseFragment
         super.loadActivity(R.string.title_activity_recommend);
         pDialog = new ProgressDialog(activity);
         pDialog.setMessage("Vui lòng chờ....");
-        pDialog.setIndeterminate(true);
-        pDialog.setCancelable(false);
         pDialog.show();
         initControlOnView();
         recService = new RecService();

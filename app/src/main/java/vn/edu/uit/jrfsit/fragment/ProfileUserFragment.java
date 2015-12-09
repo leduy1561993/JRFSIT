@@ -76,14 +76,14 @@ public class ProfileUserFragment extends BaseFragment
     @Override
     public View onCreateView(LayoutInflater layoutinflater, ViewGroup viewgroup, Bundle bundle)
     {
-        v = layoutinflater.inflate(R.layout.content_about, viewgroup, false);
+        v = layoutinflater.inflate(R.layout.content_user_profile, viewgroup, false);
         load();
         return v;
     }
 
     private void load()
     {
-        super.loadActivity(0x7f070047);
+        super.loadActivity(R.string.title_activity_person);
         initControlOnView();
         pDialog = new ProgressDialog(activity);
         pDialog.setMessage("Vui lòng chờ....");
@@ -131,7 +131,7 @@ public class ProfileUserFragment extends BaseFragment
     public void initControlOnView()
     {
         btEditProfile = (ImageButton) v.findViewById(R.id.bt_edit_personal_job_profile);
-        tvPsEmail = (AppCompatTextView) v.findViewById(R.id.tv_ps_address_job_profile);
+        tvPsEmail = (AppCompatTextView) v.findViewById(R.id.tv_ps_email_job_profile);
         tvPsTNumber = (AppCompatTextView) v.findViewById(R.id.tv_ps_sdt_job_profile);
         tvPsAddress = (AppCompatTextView) v.findViewById(R.id.tv_ps_address_job_profile);
         tvPsBirhday = (AppCompatTextView) v.findViewById(R.id.tv_ps_birthday_job_profile);
@@ -183,6 +183,7 @@ public class ProfileUserFragment extends BaseFragment
         });
     }
 
+    @Override
     public void onActivityResult(final int requestCode, int resultCode, Intent data)
     {
         if (requestCode == REQUEST_EDIT_PROFILE) {
@@ -218,7 +219,6 @@ public class ProfileUserFragment extends BaseFragment
                 boolean check = false;
                 if(list!=null){
                     for (Skill item:list) {
-
                         if(item.getId().equals(returnSkill.getId()))
                             check=true;
                     }
@@ -314,6 +314,7 @@ public class ProfileUserFragment extends BaseFragment
                                 public void run() {
                                     if (check) {
                                         tvUserEx.setText(tempex);
+                                        user.setCareerObjective(tempex);
                                         Utils.print(activity, "Cập nhật thành công");
                                     } else {
                                         Utils.print(activity, "Cập nhật kỹ năng thất bại, kiểm tra kết nối");

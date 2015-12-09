@@ -81,6 +81,7 @@ public class MainActivity extends AppCompatActivity
 
     private void initLoad() {
         accountPreferences = new AccountPreferences(this);
+        accountPreferences.putAccount("53","leduy15@gmail.com","e10adc3949ba59abbe56e057f20f883e",false,null);
         account = accountPreferences.getAccount();
         bitmapUtil = new BitmapUtil();
         bitmapService = new BitmapService();
@@ -106,14 +107,6 @@ public class MainActivity extends AppCompatActivity
         }).start();
 
         tvEmail.setText(account.getEmail());
-        setFragment(new SearchFragment());
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        navigationView.setCheckedItem(0);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
-        }
         mGoogleApiClient = (new
                 com.google.android.gms.common.api.GoogleApiClient.Builder(this))
                 .addConnectionCallbacks(this)
@@ -123,10 +116,15 @@ public class MainActivity extends AppCompatActivity
                 .addScope(Plus.SCOPE_PLUS_LOGIN)
                 .build();
         mGoogleApiClient.connect();
+        setFragment(new ProfileUserFragment());
+        //navigationView.setCheckedItem(0);
     }
 
     private void setFragment(Fragment fragment) {
-        getFragmentManager().beginTransaction().replace(R.id.main_frame, fragment).commit();
+        FragmentManager fragmentManager = getFragmentManager();
+        fragmentManager.beginTransaction()
+                .replace(R.id.main_frame, fragment)
+                .commit();
     }
 
     private void signOutFromGplus() {
@@ -140,13 +138,13 @@ public class MainActivity extends AppCompatActivity
         startActivity(new Intent(getApplicationContext(), LoginActivity.class));
     }
 
+    @Override
     public void onBackPressed() {
-        DrawerLayout drawerlayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if (drawerlayout.isDrawerOpen(GravityCompat.START)) {
-            drawerlayout.closeDrawer(GravityCompat.START);
-            return;
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
         }
-        super.onBackPressed();
         if (mBackPressed + 2000L > System.currentTimeMillis()) {
             super.onBackPressed();
             return;
@@ -157,22 +155,26 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
+    @Override
     public void onConnected(Bundle bundle) {
     }
 
+    @Override
     public void onConnectionFailed(ConnectionResult connectionresult) {
     }
 
+    @Override
     public void onConnectionSuspended(int i) {
     }
 
-
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main, menu);
 
         return super.onCreateOptionsMenu(menu);
     }
 
+    @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         int i = item.getItemId();
         if (i == R.id.nav_search) {
@@ -192,11 +194,13 @@ public class MainActivity extends AppCompatActivity
         } else if (i ==  R.id.nav_logout) {
             signOutFromGplus();
         }
+        navigationView.setCheckedItem(i);
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
 
+    @Override
     public boolean onOptionsItemSelected(MenuItem menuitem) {
         menuitem.getItemId();
         return super.onOptionsItemSelected(menuitem);

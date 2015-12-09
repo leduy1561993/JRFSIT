@@ -23,6 +23,7 @@
     <string name="title_activity_recommend">Công việc giới thiệu cho bạn</string>
     <string name="title_activity_save_job">Công việc đã lưu</string>
     <string name="title_activity_setting">Cài đặt</string>
+    <string name="title_activity_person">Thông tin cá nhân</string>
 
     <!-- -->
     <string name="connect_fail">Cập nhật thất bại, kiểm tra kết nối</string>

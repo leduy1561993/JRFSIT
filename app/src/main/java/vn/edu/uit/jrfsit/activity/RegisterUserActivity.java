@@ -49,10 +49,7 @@ public class RegisterUserActivity extends AppCompatActivity
     static final int DATE_DIALOG_ID = 999;
     public static final String PARAM_EXTRA_QUERY = "place_picker_extra_query";
     int PLACE_PICKER_REQUEST;
-    String check;
-    private android.app.DatePickerDialog.OnDateSetListener datePickerListener;
     ProgressDialog dialog;
-    android.content.DialogInterface.OnClickListener dialogClickListener;
     AppCompatAutoCompleteTextView mAcAddress;
     AppCompatButton mBtLocation;
     AppCompatButton mBtRegister;
@@ -135,15 +132,16 @@ public class RegisterUserActivity extends AppCompatActivity
                 return false;
             }
         });
-        mEtPassword.setOnTouchListener(new android.view.View.OnTouchListener() {
+        mEtPassword.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public boolean onTouch(View view, MotionEvent motionevent) {
+            public boolean onTouch(View v, MotionEvent event) {
                 if (Utils.isValidEmail(mEtEmail.getText().toString())) {
                     mEtEmail.setCompoundDrawablesWithIntrinsicBounds(null, null, getResources().getDrawable(R.drawable.ic_check_ok), null);
                     mEtEmail.setTag("1");
                 } else {
                     mEtEmail.setCompoundDrawablesWithIntrinsicBounds(null, null, getResources().getDrawable(R.drawable.ic_delete), null);
                     mEtEmail.setText("");
+                    mEtEmail.setTag("0");
                 }
                 return false;
             }
@@ -238,6 +236,43 @@ public class RegisterUserActivity extends AppCompatActivity
         }
     }
 
+    /**
+     * DatePickerDialog
+     */
+    private DatePickerDialog.OnDateSetListener datePickerListener
+            = new DatePickerDialog.OnDateSetListener() {
+        public void onDateSet(DatePicker datepicker, int i, int j, int k)
+        {
+            year = i;
+            day = k;
+            String strday = String.valueOf(day);
+            String strmounth = String.valueOf(j + 1);
+            month = Integer.parseInt(strmounth);
+            if (day < 10)
+            {
+                strday = (new StringBuilder()).append("0").append(strday).toString();
+            }
+            if (month < 10)
+            {
+                strmounth = (new StringBuilder()).append("0").append(strmounth).toString();
+            }
+            mEtBirthday.setText((new StringBuilder()).append(year).append("-").append(strmounth).append("-").append(strday).append(" "));
+        }
+    };
+
+    DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
+        @Override
+        public void onClick(DialogInterface dialog, int which) {
+            switch (which) {
+                case DialogInterface.BUTTON_POSITIVE:
+                    onBackPressed();
+                    break;
+                case DialogInterface.BUTTON_NEGATIVE:
+                    break;
+            }
+        }
+    };
+
     @Override
     public void onPause() {
         super.onPause();
@@ -279,6 +314,7 @@ public class RegisterUserActivity extends AppCompatActivity
                             public void run() {
                                 Utils.print(RegisterUserActivity.this, "Đăng kí thành công, vui lòng kiểm tra mail để kích hoạt tài khoản");
                                 dialog.dismiss();
+                                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
                             }
                         });
                         return;
@@ -287,6 +323,7 @@ public class RegisterUserActivity extends AppCompatActivity
                             @Override
                             public void run() {
                                 Utils.print(RegisterUserActivity.this, "Thất bại, kiểm tra kết nối");
+                                dialog.dismiss();
                             }
                         });
                         return;
@@ -296,6 +333,7 @@ public class RegisterUserActivity extends AppCompatActivity
                         @Override
                         public void run() {
                             Utils.print(RegisterUserActivity.this, "Mật khẩu không (lớn hơn 5 ks tự)");
+                            dialog.dismiss();
                         }
                     });
                     return;
@@ -305,6 +343,7 @@ public class RegisterUserActivity extends AppCompatActivity
                     @Override
                     public void run() {
                         Utils.print(RegisterUserActivity.this, "Email không hợp lệ");
+                        dialog.dismiss();
                     }
                 });
                 return;
@@ -314,10 +353,12 @@ public class RegisterUserActivity extends AppCompatActivity
                 @Override
                 public void run() {
                     Utils.print(RegisterUserActivity.this, "Tên không hợp lệ, lớn hơn 5 ký tự");
+                    dialog.dismiss();
                 }
             });
             return;
         }
+
     }
 
     public void setupUI(View view) {

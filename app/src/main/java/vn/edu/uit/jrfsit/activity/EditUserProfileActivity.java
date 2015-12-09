@@ -103,7 +103,7 @@ public class EditUserProfileActivity extends AppCompatActivity
             @Override
             public boolean onTouch(View view, MotionEvent motionevent)
             {
-                showDialog(1);
+                showDialog(999);
                 return false;
             }
         });
@@ -247,4 +247,36 @@ public class EditUserProfileActivity extends AppCompatActivity
         return null;
     }
     //endregion
+
+    @Override
+    protected Dialog onCreateDialog(int i) {
+        switch (i) {
+            default:
+                return null;
+
+            case 999:
+                return new DatePickerDialog(this, datePickerListener, year, month, day);
+        }
+    }
+
+    private DatePickerDialog.OnDateSetListener datePickerListener
+            = new DatePickerDialog.OnDateSetListener() {
+        public void onDateSet(DatePicker datepicker, int i, int j, int k)
+        {
+            year = i;
+            day = k;
+            String strday = String.valueOf(day);
+            String strmounth = String.valueOf(j + 1);
+            month = Integer.parseInt(strmounth);
+            if (day < 10)
+            {
+                strday = (new StringBuilder()).append("0").append(strday).toString();
+            }
+            if (month < 10)
+            {
+                strmounth = (new StringBuilder()).append("0").append(strmounth).toString();
+            }
+            mEtBirtday.setText((new StringBuilder()).append(year).append("-").append(strmounth).append("-").append(strday).append(" "));
+        }
+    };
 }

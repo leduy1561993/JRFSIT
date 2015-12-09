@@ -33,14 +33,14 @@ public class AccountPreferences
         return new Account(pre.getString("userId", ""), pre.getString("email", ""), pre.getString("password", ""), pre.getString("imageUrl", "https://cdn4.iconfinder.com/data/icons/linecon/512/photo-64.png"), pre.getBoolean("isGoogle", false));
     }
 
-    public void putAccount(String s, String s1, String s2, boolean flag, String s3)
+    public void putAccount(String userId, String email, String password, boolean flag, String imageUrl)
     {
         editor.clear();
-        editor.putString("userId", s);
-        editor.putString("email", s1);
-        editor.putString("password", s2);
+        editor.putString("userId", userId);
+        editor.putString("email", email);
+        editor.putString("password", password);
         editor.putBoolean("isGoogle", flag);
-        editor.putString("imageUrl", s3);
+        editor.putString("imageUrl", imageUrl);
         editor.commit();
     }
 }

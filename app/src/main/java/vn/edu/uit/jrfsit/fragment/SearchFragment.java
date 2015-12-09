@@ -70,7 +70,7 @@ public class SearchFragment extends Fragment
     private void load()
     {
         activity = (AppCompatActivity)getActivity();
-        activity.getSupportActionBar().setTitle("T\354m ki\u1EBFm");
+        activity.getSupportActionBar().setTitle("Tìm kiếm");
         initControlOnView();
         initListener();
         adapter = new ViewPagerAdapter(activity.getSupportFragmentManager(), Titles, Numboftabs);
