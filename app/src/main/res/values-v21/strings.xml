@@ -16,6 +16,16 @@
     <string name="title_activity_job_edit_skill">Chỉnh sửa kĩ năng</string>
     <string name="title_activity_job_edit_profile">Chỉnh sửa thông tin</string>
     <string name="title_activity_job_edit_ex">Chỉnh sửa nguyện vọng</string>
+    <string name="title_activity_main">Màn hình chủ</string>
+    <string name="title_activity_change_pass">Đổi mật khẩu</string>
+    <string name="title_activity_register">Đăng ký</string>
+    <string name="title_activity_about">Thông tin</string>
+    <string name="title_activity_recommend">Công việc giới thiệu cho bạn</string>
+    <string name="title_activity_save_job">Công việc đã lưu</string>
+    <string name="title_activity_setting">Cài đặt</string>
+
+    <!-- -->
+    <string name="connect_fail">Cập nhật thất bại, kiểm tra kết nối</string>
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password (optional)</string>

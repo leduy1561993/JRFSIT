@@ -2,8 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "23.0.2"
-    useLibrary 'org.apache.http.legacy'
+    buildToolsVersion '23.0.2'
     defaultConfig {
         applicationId "vn.edu.uit.jrfsit"
         minSdkVersion 21
@@ -29,4 +28,5 @@ dependencies {
     compile 'com.android.support:support-annotations:23.1.0'
     compile 'com.android.support:recyclerview-v7:23.1.0'
     compile 'com.google.android.gms:play-services:7.3.0'
+    compile files('src/org.apache.http.legacy.jar')
 }

@@ -2,21 +2,25 @@
 <android.support.design.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:fitsSystemWindows="true"
-    tools:context="com.leduy.layout.DanhSachCongViec">
-    <android.support.design.widget.AppBarLayout android:layout_height="wrap_content"
-        android:layout_width="match_parent" android:theme="@style/AppTheme.AppBarOverlay">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
         <android.support.v7.widget.Toolbar
-            style="@style/ToolBarStyle.Event"
             xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/toolbardscv"
-            android:layout_width="match_parent"
+            style="@style/ToolBarStyle.Event"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:minHeight="@dimen/abc_action_bar_default_height_material">
-        </android.support.v7.widget.Toolbar>
+            android:minHeight="@dimen/abc_action_bar_default_height_material" />
     </android.support.design.widget.AppBarLayout>
 
     <include layout="@layout/content_job_list" />
-    <include layout="@layout/failed_search"/>
+
+    <include layout="@layout/failed_search" />
 </android.support.design.widget.CoordinatorLayout>

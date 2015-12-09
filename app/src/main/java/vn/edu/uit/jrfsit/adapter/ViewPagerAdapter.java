@@ -11,8 +11,9 @@ import android.view.ViewGroup;
 
 import java.util.HashMap;
 
-import vn.edu.uit.jrfsit.tabfragment.TabResultRecently;
-import vn.edu.uit.jrfsit.tabfragment.TabSearchJob;
+import vn.edu.uit.jrfsit.fragment.TabResultRecently;
+import vn.edu.uit.jrfsit.fragment.TabSearchJob;
+
 
 /**
  * Created by hp1 on 21-01-2015.

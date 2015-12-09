@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:showIn="@layout/activity_job_search">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
         android:id="@+id/lv_job_search"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
         android:descendantFocusability="beforeDescendants"
         android:focusableInTouchMode="true"
         android:orientation="vertical">
 
         <ImageView
-            android:layout_width="match_parent"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/job_search"
             android:gravity="center_vertical"
@@ -22,86 +22,81 @@
 
         <android.support.v7.widget.AppCompatAutoCompleteTextView
             android:id="@+id/tvJob_search_job_name"
-            android:layout_width="match_parent"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="10.0dip"
             android:autoText="true"
-            android:textColor="@color/colorText"
-            android:imeOptions="actionNext"
             android:ems="10"
-            android:inputType="text"
-            android:layout_margin="10dp"
             android:hint="Tên công việc"
-            android:padding="10dp" />
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:padding="10.0dip"
+            android:textColor="@color/colorText" />
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_weight="10"
-            android:layout_height="wrap_content">
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="10.0">
+
             <android.support.v7.widget.AppCompatAutoCompleteTextView
                 android:id="@+id/tvJob_search_location"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="10.0dip"
+                android:layout_weight="2.0"
                 android:autoText="true"
-                android:inputType="text"
-                android:textColor="@color/colorText"
-                android:layout_width="match_parent"
-                android:layout_weight="2"
-                android:layout_height="match_parent"
-                android:layout_margin="10dp"
-                android:hint="Địa điểm"
                 android:ems="10"
-                android:padding="15dp" />
+                android:hint="Địa điểm"
+                android:inputType="text"
+                android:padding="15.0dip"
+                android:textColor="@color/colorText" />
+
             <android.support.v7.widget.AppCompatButton
                 android:id="@+id/btJob_location"
-                android:lines="1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="10dp"
-                android:paddingTop="5dp"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="10.0dip"
+                android:layout_weight="8.0"
                 android:background="@drawable/ripple"
                 android:drawableStart="@drawable/ic_search"
-                android:layout_weight="8"
-                android:padding="10dp"
-                android:textSize="10dp" />
+                android:lines="1"
+                android:padding="10.0dip"
+                android:paddingTop="5.0dip"
+                android:textSize="10.0dip" />
         </LinearLayout>
-
-
-        <!--<android.support.v7.widget.AppCompatSpinner
-            android:id="@+id/snJob_search_salary"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:paddingTop="15dp"
-            style="@style/Base.Widget.AppCompat.Spinner.Underlined"
-            android:spinnerMode="dropdown" />-->
 
         <android.support.v7.widget.AppCompatSpinner
             android:id="@+id/snJob_search_specialy"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:paddingTop="15dp"
             style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10.0dip"
+            android:paddingTop="15.0dip"
             android:spinnerMode="dropdown" />
+
         <android.support.v7.widget.AppCompatSpinner
             android:id="@+id/snJob_search_style"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:paddingTop="15dp"
             style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10.0dip"
+            android:paddingTop="15.0dip"
             android:spinnerMode="dropdown" />
+
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content">
+
             <android.support.v7.widget.AppCompatButton
                 android:id="@+id/btJob_search"
-                android:layout_width="match_parent"
                 style="@style/Widget.AppCompat.Button.Small"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
+                android:layout_margin="5.0dip"
+                android:background="@drawable/ripple"
                 android:text="Tìm kiếm"
                 android:textColor="@color/colorPrimary"
-                android:background="@drawable/ripple"
-                android:textSize="15dp" />
+                android:textSize="15.0dip" />
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

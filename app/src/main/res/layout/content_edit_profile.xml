@@ -1,181 +1,207 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_weight="10.0"
     android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:padding="20dp"
-    android:layout_weight="10"
-    android:layout_height="match_parent">
+    android:padding="20.0dip">
+
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_weight="1"
-        android:layout_height="match_parent">
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0">
+
         <LinearLayout
-            android:layout_width="match_parent"
-            android:orientation="vertical"
-            android:layout_height="match_parent">
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
             <LinearLayout
-                android:layout_width="match_parent"
-                android:orientation="vertical"
-                android:layout_height="wrap_content">
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
                 <android.support.v7.widget.AppCompatTextView
-                    android:layout_width="match_parent"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:text="Họ Tên:"
                     android:textColor="@color/colorTextSub"
-                    android:textSize="14dp" />
+                    android:textSize="@dimen/text_size_normal" />
+
                 <android.support.v7.widget.AppCompatEditText
-                    android:layout_marginTop="5dp"
                     android:id="@+id/et_name_profile"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.0dip"
                     android:inputType="textPersonName"
-                    android:layout_width="match_parent"
-                    android:textColor="@color/colorText"
-                    android:layout_height="wrap_content"/>
+                    android:textColor="@color/colorText" />
             </LinearLayout>
+
             <LinearLayout
-                android:layout_width="match_parent"
-                android:orientation="vertical"
-                android:layout_marginTop="10dp"
-                android:layout_height="wrap_content">
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:orientation="vertical">
+
                 <android.support.v7.widget.AppCompatTextView
-                    android:layout_width="match_parent"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:text="Email:"
                     android:textColor="@color/colorTextSub"
-                    android:textSize="14dp" />
+                    android:textSize="@dimen/text_size_normal" />
+
                 <android.support.v7.widget.AppCompatEditText
-                    android:layout_marginTop="5dp"
                     android:id="@+id/et_email_profile"
-                    android:layout_width="match_parent"
-                    android:textColor="@color/colorText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.0dip"
                     android:enabled="false"
                     android:inputType="textEmailAddress"
-                    android:layout_height="wrap_content"/>
+                    android:textColor="@color/colorText" />
             </LinearLayout>
+
             <LinearLayout
-                android:layout_width="match_parent"
-                android:orientation="vertical"
-                android:layout_marginTop="10dp"
-                android:layout_height="wrap_content">
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:orientation="vertical">
+
                 <android.support.v7.widget.AppCompatTextView
-                    android:layout_width="match_parent"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:text="Số điện thoại"
                     android:textColor="@color/colorTextSub"
-                    android:textSize="14dp" />
+                    android:textSize="@dimen/text_size_normal" />
+
                 <android.support.v7.widget.AppCompatEditText
-                    android:layout_marginTop="5dp"
                     android:id="@+id/et_mobilenumber_profile"
-                    android:layout_width="match_parent"
-                    android:textColor="@color/colorText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.0dip"
                     android:inputType="phone"
-                    android:layout_height="wrap_content"/>
+                    android:textColor="@color/colorText" />
             </LinearLayout>
+
             <LinearLayout
-                android:layout_width="match_parent"
-                android:orientation="vertical"
-                android:layout_marginTop="10dp"
-                android:layout_height="wrap_content">
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:orientation="vertical">
+
                 <android.support.v7.widget.AppCompatTextView
-                    android:layout_width="match_parent"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:text="Địa chỉ:"
                     android:textColor="@color/colorTextSub"
-                    android:textSize="14dp" />
+                    android:textSize="@dimen/text_size_normal" />
+
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_weight="10"
-                    android:layout_marginTop="5dp"
-                    android:layout_height="wrap_content">
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.0dip"
+                    android:layout_weight="10.0">
+
                     <android.support.v7.widget.AppCompatAutoCompleteTextView
                         android:id="@+id/tv_location__profile"
-                        android:autoText="true"
-                        android:inputType="text"
-                        android:textColor="@color/colorText"
-                        android:layout_width="match_parent"
-                        android:layout_weight="2"
+                        android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
+                        android:layout_weight="2.0"
+                        android:autoText="true"
                         android:ems="10"
-                        android:padding="15dp" />
+                        android:inputType="text"
+                        android:padding="15.0dip"
+                        android:textColor="@color/colorText" />
+
                     <android.support.v7.widget.AppCompatButton
                         android:id="@+id/bt_location__profile"
-                        android:lines="1"
-                        android:layout_width="match_parent"
+                        android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:paddingTop="5dp"
+                        android:layout_weight="8.0"
                         android:background="@drawable/ripple"
                         android:drawableStart="@drawable/ic_search"
-                        android:layout_weight="8"
-                        android:padding="10dp"
-                        android:textSize="10dp" />
+                        android:lines="1"
+                        android:padding="10.0dip"
+                        android:paddingTop="5.0dip"
+                        android:textSize="10.0dip" />
                 </LinearLayout>
             </LinearLayout>
+
             <LinearLayout
-                android:layout_width="match_parent"
-                android:orientation="vertical"
-                android:layout_marginTop="10dp"
-                android:layout_height="wrap_content">
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:orientation="vertical">
+
                 <android.support.v7.widget.AppCompatTextView
-                    android:layout_width="match_parent"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:text="Ngày sinh:"
                     android:textColor="@color/colorTextSub"
-                    android:textSize="14dp" />
+                    android:textSize="@dimen/text_size_normal" />
+
                 <android.support.v7.widget.AppCompatEditText
-                    android:layout_marginTop="5dp"
                     android:id="@+id/et_birthday_profile"
-                    android:layout_width="match_parent"
-                    android:textColor="@color/colorText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.0dip"
                     android:editable="false"
-                    android:layout_height="wrap_content"/>
+                    android:textColor="@color/colorText" />
             </LinearLayout>
+
             <LinearLayout
-                android:layout_width="match_parent"
-                android:orientation="vertical"
-                android:layout_marginTop="10dp"
-                android:layout_height="wrap_content">
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:orientation="vertical">
+
                 <android.support.v7.widget.AppCompatTextView
-                    android:layout_width="match_parent"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:text="Giới tính:"
                     android:textColor="@color/colorTextSub"
-                    android:textSize="14dp" />
+                    android:textSize="@dimen/text_size_normal" />
+
                 <android.support.v7.widget.AppCompatSpinner
-                    android:layout_marginTop="5dp"
                     android:id="@+id/sn_gender_profile"
-                    android:layout_width="match_parent"
-                    android:textColor="@color/colorText"
-                    android:editable="false"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="5.0dip"
+                    android:editable="false"
                     android:spinnerMode="dropdown"
+                    android:textColor="@color/colorText"
                     android:touchscreenBlocksFocus="false" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
+
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_weight="9"
-        android:weightSum="2"
-        android:layout_height="match_parent">
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="9.0"
+        android:weightSum="2.0">
+
         <android.support.v7.widget.AppCompatButton
             android:id="@+id/btCancel_Profile"
-            android:layout_width="match_parent"
-            android:layout_weight="1"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/ic_delete"
+            android:layout_weight="1.0"
             android:background="@drawable/ripple"
-            android:padding="10dp"
+            android:drawableLeft="@drawable/ic_delete"
+            android:padding="10.0dip"
             android:text="Hủy"
             android:textColor="@color/colorPrimary"
-            android:textSize="15dp" />
+            android:textSize="15.0dip" />
+
         <android.support.v7.widget.AppCompatButton
             android:id="@+id/btSave_Profile"
-            android:layout_weight="1"
-            android:layout_width="match_parent"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="1.0"
             android:background="@drawable/ripple"
-            android:text="Lưu"
             android:drawableLeft="@drawable/ic_save_ac"
+            android:text="Lưu"
             android:textColor="@color/colorPrimary"
-            android:textSize="15dp" />
+            android:textSize="15.0dip" />
     </LinearLayout>
 </LinearLayout>

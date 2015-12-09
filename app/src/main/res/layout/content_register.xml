@@ -1,220 +1,287 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:id="@+id/ln_resgister"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/colorbackgroupwhite"
+    android:focusableInTouchMode="true"
     android:orientation="vertical"
-    android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".JobDetail"
-    tools:showIn="@layout/app_bar_register">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#FF5722"
-        android:layout_weight="45">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Đăng kí thông tin"
-            android:textColor="@android:color/white"
-            android:textSize="30dp"
-            android:gravity="center"/>
-    </LinearLayout>
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_weight="9"
-        android:layout_height="match_parent">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-            android:weightSum="100">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:padding="15.0sp"
+            android:weightSum="100.0">
+
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="25.0"
                 android:orientation="vertical"
-                android:weightSum="100"
-                android:layout_weight="25">
+                android:weightSum="100.0">
+
                 <android.support.v7.widget.AppCompatTextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="60"
-                    android:textSize="25dp"
-                    android:text="Họ tên người dùng:"/>
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="60.0"
+                    android:text="Họ tên"
+                    android:textSize="@dimen/title_job_text_size"
+                    android:textStyle="bold" />
+
                 <android.support.v7.widget.AppCompatEditText
-                    android:id="@+id/dktt_et_ten"
-                    android:layout_width="match_parent"
-                    android:layout_weight="40"
-                    android:hint="Họ tên đầy đủ"
-                    android:layout_height="match_parent" />
+                    android:id="@+id/etName_resgister"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="15.0sp"
+                    android:layout_marginRight="15.0sp"
+                    android:layout_weight="40.0"
+                    android:hint="Chạm để nhập"
+                    android:textSize="@dimen/text_size_normal" />
             </LinearLayout>
+
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="25.0"
                 android:orientation="vertical"
-                android:weightSum="100"
-                android:layout_weight="25">
+                android:weightSum="100.0">
+
                 <android.support.v7.widget.AppCompatTextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="60"
-                    android:textSize="25dp"
-                    android:text="Email:"/>
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="5.0dip"
+                    android:layout_weight="60.0"
+                    android:text="Email *"
+                    android:textSize="@dimen/title_job_text_size"
+                    android:textStyle="bold" />
+
                 <android.support.v7.widget.AppCompatEditText
-                    android:id="@+id/dktt_et_email"
-                    android:layout_width="match_parent"
-                    android:layout_weight="40"
-                    android:hint="Email"
-                    android:layout_height="match_parent" />
+                    android:id="@+id/etEmail_resgister"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="15.0sp"
+                    android:layout_marginRight="15.0sp"
+                    android:layout_weight="40.0"
+                    android:hint="Chạm để nhập"
+                    android:textSize="@dimen/text_size_normal" />
             </LinearLayout>
+
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="25.0"
                 android:orientation="vertical"
-                android:weightSum="100"
-                android:layout_weight="25">
+                android:weightSum="100.0">
+
                 <android.support.v7.widget.AppCompatTextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="60"
-                    android:textSize="25dp"
-                    android:text="Password:"/>
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="5.0dip"
+                    android:layout_weight="60.0"
+                    android:text="Password *"
+                    android:textSize="@dimen/title_job_text_size"
+                    android:textStyle="bold" />
+
                 <android.support.v7.widget.AppCompatEditText
-                    android:id="@+id/dktt_et_password"
-                    android:layout_width="match_parent"
-                    android:layout_weight="40"
-                    android:hint="Password"
+                    android:id="@+id/etPass_resgister"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="15.0sp"
+                    android:layout_marginRight="15.0sp"
+                    android:layout_weight="40.0"
+                    android:hint="Chạm để nhập"
                     android:inputType="textPassword"
-                    android:layout_height="match_parent" />
+                    android:textSize="@dimen/text_size_normal" />
             </LinearLayout>
+
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="25.0"
                 android:orientation="vertical"
-                android:weightSum="100"
-                android:layout_weight="25">
+                android:weightSum="100.0">
+
                 <android.support.v7.widget.AppCompatTextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="60"
-                    android:textSize="25dp"
-                    android:text="Nhập lại password:"/>
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="5.0dip"
+                    android:layout_weight="60.0"
+                    android:text="Nhập lại password *"
+                    android:textSize="@dimen/title_job_text_size"
+                    android:textStyle="bold" />
+
                 <android.support.v7.widget.AppCompatEditText
-                    android:id="@+id/dktt_et_nhaplaiPassword"
-                    android:layout_width="match_parent"
-                    android:layout_weight="40"
-                    android:hint="Nhập lại password"
+                    android:id="@+id/etRe_pass_resgister"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="15.0sp"
+                    android:layout_marginRight="15.0sp"
+                    android:layout_weight="40.0"
+                    android:hint="Chạm để nhập"
                     android:inputType="textPassword"
-                    android:layout_height="match_parent" />
+                    android:textSize="@dimen/text_size_normal" />
             </LinearLayout>
+
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="25.0"
                 android:orientation="vertical"
-                android:weightSum="100"
-                android:layout_weight="25">
+                android:weightSum="100.0">
+
                 <android.support.v7.widget.AppCompatTextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="60"
-                    android:textSize="25dp"
-                    android:text="Giới tính:"/>
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="5.0dip"
+                    android:layout_weight="60.0"
+                    android:text="Giới tính"
+                    android:textSize="@dimen/title_job_text_size"
+                    android:textStyle="bold" />
+
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="40">
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="15.0sp"
+                    android:layout_marginRight="15.0sp"
+                    android:layout_weight="40.0">
+
                     <RadioGroup
-                        android:layout_width="match_parent"
-                        android:weightSum="100"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
                         android:orientation="horizontal"
-                        android:layout_height="match_parent">
+                        android:weightSum="100.0">
+
                         <android.support.v7.widget.AppCompatRadioButton
-                            android:id="@+id/dktt_rb_Nam"
-                            android:layout_width="match_parent"
-                            android:layout_weight="50"
+                            android:id="@+id/rbMale_register"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="50.0"
                             android:text="Nam"
-                            android:layout_height="match_parent" />
+                            android:textColor="@color/colorTextSub" />
+
                         <android.support.v7.widget.AppCompatRadioButton
-                            android:id="@+id/dktt_rb_Nu"
-                            android:layout_width="match_parent"
-                            android:layout_weight="50"
+                            android:id="@+id/rbFeMale_register"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="50.0"
                             android:text="Nữ"
-                            android:layout_height="match_parent" />
+                            android:textColor="@color/colorTextSub" />
                     </RadioGroup>
                 </LinearLayout>
             </LinearLayout>
+
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="25.0"
                 android:orientation="vertical"
-                android:weightSum="100"
-                android:layout_weight="25">
+                android:weightSum="100.0">
+
                 <android.support.v7.widget.AppCompatTextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="60"
-                    android:textSize="25dp"
-                    android:text="Số điện thoại:"/>
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="5.0dip"
+                    android:layout_weight="60.0"
+                    android:text="Số điện thoại"
+                    android:textSize="@dimen/title_job_text_size"
+                    android:textStyle="bold" />
+
                 <android.support.v7.widget.AppCompatEditText
-                    android:id="@+id/dktt_et_sdt"
-                    android:layout_width="match_parent"
-                    android:layout_weight="40"
-                    android:hint="Nhập số điện thoại"
-                    android:inputType="number"
-                    android:layout_height="match_parent" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:weightSum="100"
-                android:layout_weight="25">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="60"
-                    android:textSize="25dp"
-                    android:text="Ngày sinh:"/>
-                <EditText
-                    android:id="@+id/dktt_et_ngaysinh"
-                    android:layout_width="match_parent"
-                    android:layout_weight="40"
+                    android:id="@+id/etPhone_resgister"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="15.0sp"
+                    android:layout_marginRight="15.0sp"
+                    android:layout_weight="40.0"
                     android:hint="Chạm để nhập"
+                    android:inputType="phone"
+                    android:textSize="@dimen/text_size_normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="25.0"
+                android:orientation="vertical"
+                android:weightSum="100.0">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="5.0dip"
+                    android:layout_weight="60.0"
+                    android:text="Ngày sinh"
+                    android:textSize="@dimen/title_job_text_size"
+                    android:textStyle="bold" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/etBirthday_resgister"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="15.0sp"
+                    android:layout_marginRight="15.0sp"
+                    android:layout_marginTop="5.0dip"
+                    android:layout_weight="40.0"
                     android:editable="false"
-                    android:layout_height="match_parent" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:weightSum="100"
-                android:layout_weight="25">
-                <android.support.v7.widget.AppCompatTextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="60"
-                    android:textSize="25dp"
-                    android:text="Địa chỉ:"/>
-                <android.support.v7.widget.AppCompatEditText
-                    android:id="@+id/dktt_et_diachi"
-                    android:layout_width="match_parent"
-                    android:layout_weight="40"
                     android:hint="Chạm để nhập"
-                    android:layout_height="match_parent" />
+                    android:textSize="@dimen/text_size_normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="25.0"
+                android:orientation="vertical"
+                android:weightSum="100.0">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="5.0dip"
+                    android:layout_weight="60.0"
+                    android:text="Địa chỉ"
+                    android:textSize="@dimen/title_job_text_size"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15.0sp"
+                    android:layout_marginRight="15.0sp"
+                    android:layout_weight="10.0">
+
+                    <android.support.v7.widget.AppCompatAutoCompleteTextView
+                        android:id="@+id/acLocation_register"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.0"
+                        android:autoText="true"
+                        android:ems="10"
+                        android:inputType="text"
+                        android:padding="15.0dip"
+                        android:textColor="@color/colorText" />
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/btLocation_register"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8.0"
+                        android:background="@drawable/ripple"
+                        android:drawableRight="@drawable/ic_search"
+                        android:lines="1"
+                        android:padding="10.0dip"
+                        android:paddingTop="5.0dip"
+                        android:textSize="10.0dip" />
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="46">
-        <android.support.v7.widget.AppCompatButton
-            android:id="@+id/dktt_bt_dangKi"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="50"
-            android:background="@drawable/ripple"
-            android:text="Đăng kí"/>
-    </LinearLayout>
 </LinearLayout>

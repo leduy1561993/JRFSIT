@@ -1,42 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/ln_job_rec_failed"
-    android:layout_height="match_parent"
-    tools:showIn="@layout/app_bar_job_rec"
-    tools:context=".RecommendJobActivity">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
     <LinearLayout
-        android:layout_width="match_parent"
-        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:padding="50dp"
-        android:layout_height="wrap_content">
+        android:orientation="vertical"
+        android:padding="50.0dip">
+
         <LinearLayout
-            android:layout_width="match_parent"
-            android:weightSum="10"
-            android:layout_height="wrap_content">
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="10.0">
+
             <TextView
-                android:layout_width="match_parent"
-                android:text="Xin lỗi ..."
-                android:textSize="40dp"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="3.0"
                 android:gravity="center_vertical"
-                android:layout_weight="3"
-                android:textStyle="bold"
-                android:layout_height="match_parent" />
+                android:text="Xin lỗi ..."
+                android:textSize="40.0dip"
+                android:textStyle="bold" />
+
             <ImageView
-                android:layout_width="match_parent"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_weight="7"
-                android:src="@drawable/sad"
-                android:layout_height="wrap_content" />
+                android:layout_weight="7.0"
+                android:src="@drawable/sad" />
         </LinearLayout>
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:textSize="15dp"
-            android:text="    Xin lỗi, không giới thiệu công việc nào cho bạn.
-    Hãy bổ sung thông tin và đánh giá công việc quan tâm để được giới thiệu công việc chính xác hơn."/>
+            android:text="    Xin lỗi, không giới thiệu công việc nào cho bạn.     Hãy bổ sung thông tin và đánh giá công việc quan tâm để được giới thiệu công việc chính xác hơn."
+            android:textSize="15.0dip" />
     </LinearLayout>
 </LinearLayout>

@@ -1,3 +1,7 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
 package vn.edu.uit.jrfsit.adapter;
 
 import android.app.Activity;
@@ -6,47 +10,40 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-
-
 import java.util.List;
-
-import vn.edu.uit.jrfsit.R;
 import vn.edu.uit.jrfsit.entity.JobSearch;
 
-/**
- * Created by LeDuy on 11/5/2015.
- */
-public class SearchRecenlyListApdapter extends ArrayAdapter<JobSearch> {
+public class SearchRecenlyListApdapter extends ArrayAdapter
+{
+
     private final Activity context;
-    private final List<JobSearch> list;
+    private final List list;
     protected AppCompatTextView tvKey;
     protected AppCompatTextView tvLocation;
     protected AppCompatTextView tvSearchmode;
     protected AppCompatTextView tvSpecial;
 
-    public SearchRecenlyListApdapter(Activity context, List<JobSearch> list) {
-        super(context, R.layout.list_job_search, list);
-        this.context = context;
-        this.list = list;
+    public SearchRecenlyListApdapter(Activity activity, List list1)
+    {
+        super(activity, 0x7f04003f, list1);
+        context = activity;
+        list = list1;
     }
 
-    @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        View view = null;
-        if (convertView == null) {
-            LayoutInflater inflator = context.getLayoutInflater();
-            view = inflator.inflate(R.layout.list_job_search, null);
-            tvKey = (AppCompatTextView) view.findViewById(R.id.tv_keyword_search_item);
-            tvLocation = (AppCompatTextView) view.findViewById(R.id.tv_location_search_item);
-            tvSearchmode = (AppCompatTextView) view.findViewById(R.id.tv_search_mode_item);
-            tvSpecial = (AppCompatTextView) view.findViewById(R.id.tv_special_search_item);
-        } else {
-            view = convertView;
+    public View getView(int i, View view, ViewGroup viewgroup)
+    {
+        if (view == null)
+        {
+            view = context.getLayoutInflater().inflate(0x7f04003f, null);
+            tvKey = (AppCompatTextView)view.findViewById(0x7f0e00ec);
+            tvLocation = (AppCompatTextView)view.findViewById(0x7f0e00ed);
+            tvSearchmode = (AppCompatTextView)view.findViewById(0x7f0e00ef);
+            tvSpecial = (AppCompatTextView)view.findViewById(0x7f0e00ee);
         }
-        tvKey.setText(list.get(position).getJobName());
-        tvLocation.setText(list.get(position).getLocation());
-        tvSearchmode.setText(list.get(position).getSortmode());
-        tvSpecial.setText(list.get(position).getSpecialy());
+        tvKey.setText(((JobSearch)list.get(i)).getJobName());
+        tvLocation.setText(((JobSearch)list.get(i)).getLocation());
+        tvSearchmode.setText(((JobSearch)list.get(i)).getSortmode());
+        tvSpecial.setText(((JobSearch)list.get(i)).getSpecialy());
         return view;
     }
 }

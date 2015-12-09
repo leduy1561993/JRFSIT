@@ -11,4 +11,5 @@
     <color name="colorJob">#B2EBF2</color>
     <color name="colorbackgroup">#0097A7</color>
     <color name="colorstarrating">#FBC02D</color>
+    <color name="colorbackgroupwhite">#FFFF</color>
 </resources>

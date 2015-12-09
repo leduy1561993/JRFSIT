@@ -1,21 +1,25 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
 package vn.edu.uit.jrfsit.service;
+
+import java.io.IOException;
+import java.util.ArrayList;
 
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.io.IOException;
-import java.util.ArrayList;
-
 import vn.edu.uit.jrfsit.connect.Connect;
 import vn.edu.uit.jrfsit.entity.JobSearch;
 
-/**
- * Created by LeDuy on 11/19/2015.
- */
-public class SearchService extends BaseService {
+// Referenced classes of package vn.edu.uit.jrfsit.service:
+//            BaseService
+
+public class SearchService extends BaseService
+{
     public ArrayList<JobSearch> getResultSearch(String jobName, String location,String special, String offset,String sortMode){
         Connect connect = super.initConnection("doan/search.php");
         boolean checkKeyWord = false;

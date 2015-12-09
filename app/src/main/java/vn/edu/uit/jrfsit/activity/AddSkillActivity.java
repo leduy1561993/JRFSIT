@@ -1,3 +1,7 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
 package vn.edu.uit.jrfsit.activity;
 
 import android.app.Activity;
@@ -7,8 +11,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.AppCompatSpinner;
-import android.support.v7.widget.Toolbar;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -19,16 +21,16 @@ import vn.edu.uit.jrfsit.R;
 import vn.edu.uit.jrfsit.entity.Skill;
 import vn.edu.uit.jrfsit.utils.Utils;
 
+public class AddSkillActivity extends AppCompatActivity
+{
 
-/**
- * Created by LeDuy on 11/1/2015.
- */
-public class AddSkillActivity extends AppCompatActivity {
-    protected AppCompatSpinner pnSkill;
-    protected AppCompatSpinner pnExperence;
     private AppCompatButton btCancel;
     private AppCompatButton btSave;
+    protected AppCompatSpinner pnExperence;
+    protected AppCompatSpinner pnSkill;
     private Skill skill;
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_getskill);
@@ -36,13 +38,17 @@ public class AddSkillActivity extends AppCompatActivity {
         initData();
         initListener();
     }
-    private void initControlOnView(){
+
+    private void initControlOnView()
+    {
         pnSkill = (AppCompatSpinner) findViewById(R.id.sn_skill);
         pnExperence = (AppCompatSpinner) findViewById(R.id.sn_experience);
         btCancel = (AppCompatButton) findViewById(R.id.btCancel_Skill);
         btSave = (AppCompatButton) findViewById(R.id.btSave_Skill);
     }
-    private void initData(){
+
+    private void initData()
+    {
         skill= new Skill();
         // set data pnskill
 
@@ -113,8 +119,10 @@ public class AddSkillActivity extends AppCompatActivity {
         adapterExperience.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         pnExperence.setAdapter(adapterExperience);
     }
-    private void initListener(){
-        pnSkill.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
+    private void initListener()
+    {
+        pnSkill.setOnItemSelectedListener(new android.widget.AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 pnSkill.setTag(String.valueOf(position));
@@ -142,12 +150,12 @@ public class AddSkillActivity extends AppCompatActivity {
                 }
             }
         });
-
-        btCancel.setOnClickListener(new View.OnClickListener() {
+        btCancel.setOnClickListener(new android.view.View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 finish();
             }
         });
     }
+
 }

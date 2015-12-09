@@ -1,23 +1,26 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
 package vn.edu.uit.jrfsit.service;
+
+import java.io.IOException;
+import java.util.ArrayList;
 
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.io.IOException;
-import java.util.ArrayList;
-
 import vn.edu.uit.jrfsit.connect.Connect;
 import vn.edu.uit.jrfsit.entity.Job;
 import vn.edu.uit.jrfsit.entity.JobSearch;
 
-/**
- * Created by LeDuy on 11/19/2015.
- */
-public class JobService extends BaseService {
+// Referenced classes of package vn.edu.uit.jrfsit.service:
+//            BaseService
 
+public class JobService extends BaseService
+{
     public Job getJob(String JobId, String idUser) throws JSONException {
 
         Connect connect = super.initConnection("doan/getJobDetail.php");
@@ -66,47 +69,6 @@ public class JobService extends BaseService {
         return job;
     }
 
-
-    public boolean insertSaveJob(String idUser, String idJob) {
-        Connect connect = super.initConnection("doan/insertSaveJob.php");
-        ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
-        nameValuePairs.add(new BasicNameValuePair("idUser", idUser));
-        nameValuePairs.add(new BasicNameValuePair("JobId", idJob));
-        boolean result;
-        String check;
-        try {
-            result = connect.DUI(nameValuePairs);
-        } catch (IOException e) {
-            e.printStackTrace();
-            result = false;
-        } catch (JSONException e) {
-            e.printStackTrace();
-            result = false;
-        }
-
-        return result;
-    }
-
-    public boolean updateSaveJob(String idUser, String idJob, String isSave) {
-        Connect connect = super.initConnection("doan/updateSaveJob.php");
-        ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
-        nameValuePairs.add(new BasicNameValuePair("idUser", idUser));
-        nameValuePairs.add(new BasicNameValuePair("JobId", idJob));
-        nameValuePairs.add(new BasicNameValuePair("isSave", isSave));
-        String check;
-        boolean result;
-        try {
-            result = connect.DUI(nameValuePairs);
-        } catch (IOException e) {
-            e.printStackTrace();
-            result = false;
-        } catch (JSONException e) {
-            e.printStackTrace();
-            result = false;
-        }
-        return result;
-    }
-
     public ArrayList<JobSearch> getSaveJob(String idUser, String offset) {
         Connect connect = super.initConnection("doan/getSaveJob.php");
         ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
@@ -141,5 +103,44 @@ public class JobService extends BaseService {
             list = null;
         }
         return list;
+    }
+
+    public boolean updateSaveJob(String idUser, String idJob, String isSave) {
+        Connect connect = super.initConnection("doan/updateSaveJob.php");
+        ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
+        nameValuePairs.add(new BasicNameValuePair("idUser", idUser));
+        nameValuePairs.add(new BasicNameValuePair("JobId", idJob));
+        nameValuePairs.add(new BasicNameValuePair("isSave", isSave));
+        String check;
+        boolean result;
+        try {
+            result = connect.DUI(nameValuePairs);
+        } catch (IOException e) {
+            e.printStackTrace();
+            result = false;
+        } catch (JSONException e) {
+            e.printStackTrace();
+            result = false;
+        }
+        return result;
+    }
+    public boolean insertSaveJob(String idUser, String idJob) {
+        Connect connect = super.initConnection("doan/insertSaveJob.php");
+        ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
+        nameValuePairs.add(new BasicNameValuePair("idUser", idUser));
+        nameValuePairs.add(new BasicNameValuePair("JobId", idJob));
+        boolean result;
+        String check;
+        try {
+            result = connect.DUI(nameValuePairs);
+        } catch (IOException e) {
+            e.printStackTrace();
+            result = false;
+        } catch (JSONException e) {
+            e.printStackTrace();
+            result = false;
+        }
+
+        return result;
     }
 }

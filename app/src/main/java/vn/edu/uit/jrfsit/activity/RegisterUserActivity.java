@@ -1,217 +1,347 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
 package vn.edu.uit.jrfsit.activity;
 
 import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
-import android.os.StrictMode;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.AppCompatAutoCompleteTextView;
+import android.support.v7.widget.AppCompatButton;
+import android.support.v7.widget.AppCompatEditText;
+import android.support.v7.widget.AppCompatRadioButton;
+import android.support.v7.widget.Toolbar;
+import android.view.KeyEvent;
+import android.view.MotionEvent;
 import android.view.View;
-import android.widget.Button;
+import android.view.ViewGroup;
+import android.view.Window;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.AdapterView;
 import android.widget.DatePicker;
-import android.widget.EditText;
-import android.widget.RadioButton;
-import android.widget.Toast;
+import android.widget.TextView;
+
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
+import com.google.android.gms.common.GooglePlayServicesRepairableException;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.location.places.Place;
+import com.google.android.gms.location.places.Places;
+import com.google.android.gms.location.places.ui.PlacePicker;
 
 import vn.edu.uit.jrfsit.R;
+import vn.edu.uit.jrfsit.adapter.AutoCompleteAdapter;
+import vn.edu.uit.jrfsit.layoutcomponent.AutoCompletePlace;
+import vn.edu.uit.jrfsit.service.UserService;
+import vn.edu.uit.jrfsit.utils.Utils;
 
-/**
- * Created by LeDuy on 10/27/2015.
- */
-public class RegisterUserActivity extends Activity {
-        EditText hoten;
-        EditText email;
-        EditText passWord;
-        EditText rePassWord;
-        RadioButton gtNam;
-        RadioButton gtNu;
-        EditText sdt;
-        EditText ngaySinh;
-        EditText diaChi;
-        Button troLai;
-        Button dangKi;
-        private int year = 1993;
-        private int month = 6;
-        private int day = 15;
-        static final int DATE_DIALOG_ID = 999;
-        ProgressDialog dialog = null;
-        String check = null;
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_register);
-            if (android.os.Build.VERSION.SDK_INT > 8) {
-                StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder()
-                        .permitAll().build();
-                StrictMode.setThreadPolicy(policy);
+public class RegisterUserActivity extends AppCompatActivity
+        implements com.google.android.gms.common.api.GoogleApiClient.ConnectionCallbacks, com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener {
+
+    static final int DATE_DIALOG_ID = 999;
+    public static final String PARAM_EXTRA_QUERY = "place_picker_extra_query";
+    int PLACE_PICKER_REQUEST;
+    String check;
+    private android.app.DatePickerDialog.OnDateSetListener datePickerListener;
+    ProgressDialog dialog;
+    android.content.DialogInterface.OnClickListener dialogClickListener;
+    AppCompatAutoCompleteTextView mAcAddress;
+    AppCompatButton mBtLocation;
+    AppCompatButton mBtRegister;
+    AppCompatEditText mEtBirthday;
+    AppCompatEditText mEtEmail;
+    AppCompatEditText mEtName;
+    AppCompatEditText mEtPassword;
+    AppCompatEditText mEtPhone;
+    AppCompatEditText mEtRePassword;
+    private GoogleApiClient mGoogleApiClient;
+    AppCompatRadioButton mRbFemale;
+    AppCompatRadioButton mRbMale;
+    Toolbar mToolbar;
+    private int month = 6;
+    UserService userService;
+    private int year = 1993;
+    private int day = 15;
+
+    @Override
+    protected void onCreate(Bundle bundle) {
+        super.onCreate(bundle);
+        setContentView(R.layout.activity_register);
+        load();
+    }
+
+    private void initControlOnView() {
+        mToolbar = (Toolbar) findViewById(R.id.toolbar_register);
+        mBtRegister = (AppCompatButton) findViewById(R.id.btRegister_user);
+        mEtName = (AppCompatEditText) findViewById(R.id.etName_resgister);
+        mEtEmail = (AppCompatEditText) findViewById(R.id.etEmail_resgister);
+        mEtPassword = (AppCompatEditText) findViewById(R.id.etPass_resgister);
+        mEtRePassword = (AppCompatEditText) findViewById(R.id.etRe_pass_resgister);
+        mRbFemale = (AppCompatRadioButton) findViewById(R.id.rbFeMale_register);
+        mRbMale = (AppCompatRadioButton) findViewById(R.id.rbMale_register);
+        mEtPhone = (AppCompatEditText) findViewById(R.id.etPhone_resgister);
+        mEtBirthday = (AppCompatEditText) findViewById(R.id.etBirthday_resgister);
+        mAcAddress = (AppCompatAutoCompleteTextView) findViewById(R.id.acLocation_register);
+        mBtLocation = (AppCompatButton) findViewById(R.id.btLocation_register);
+    }
+
+    private void initListener() {
+        mToolbar.setNavigationOnClickListener(new android.view.View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                (new android.app.AlertDialog.Builder(RegisterUserActivity.this))
+                        .setMessage("Cài đặt chưa được lưu, bạn thực sự muốn thoát không?")
+                        .setPositiveButton("Có", dialogClickListener)
+                        .setNegativeButton("Không", dialogClickListener)
+                        .show();
             }
-        /*
-        dang ki button
-         */
-            ngaySinh = (EditText) findViewById(R.id.dktt_et_ngaysinh);
-            dangKi = (Button) findViewById(R.id.dktt_bt_dangKi);
-            hoten = (EditText) findViewById(R.id.dktt_et_ten);
-            email = (EditText) findViewById(R.id.dktt_et_email);
-            passWord = (EditText) findViewById(R.id.dktt_et_password);
-            rePassWord = (EditText) findViewById(R.id.dktt_et_nhaplaiPassword);
-            gtNam = (RadioButton) findViewById(R.id.dktt_rb_Nam);
-            gtNam.setChecked(true);
-            gtNu = (RadioButton) findViewById(R.id.dktt_rb_Nu);
-            sdt = (EditText) findViewById(R.id.dktt_et_sdt);
-            diaChi = (EditText) findViewById(R.id.dktt_et_diachi);
-        /*
-        su kiem button
-         */
-            ngaySinh.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    showDialog(DATE_DIALOG_ID);
-                }
-            });
-            troLai.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    finish();
-                    startActivity(new Intent(getApplicationContext(), LoginActivity.class));
-                }
-            });
+        });
+        mBtLocation.setOnClickListener(new android.view.View.OnClickListener() {
 
-            dangKi.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (hoten.getText().length() > 6) {
-                        if (email.getText().length() > 12) {
-                            if (passWord.getText().length() > 6) {
-                                if (rePassWord.getText().toString().trim().equals(passWord.getText().toString().trim())) {
-                                    if (sdt.getText().length() > 9 || sdt.getText().length() < 12) {
-                                        if (ngaySinh.getText().length() > 0) {
-                                            if (diaChi.getText().length() > 10) {
-                                            /*AlertDialog.Builder builder = new AlertDialog.Builder(DangKiNguoiDung.this);
-                                            builder.setMessage("Tiến trình đang thực hiện, vui lòng chờ");
-                                            AlertDialog OptionDialog = builder.create();
-                                            OptionDialog.show();*/
-                                                dialog = ProgressDialog.show(RegisterUserActivity.this, "",
-                                                        "Đang đăng kí.....", true);
-                                                new Thread(new Runnable() {
-                                                    public void run() {
-                                                        DangKi();
-                                                    }
-                                                }).start();
-                                            } else {
-                                                Toast.makeText(getBaseContext(), "Địa chỉ nhập vào phải lớn hơn 10 kí tự !", Toast.LENGTH_SHORT).show();
-                                            }
-                                        } else {
-                                            Toast.makeText(getBaseContext(), "Bạn chưa chọn ngày sinh !", Toast.LENGTH_SHORT).show();
-                                        }
-                                    } else {
-                                        Toast.makeText(getBaseContext(), "Số điện thoại nhập vào sai!", Toast.LENGTH_SHORT).show();
-                                    }
-                                } else {
-                                    Toast.makeText(getBaseContext(), "Password nhập lại không khớp!", Toast.LENGTH_SHORT).show();
-                                }
-                            } else {
-                                Toast.makeText(getBaseContext(), "Password nhập vào phải lớn hơn 6 kí tự !", Toast.LENGTH_SHORT).show();
-                            }
-                        } else {
-                            Toast.makeText(getBaseContext(), "Email nhập vào phải lớn hơn 6 kí tự !", Toast.LENGTH_SHORT).show();
-                        }
-                    } else {
-                        Toast.makeText(getBaseContext(), "Tên nhập vào phải lớn hơn 6 kí tự !", Toast.LENGTH_SHORT).show();
-                    }
+            @Override
+            public void onClick(View v) {
+                int PLACE_PICKER_REQUEST = 1;
+                PlacePicker.IntentBuilder builder = new PlacePicker.IntentBuilder();
+                try {
+                    Intent intent = builder.build(getApplicationContext());
+                    intent.putExtra(PARAM_EXTRA_QUERY, "&components=country:gh&types=(cities)");
+                    startActivityForResult(intent, PLACE_PICKER_REQUEST);
+                } catch (GooglePlayServicesRepairableException e) {
+                    e.printStackTrace();
+                } catch (GooglePlayServicesNotAvailableException e) {
+                    e.printStackTrace();
                 }
-            });
-        }
-
-
-        @Override
-        protected Dialog onCreateDialog(int id) {
-            switch (id) {
-                case DATE_DIALOG_ID:
-                    return new DatePickerDialog(this, datePickerListener,
-                            year, (month), day);
             }
-            return null;
-        }
-        private DatePickerDialog.OnDateSetListener datePickerListener
-                = new DatePickerDialog.OnDateSetListener() {
-            public void onDateSet(DatePicker view, int selectedYear,
-                                  int selectedMonth, int selectedDay) {
-                year = selectedYear;
-                month = selectedMonth;
-                day = selectedDay;
-                String strDay=String.valueOf(day);
-                String strMonth = String.valueOf(month+1);
-                if(day<10){
-                    strDay="0"+strDay;
-                }
-                if(month<10){
-                    strMonth="0"+strMonth;
-                }
-
-                ngaySinh.setText(new StringBuilder().append(year)
-                        .append("-").append(strMonth).append("-").append(strDay)
-                        .append(" "));
+        });
+        mAcAddress.setOnItemClickListener(new android.widget.AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                AutoCompletePlace selection = (AutoCompletePlace) parent.getItemAtPosition(position);
+                mAcAddress.setText(getCity(selection.getDescription()));
             }
-        };
-        public void DangKi(){
-            /*Util util = new Util();
-            String text_hoTen = hoten.getText().toString();
-            String text_email = email.getText().toString();
-            String text_password = rePassWord.getText().toString();
-            String text_sdt = sdt.getText().toString();
-            String gt=null;
-            if(gtNam.isChecked()){
-                gt="Nam";
-            }else{
-                gt="Nu";
+        });
+        mEtBirthday.setOnTouchListener(new android.view.View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionevent) {
+                showDialog(999);
+                return false;
             }
-            String text_ngaySinh = ngaySinh.getText().toString();
-            String text_diaChi = diaChi.getText().toString();
-            String link = "http://mto.16mb.com/mto/insertUser.php";
-            Connect connect = new Connect(link);
-            ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
-            nameValuePairs.add(new BasicNameValuePair("MaNguoiDung", util.LayMaCuoi_User()));
-            nameValuePairs.add(new BasicNameValuePair("HoTen", text_hoTen));
-            nameValuePairs.add(new BasicNameValuePair("GioiTinh", gt));
-            nameValuePairs.add(new BasicNameValuePair("NgaySinh", text_ngaySinh));
-            nameValuePairs.add(new BasicNameValuePair("SDT", text_sdt));
-            nameValuePairs.add(new BasicNameValuePair("DiaChi", text_diaChi));
-            nameValuePairs.add(new BasicNameValuePair("Email", text_email));
-            nameValuePairs.add(new BasicNameValuePair("PassWord", text_password));
-            check = "a";
-            check = connect.connect_ArrayList(nameValuePairs, "success");
-
-            if (check.equals("1")) {
-                runOnUiThread(new Runnable() {
+        });
+        mEtPassword.setOnTouchListener(new android.view.View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionevent) {
+                if (Utils.isValidEmail(mEtEmail.getText().toString())) {
+                    mEtEmail.setCompoundDrawablesWithIntrinsicBounds(null, null, getResources().getDrawable(R.drawable.ic_check_ok), null);
+                    mEtEmail.setTag("1");
+                } else {
+                    mEtEmail.setCompoundDrawablesWithIntrinsicBounds(null, null, getResources().getDrawable(R.drawable.ic_delete), null);
+                    mEtEmail.setText("");
+                }
+                return false;
+            }
+        });
+        mBtRegister.setOnClickListener(new android.view.View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog = ProgressDialog.show(RegisterUserActivity.this, "", "Vui lòng chờ....", true);
+                (new Thread(new Runnable() {
                     public void run() {
-                        Toast.makeText(getBaseContext(), " Đăng kí thành công!", Toast.LENGTH_SHORT).show();
+                        register();
                     }
-                });
-                dialog.dismiss();
-                finish();
-                startActivity(new Intent(getApplicationContext(), dangnhap.class));
+                })).start();
+            }
+        });
+    }
+
+    private void load() {
+        initControlOnView();
+        setSupportActionBar(mToolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        mRbMale.setChecked(true);
+        AutoCompleteAdapter autocompleteadapter = new AutoCompleteAdapter(this);
+        mGoogleApiClient = (new com.google.android.gms.common.api.GoogleApiClient.Builder(this)).addApi(Places.GEO_DATA_API).addApi(Places.PLACE_DETECTION_API).addConnectionCallbacks(this).addOnConnectionFailedListener(this).build();
+        mGoogleApiClient.connect();
+        autocompleteadapter.setGoogleApiClient(mGoogleApiClient);
+        mAcAddress.setAdapter(autocompleteadapter);
+        setupUI(findViewById(R.id.ln_resgister));
+        initListener();
+    }
+
+    String getCity(String address) {
+        String[] temp;
+        String city = null;
+        if (address != null) {
+            temp = address.split(",");
+            if (temp != null && temp.length >= 2) {
+                city = temp[temp.length - 2];
+            }
+            return city;
+        }
+        return null;
+    }
+
+
+    public void hideSoftKeyboard(AppCompatActivity appcompatactivity) {
+        InputMethodManager inputMethodManager = (InputMethodManager) this.getSystemService(Activity.INPUT_METHOD_SERVICE);
+        inputMethodManager.hideSoftInputFromWindow(this.getCurrentFocus().getWindowToken(), 0);
+        View v = this.getWindow().getDecorView();
+        v.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == PLACE_PICKER_REQUEST) {
+            if (resultCode == -1) {
+                Place place = PlacePicker.getPlace(data, RegisterUserActivity.this);
+                mAcAddress.setText(getCity((String) place.getAddress()));
+            }
+        }
+    }
+
+    @Override
+    public void onConnected(Bundle bundle) {
+        if (mGoogleApiClient != null) {
+            mGoogleApiClient.connect();
+        }
+    }
+
+    @Override
+    public void onConnectionFailed(ConnectionResult connectionresult) {
+    }
+
+    @Override
+    public void onConnectionSuspended(int i) {
+        if (mGoogleApiClient != null && mGoogleApiClient.isConnected()) {
+            mGoogleApiClient.disconnect();
+        }
+        super.onStop();
+    }
+
+
+    @Override
+    protected Dialog onCreateDialog(int i) {
+        switch (i) {
+            default:
+                return null;
+
+            case 999:
+                return new DatePickerDialog(this, datePickerListener, year, month, day);
+        }
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        mGoogleApiClient.disconnect();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        mGoogleApiClient.connect();
+    }
+
+    public void register() {
+        userService = new UserService();
+        String fullName = mEtName.getText().toString();
+        String email = mEtEmail.getText().toString();
+        String password = mEtRePassword.getText().toString();
+        String birthday = mEtBirthday.getText().toString();
+        String address = mAcAddress.getText().toString();
+        String phone = mEtPhone.getText().toString();
+        String gender;
+        String tem="";
+        if (mRbMale.isChecked()) {
+            tem = "Nam";
+        } else {
+            tem = "Nữ";
+        }
+        gender = tem;
+        String careerObjective;
+        String imageUrl;
+        if (fullName.length() > 5 || "".equals(fullName)) {
+            if (email.length() > 13 && mEtEmail.getTag().equals("1")) {
+                if ("1".equals(mEtRePassword.getTag())) {
+                    boolean flag = userService.insertUser(fullName, email, password, birthday, address, phone, gender, "", "");
+                    dialog.dismiss();
+                    if (flag) {
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                Utils.print(RegisterUserActivity.this, "Đăng kí thành công, vui lòng kiểm tra mail để kích hoạt tài khoản");
+                                dialog.dismiss();
+                            }
+                        });
+                        return;
+                    } else {
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                Utils.print(RegisterUserActivity.this, "Thất bại, kiểm tra kết nối");
+                            }
+                        });
+                        return;
+                    }
+                } else {
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            Utils.print(RegisterUserActivity.this, "Mật khẩu không (lớn hơn 5 ks tự)");
+                        }
+                    });
+                    return;
+                }
             } else {
                 runOnUiThread(new Runnable() {
+                    @Override
                     public void run() {
-                        Toast.makeText(getBaseContext(), " Đăng kí thất bại!", Toast.LENGTH_SHORT).show();
+                        Utils.print(RegisterUserActivity.this, "Email không hợp lệ");
                     }
                 });
-                dialog.dismiss();
-            }*/
-        }
-        @Override
-        public void onWindowFocusChanged(boolean hasFocus) {
-            super.onWindowFocusChanged(hasFocus);
-            View v = getWindow().getDecorView();
-            if (hasFocus) {
-                v.setSystemUiVisibility(
-                        View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                                | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                                | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                                | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                                | View.SYSTEM_UI_FLAG_FULLSCREEN
-                                | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
+                return;
             }
+        } else {
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    Utils.print(RegisterUserActivity.this, "Tên không hợp lệ, lớn hơn 5 ký tự");
+                }
+            });
+            return;
         }
+    }
+
+    public void setupUI(View view) {
+        if (!(view instanceof AppCompatAutoCompleteTextView)) {
+            view.setOnTouchListener(new android.view.View.OnTouchListener() {
+                @Override
+                public boolean onTouch(View view1, MotionEvent motionevent) {
+                    hideSoftKeyboard(RegisterUserActivity.this);
+                    if (mEtPassword.getText().toString().equals(mEtRePassword.getText().toString()) && mEtPassword.getText().toString().length() > 5) {
+                        mEtRePassword.setCompoundDrawablesWithIntrinsicBounds(null, null, getResources().getDrawable(R.drawable.ic_check_ok), null);
+                        mEtRePassword.setTag("1");
+                    } else {
+                        mEtRePassword.setCompoundDrawablesWithIntrinsicBounds(null, null, getResources().getDrawable(R.drawable.ic_delete), null);
+                        mEtRePassword.setTag("0");
+                    }
+                    return false;
+                }
+            });
+        }
+        if (view instanceof ViewGroup) {
+            for (int i = 0; i < ((ViewGroup) view).getChildCount(); i++) {
+                setupUI(((ViewGroup) view).getChildAt(i));
+            }
+
+        }
+    }
 }

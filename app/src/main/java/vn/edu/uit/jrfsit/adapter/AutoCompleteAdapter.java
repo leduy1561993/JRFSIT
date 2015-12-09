@@ -97,24 +97,24 @@ public class AutoCompleteAdapter extends ArrayAdapter<AutoCompletePlace> {
         filterTypes.add( Place.TYPE_GEOCODE);
 
         Places.GeoDataApi.getAutocompletePredictions( mGoogleApiClient, query, bounds, AutocompleteFilter.create( filterTypes ) )
-            .setResultCallback (
-                new ResultCallback<AutocompletePredictionBuffer>() {
-                    @Override
-                    public void onResult( AutocompletePredictionBuffer buffer ) {
+                .setResultCallback (
+                        new ResultCallback<AutocompletePredictionBuffer>() {
+                            @Override
+                            public void onResult( AutocompletePredictionBuffer buffer ) {
 
-                        if( buffer == null )
-                            return;
+                                if( buffer == null )
+                                    return;
 
-                        if( buffer.getStatus().isSuccess() ) {
-                            for( AutocompletePrediction prediction : buffer ) {
-                                //Add as a new item to avoid IllegalArgumentsException when buffer is released
-                                add( new AutoCompletePlace( prediction.getPlaceId(), prediction.getDescription() ) );
+                                if( buffer.getStatus().isSuccess() ) {
+                                    for( AutocompletePrediction prediction : buffer ) {
+                                        //Add as a new item to avoid IllegalArgumentsException when buffer is released
+                                        add( new AutoCompletePlace( prediction.getPlaceId(), prediction.getDescription() ) );
+                                    }
+                                }
+
+                                //Prevent memory leak by releasing buffer
+                                buffer.release();
                             }
-                        }
-
-                        //Prevent memory leak by releasing buffer
-                        buffer.release();
-                    }
-                }, 60, TimeUnit.SECONDS );
+                        }, 60, TimeUnit.SECONDS );
     }
 }

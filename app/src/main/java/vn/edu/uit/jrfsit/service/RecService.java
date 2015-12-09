@@ -1,25 +1,29 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
 package vn.edu.uit.jrfsit.service;
+
+import java.io.IOException;
+import java.util.ArrayList;
 
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.io.IOException;
-import java.util.ArrayList;
-
 import vn.edu.uit.jrfsit.connect.Connect;
 import vn.edu.uit.jrfsit.entity.JobSearch;
 
-/**
- * Created by LeDuy on 11/20/2015.
- */
-public class RecService extends BaseService{
-    public  ArrayList<JobSearch> getSaveJob(String idUser, String offset) {
+// Referenced classes of package vn.edu.uit.jrfsit.service:
+//            BaseService
+
+public class RecService extends BaseService
+{
+    public  ArrayList<JobSearch> getRecJob(String userId, String offset) {
         Connect connect =super.initConnection("doan/getRecJob.php");
         ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
-        nameValuePairs.add(new BasicNameValuePair("idUser", idUser));
+        nameValuePairs.add(new BasicNameValuePair("UserId", userId));
         nameValuePairs.add(new BasicNameValuePair("offset", offset));
         JSONArray array = null;
         ArrayList<JobSearch> list;

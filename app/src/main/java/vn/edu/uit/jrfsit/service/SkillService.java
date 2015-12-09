@@ -1,22 +1,26 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
 package vn.edu.uit.jrfsit.service;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-
 import vn.edu.uit.jrfsit.connect.Connect;
 import vn.edu.uit.jrfsit.entity.Skill;
 
-/**
- * Created by LeDuy on 11/22/2015.
- */
-public class SkillService extends BaseService {
+// Referenced classes of package vn.edu.uit.jrfsit.service:
+//            BaseService
+
+public class SkillService extends BaseService
+{
     public List<Skill> getListSkill(String userId) {
         List<Skill> listSkill;
         Connect connect = super.initConnection("doan/getListSkill.php");

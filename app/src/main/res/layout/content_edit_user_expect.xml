@@ -1,69 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".JobSkillActivity"
-    tools:showIn="@layout/app_bar_job">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
         <LinearLayout
-            android:layout_width="match_parent"
-            android:padding="10dp"
-            android:layout_height="wrap_content">
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="10.0dip">
+
             <android.support.v7.widget.AppCompatEditText
                 android:id="@+id/et_user_expect"
-                android:layout_width="match_parent"
-                android:background="@drawable/border_linear"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:gravity="top|left"
+                android:background="@drawable/border_linear"
+                android:gravity="top|left|center"
                 android:hint="Hãy cho chúng tôi biết bạn cần công việc như thế nào!"
                 android:inputType="textMultiLine"
                 android:lines="8"
                 android:maxLines="10"
                 android:minLines="6"
-                android:padding="10dp"
+                android:padding="10.0dip"
                 android:scrollbars="vertical"
                 android:singleLine="false" />
         </LinearLayout>
+
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:weightSum="2">
+            android:weightSum="2.0">
 
             <android.support.v7.widget.AppCompatButton
                 android:id="@+id/btCancel_user_expect"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="10dp"
-                android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="10.0dip"
+                android:layout_weight="1.0"
                 android:background="@drawable/ripple"
                 android:drawableLeft="@drawable/ic_delete"
-                android:padding="10dp"
-                android:paddingTop="5dp"
+                android:padding="10.0dip"
+                android:paddingTop="5.0dip"
                 android:text="Hủy"
                 android:textColor="@color/colorPrimary"
-                android:textSize="18dp" />
+                android:textSize="18.0dip" />
 
             <android.support.v7.widget.AppCompatButton
                 android:id="@+id/btSave__user_expect"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="10dp"
-                android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="10.0dip"
+                android:layout_weight="1.0"
                 android:background="@drawable/ripple"
                 android:drawableLeft="@drawable/ic_save_ac"
-                android:padding="10dp"
-                android:paddingTop="5dp"
+                android:padding="10.0dip"
+                android:paddingTop="5.0dip"
                 android:text="Lưu"
                 android:textColor="@color/colorPrimary"
-                android:textSize="18dp" />
+                android:textSize="18.0dip" />
         </LinearLayout>
     </LinearLayout>
-
 </LinearLayout>

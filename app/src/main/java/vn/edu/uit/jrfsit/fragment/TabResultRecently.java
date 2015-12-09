@@ -1,4 +1,4 @@
-package vn.edu.uit.jrfsit.tabfragment;
+package vn.edu.uit.jrfsit.fragment;
 
 /**
  * Created by LeDuy on 10/27/2015.

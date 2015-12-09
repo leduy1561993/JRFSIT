@@ -2,17 +2,23 @@
 <android.support.design.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:fitsSystemWindows="true"
-    tools:context="com.leduy.layout.tabfragment.TabResultRecently">
-    <android.support.design.widget.AppBarLayout android:layout_height="wrap_content"
-        android:layout_width="match_parent" android:theme="@style/AppTheme.AppBarOverlay">
-    </android.support.design.widget.AppBarLayout>
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay" />
+
     <include layout="@layout/content_job_list" />
+
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fabLearHistory"
-        app:rippleColor="@color/colorSelect"
-        android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end" android:layout_margin="@dimen/fab_margin"
-        android:src="@drawable/ic_delete_history" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right|center"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_delete_history"
+        app:rippleColor="@color/colorSelect" />
 </android.support.design.widget.CoordinatorLayout>

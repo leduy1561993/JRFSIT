@@ -1,130 +1,154 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
 package vn.edu.uit.jrfsit.entity;
-/**
- * Created by LeDuy on 11/5/2015.
- */
-public class JobSearch {
-    public JobSearch() {
-        dateTime =0;
-    }
-
-    public JobSearch(int id, String keyword, String location, String specialy, String logoURL) {
-        this.id = id;
-        this.jobName = keyword;
-        this.logoURL = logoURL;
-        this.location = location;
-        this.specialy = specialy;
-    }
-
-    public JobSearch(String keyword, String location, String sortmode, String specialy, long dateTime) {
-        this.jobName = keyword;
-        this.location = location;
-        this.sortmode = sortmode;
-        this.specialy = specialy;
-        this.dateTime = dateTime;
-    }
-    public JobSearch(int id, String keyword, String location,  String specialy,String sortmode, long dateTime) {
-        this.id = id;
-        this.jobName = keyword;
-        this.location = location;
-        this.sortmode = sortmode;
-        this.specialy = specialy;
-        this.dateTime = dateTime;
-    }
-
-    public String getJobName() {
-        return jobName;
-    }
-
-    public void setJobName(String keyword) {
-        this.jobName = keyword;
-    }
-
-    public String getSpecialy() {
-        return specialy;
-    }
-
-    public void setSpecialy(String specialy) {
-        this.specialy = specialy;
-    }
-
-    public String getSalary() {
-        return salary;
-    }
-
-    public void setSalary(String salary) {
-        this.salary = salary;
-    }
-
-    public String getLocation() {
-        return location;
-    }
-
-    public void setLocation(String location) {
-        this.location = location;
-    }
 
 
-    public int getId() {
-        return id;
-    }
+public class JobSearch
+{
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
+    private String company;
+    private long dateTime;
     int id;
+    private String information;
     private String jobName;
     private String location;
+    private String logoURL;
     private String salary;
+    private String sortmode;
     private String specialy;
 
-    public String getSortmode() {
-        return sortmode;
+    public JobSearch()
+    {
+        dateTime = 0L;
     }
 
-    public void setSortmode(String sortmode) {
-        this.sortmode = sortmode;
+    public JobSearch(int i, String s, String s1, String s2, String s3)
+    {
+        id = i;
+        jobName = s;
+        logoURL = s3;
+        location = s1;
+        specialy = s2;
     }
 
-    private String sortmode;
-
-    public String getInformation() {
-        return information;
+    public JobSearch(int i, String s, String s1, String s2, String s3, long l)
+    {
+        id = i;
+        jobName = s;
+        location = s1;
+        sortmode = s3;
+        specialy = s2;
+        dateTime = l;
     }
 
-    public void setInformation(String information) {
-        this.information = information;
+    public JobSearch(String s, String s1, String s2, String s3, long l)
+    {
+        jobName = s;
+        location = s1;
+        sortmode = s2;
+        specialy = s3;
+        dateTime = l;
     }
 
-    private String information;
-
-    public String getLogoURL() {
-        return logoURL;
-    }
-
-    public void setLogoURL(String logoURL) {
-        this.logoURL = logoURL;
-    }
-
-    private String logoURL;
-
-    public String getCompany() {
+    public String getCompany()
+    {
         return company;
     }
 
-    public void setCompany(String company) {
-        this.company = company;
-    }
-
-    private String company;
-
-    public long getDateTime() {
+    public long getDateTime()
+    {
         return dateTime;
     }
 
-    public void setDateTime(int dateTime) {
-        this.dateTime = dateTime;
+    public int getId()
+    {
+        return id;
     }
 
-    private long dateTime;
+    public String getInformation()
+    {
+        return information;
+    }
+
+    public String getJobName()
+    {
+        return jobName;
+    }
+
+    public String getLocation()
+    {
+        return location;
+    }
+
+    public String getLogoURL()
+    {
+        return logoURL;
+    }
+
+    public String getSalary()
+    {
+        return salary;
+    }
+
+    public String getSortmode()
+    {
+        return sortmode;
+    }
+
+    public String getSpecialy()
+    {
+        return specialy;
+    }
+
+    public void setCompany(String s)
+    {
+        company = s;
+    }
+
+    public void setDateTime(int i)
+    {
+        dateTime = i;
+    }
+
+    public void setId(int i)
+    {
+        id = i;
+    }
+
+    public void setInformation(String s)
+    {
+        information = s;
+    }
+
+    public void setJobName(String s)
+    {
+        jobName = s;
+    }
+
+    public void setLocation(String s)
+    {
+        location = s;
+    }
+
+    public void setLogoURL(String s)
+    {
+        logoURL = s;
+    }
+
+    public void setSalary(String s)
+    {
+        salary = s;
+    }
+
+    public void setSortmode(String s)
+    {
+        sortmode = s;
+    }
+
+    public void setSpecialy(String s)
+    {
+        specialy = s;
+    }
 }

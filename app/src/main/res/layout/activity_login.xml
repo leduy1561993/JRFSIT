@@ -1,104 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
     android:id="@+id/dangnhap_ln"
-    android:weightSum="100">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/colorbackgroupwhite"
+    android:orientation="vertical"
+    android:weightSum="100.0">
+
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:weightSum="100"
-        android:layout_weight="38">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="8">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="JSFIT"
-                android:gravity="center"
-                android:textColor="@android:color/holo_green_dark"
-                android:textSize="100dp" />
-            </LinearLayout>
-        </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="24"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:weightSum="100">
+        android:paddingLeft="24.0dip"
+        android:paddingRight="24.0dip"
+        android:paddingTop="56.0dip">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="81.0dip"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24.0dip"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/logo" />
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="23"
-            android:orientation="vertical"
-            android:weightSum="100">
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="23.0"
+            android:orientation="vertical">
 
             <android.support.v7.widget.AppCompatTextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="60"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
                 android:text="Email:"
-                android:textSize="25dp" />
+                android:textSize="18.0dip" />
 
             <android.support.v7.widget.AppCompatEditText
-                android:id="@+id/dangnhap_et_email"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="40"
-                android:inputType="textEmailAddress"
-                android:hint="Email người dùng : abc@gmail.com" />
+                android:id="@+id/etEmail_login"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="5.0dip"
+                android:hint="abc@gmail.com"
+                android:inputType="textEmailAddress" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="23"
-            android:orientation="vertical"
-            android:weightSum="100">
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="23.0"
+            android:orientation="vertical">
 
             <android.support.v7.widget.AppCompatTextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="60"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="10.0dip"
                 android:text="Mật khẩu:"
-                android:textSize="25dp" />
+                android:textSize="18.0dip" />
 
             <android.support.v7.widget.AppCompatEditText
-                android:id="@+id/dangnhap_et_matkhau"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="40"
-                android:inputType="textPassword"
-                android:hint="Nhập mật khẩu" />
+                android:id="@+id/etPassword_login"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="5.0dip"
+                android:hint="Nhập mật khẩu"
+                android:inputType="textPassword" />
         </LinearLayout>
-        <android.support.v7.widget.AppCompatButton
-            android:id="@+id/dangnhap_bt_dangnhap"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="28"
-            android:background="@drawable/ripple"
-            android:text="Đăng nhập" />
 
         <android.support.v7.widget.AppCompatButton
-            android:id="@+id/dangnhap_bt_danngki"
-            android:layout_marginTop="5dp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="27"
+            android:id="@+id/btLogin_login"
+            style="SignIn"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="30.0dip"
+            android:layout_marginRight="50.0dip"
+            android:layout_marginTop="15.0dip"
+            android:layout_weight="28.0"
             android:background="@drawable/ripple"
-            android:text="Đăng kí" />
+            android:drawableLeft="@drawable/ic_login"
+            android:shadowRadius="10.0"
+            android:text="Đăng nhập"
+            android:textColor="@color/colorTextSub" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btRegister_login"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="30.0dip"
+            android:layout_marginRight="50.0dip"
+            android:layout_marginTop="5.0dip"
+            android:layout_weight="27.0"
+            android:background="@drawable/ripple"
+            android:drawableLeft="@drawable/ic_create_user"
+            android:text="Đăng kí"
+            android:textColor="@color/colorTextSub" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btLoginGoogle"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="30.0dip"
+            android:layout_marginRight="50.0dip"
+            android:layout_marginTop="5.0dip"
+            android:layout_weight="27.0"
+            android:background="@drawable/ripple"
+            android:drawableLeft="@drawable/ic_google_plus"
+            android:text="Đăng nhập với Google+"
+            android:textColor="@color/colorTextSub" />
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="38">
-        </LinearLayout>
 </LinearLayout>

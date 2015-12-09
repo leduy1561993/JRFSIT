@@ -1,3 +1,7 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: braces fieldsfirst space lnc 
+
 package vn.edu.uit.jrfsit.activity;
 
 import android.app.Activity;
@@ -10,13 +14,11 @@ import android.support.v7.widget.AppCompatAutoCompleteTextView;
 import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.AppCompatEditText;
 import android.support.v7.widget.AppCompatSpinner;
-import android.text.method.Touch;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
-
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
 import com.google.android.gms.common.GooglePlayServicesRepairableException;
@@ -30,10 +32,9 @@ import vn.edu.uit.jrfsit.adapter.AutoCompleteAdapter;
 import vn.edu.uit.jrfsit.entity.User;
 import vn.edu.uit.jrfsit.layoutcomponent.AutoCompletePlace;
 
-/**
- * Created by LeDuy on 11/20/2015.
- */
-public class  EditUserProfileActivity extends AppCompatActivity implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener{
+public class EditUserProfileActivity extends AppCompatActivity
+    implements com.google.android.gms.common.api.GoogleApiClient.ConnectionCallbacks, com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener
+{
     //region defination
     AppCompatEditText mEtName;
     AppCompatEditText mEtEmail;
@@ -62,6 +63,7 @@ public class  EditUserProfileActivity extends AppCompatActivity implements Googl
      *
      * @param savedInstanceState
      */
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_edit_profile);
@@ -70,10 +72,20 @@ public class  EditUserProfileActivity extends AppCompatActivity implements Googl
         load();
     }
 
-    /**
-     * initControlOnView
-     */
-    private void initControlOnView(){
+    private User getUserFromView()
+    {
+        User user1 = new User();
+        user1.setFullName(mEtName.getText().toString());
+        user1.setEmail(mEtEmail.getText().toString());
+        user1.setPhone(mEtPhone.getText().toString());
+        user1.setAddress(mAtAddress.getText().toString());
+        user1.setBirthday(mEtBirtday.getText().toString());
+        user1.setGender(mSnGender.getSelectedItem().toString());
+        return user1;
+    }
+
+    private void initControlOnView()
+    {
         mEtName = (AppCompatEditText) findViewById(R.id.et_name_profile);
         mEtEmail= (AppCompatEditText) findViewById(R.id.et_email_profile);
         mEtPhone = (AppCompatEditText) findViewById(R.id.et_mobilenumber_profile);
@@ -85,24 +97,24 @@ public class  EditUserProfileActivity extends AppCompatActivity implements Googl
         mBtCancel = (AppCompatButton) findViewById(R.id.btCancel_Profile);
     }
 
-    /**
-     * initListener
-     */
-    private void initListener(){
-        mEtBirtday.setOnTouchListener(new View.OnTouchListener() {
+    private void initListener()
+    {
+        mEtBirtday.setOnTouchListener(new android.view.View.OnTouchListener() {
             @Override
-            public boolean onTouch(View v, MotionEvent event) {
+            public boolean onTouch(View view, MotionEvent motionevent)
+            {
                 showDialog(1);
                 return false;
             }
         });
-        mBtCancel.setOnClickListener(new View.OnClickListener() {
+        mBtCancel.setOnClickListener(new android.view.View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view)
+            {
                 finish();
             }
         });
-        mBtSave.setOnClickListener(new View.OnClickListener() {
+        mBtSave.setOnClickListener(new android.view.View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent returnIntent = new Intent();
@@ -112,8 +124,7 @@ public class  EditUserProfileActivity extends AppCompatActivity implements Googl
                 finish();
             }
         });
-
-        mBtAddress.setOnClickListener(new View.OnClickListener() {
+        mBtAddress.setOnClickListener(new android.view.View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 PlacePicker.IntentBuilder builder = new PlacePicker.IntentBuilder();
@@ -128,7 +139,7 @@ public class  EditUserProfileActivity extends AppCompatActivity implements Googl
                 }
             }
         });
-        mAtAddress.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        mAtAddress.setOnItemClickListener(new android.widget.AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 AutoCompletePlace selection = (AutoCompletePlace) parent.getItemAtPosition(position);
@@ -137,13 +148,10 @@ public class  EditUserProfileActivity extends AppCompatActivity implements Googl
         });
     }
 
-    /**
-     * load
-     */
-    private void load(){
+    private void load()
+    {
         user = new User();
-        Intent intent = getIntent();
-        user = (User) intent.getSerializableExtra("user");
+        user = (User)getIntent().getSerializableExtra("user");
         loadDatoToView(user);
         String[] gender =new String[]{"Nam","Nữ"};
         ArrayAdapter<String> gen = new ArrayAdapter<String>(EditUserProfileActivity.this,R.layout.spinner_item,gender);
@@ -156,59 +164,16 @@ public class  EditUserProfileActivity extends AppCompatActivity implements Googl
                 .Builder(this)
                 .addApi(Places.GEO_DATA_API)
                 .addApi(Places.PLACE_DETECTION_API)
-                .addConnectionCallbacks((GoogleApiClient.ConnectionCallbacks) EditUserProfileActivity.this)
-                .addOnConnectionFailedListener((GoogleApiClient.OnConnectionFailedListener) EditUserProfileActivity.this)
+                .addConnectionCallbacks(EditUserProfileActivity.this)
+                .addOnConnectionFailedListener(EditUserProfileActivity.this)
                 .build();
         mGoogleApiClient.connect();
         mAdapter.setGoogleApiClient(mGoogleApiClient);
         mAtAddress.setAdapter(mAdapter);
-
-        //endregion
     }
 
-    //region getdate
-    @Override
-    protected Dialog onCreateDialog(int id) {
-        switch (id) {
-            case 1:
-                return new DatePickerDialog(this, datePickerListener,
-                        year, (month), day);
-        }
-        return null;
-    }
-
-    /**
-     * DatePickerDialog
-     */
-    private DatePickerDialog.OnDateSetListener datePickerListener
-            = new DatePickerDialog.OnDateSetListener() {
-        public void onDateSet(DatePicker view, int selectedYear,
-                              int selectedMonth, int selectedDay) {
-            //region set
-            year = selectedYear;
-            month = selectedMonth;
-            day = selectedDay;
-            String strDay=String.valueOf(day);
-            String strMonth = String.valueOf(month+1);
-            if(day<10){
-                strDay="0"+strDay;
-            }
-            if(month<10){
-                strMonth="0"+strMonth;
-            }
-            mEtBirtday.setText(new StringBuilder().append(year)
-                    .append("-").append(strMonth).append("-").append(strDay)
-                    .append(" "));
-            //endregion
-        }
-    };
-    //endregion get date
-
-    /**
-     *
-     * @param user loadDatoToView
-     */
-    private void loadDatoToView(User user){
+    private void loadDatoToView(User user)
+    {
         mEtName.setText(user.getFullName());
         mEtEmail.setText(user.getEmail());
         mEtPhone.setText(user.getPhone());
@@ -219,21 +184,6 @@ public class  EditUserProfileActivity extends AppCompatActivity implements Googl
         }else {
             mSnGender.setSelection(1);
         }
-    }
-
-    /**
-     *
-     * @return getUserFromView
-     */
-    private User getUserFromView(){
-        User user= new User();
-        user.setFullName(mEtName.getText().toString());
-        user.setEmail(mEtEmail.getText().toString());
-        user.setPhone(mEtPhone.getText().toString());
-        user.setAddress(mAtAddress.getText().toString());
-        user.setBirthday(mEtBirtday.getText().toString());
-        user.setGender(mSnGender.getSelectedItem().toString());
-        return user;
     }
 
     /**
