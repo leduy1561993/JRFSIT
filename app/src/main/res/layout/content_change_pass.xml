@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/colorbackgroupwhite"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="300.0dip"
+        android:minWidth="300.0dip"
+        android:orientation="vertical"
+        android:padding="10.0dip"
+        android:weightSum="10.0">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5.0dip"
+            android:orientation="vertical"
+            android:padding="5.0dip">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5.0dip"
+                android:drawableLeft="@drawable/ic_change_pass"
+                android:gravity="center_vertical"
+                android:padding="2.0dip"
+                android:singleLine="false"
+                android:text="  Mật khẩu cũ"
+                android:textColor="@color/colorText"
+                android:textSize="15.0dip" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="10.0" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/etSetting_old_pass"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.0dip"
+                android:hint="Chạm để nhập"
+                android:inputType="textPassword"
+                android:textSize="14.0dip" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5.0dip"
+                android:drawableLeft="@drawable/ic_new_pass1"
+                android:gravity="center_vertical"
+                android:padding="2.0dip"
+                android:singleLine="false"
+                android:text=" Mật khẩu mới"
+                android:textColor="@color/colorText"
+                android:textSize="15.0dip" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/etSetting_new_pass"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.0dip"
+                android:hint="Chạm để nhập"
+                android:inputType="textPassword"
+                android:textSize="14.0dip" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5.0dip"
+                android:drawableLeft="@drawable/ic_new_pass"
+                android:gravity="center_vertical"
+                android:padding="2.0dip"
+                android:singleLine="false"
+                android:text=" Nhập lại mật khẩu"
+                android:textColor="@color/colorText"
+                android:textSize="15.0dip" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/etSetting_re_new_pass"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.0dip"
+                android:hint="Chạm để nhập"
+                android:inputType="textPassword"
+                android:textSize="14.0dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2.0">
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btSeting_pass_change_cancel"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="10.0dip"
+                android:layout_weight="1.0"
+                android:background="@drawable/ripple"
+                android:drawableLeft="@drawable/ic_delete"
+                android:padding="10.0dip"
+                android:paddingTop="5.0dip"
+                android:text="Hủy"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18.0dip" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btSeting_pass_change_save"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="10.0dip"
+                android:layout_weight="1.0"
+                android:background="@drawable/ripple"
+                android:drawableLeft="@drawable/ic_save_ac"
+                android:padding="10.0dip"
+                android:paddingTop="5.0dip"
+                android:text="Lưu"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
