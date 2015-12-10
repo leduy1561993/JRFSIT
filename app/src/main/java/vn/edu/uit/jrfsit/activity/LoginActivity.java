@@ -17,6 +17,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -31,6 +32,8 @@ import vn.edu.uit.jrfsit.preferences.AccountPreferences;
 import vn.edu.uit.jrfsit.service.LoginService;
 import vn.edu.uit.jrfsit.service.UserService;
 import vn.edu.uit.jrfsit.utils.Utils;
+
+import static vn.edu.uit.jrfsit.R.id.ln_login_flash;
 
 // Referenced classes of package vn.edu.uit.jrfsit.activity:
 //            MainActivity, RegisterUserActivity
@@ -55,7 +58,8 @@ public class LoginActivity extends AppCompatActivity
     AppCompatButton signInButton;
     UserService userService;
     ProgressDialog progressdialog;
-
+    LinearLayout lnFlash;
+    LinearLayout lnLogin;
 
     @Override
     protected void onCreate(Bundle bundle) {
@@ -159,6 +163,8 @@ public class LoginActivity extends AppCompatActivity
         btLogin = (AppCompatButton) findViewById(R.id.btLogin_login);
         btRegister = (AppCompatButton) findViewById(R.id.btRegister_login);
         signInButton = (AppCompatButton) findViewById(R.id.btLoginGoogle);
+        lnFlash = (LinearLayout) findViewById(R.id.ln_login_flash);
+        lnLogin = (LinearLayout) findViewById(R.id.ln_login);
     }
 
     void initListener() {
@@ -210,8 +216,15 @@ public class LoginActivity extends AppCompatActivity
         initControlOnView();
         loginService = new LoginService();
         userService = new UserService();
-        setupUI(findViewById(R.id.dangnhap_ln));
+        setupUI(findViewById(R.id.ln_login));
         initListener();
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        lnFlash.setVisibility(View.INVISIBLE);
+        lnLogin.setVisibility(View.VISIBLE);
     }
 
     void login() {
