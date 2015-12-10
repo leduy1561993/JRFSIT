@@ -23,7 +23,7 @@ public class RateService extends BaseService
         ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
         nameValuePairs.add(new BasicNameValuePair("UserId", userId));
         nameValuePairs.add(new BasicNameValuePair("JobId", idJob));
-        nameValuePairs.add(new BasicNameValuePair("rate", rate));
+        nameValuePairs.add(new BasicNameValuePair("Rate", rate));
         boolean rerult;
         try {
             rerult = connect.DUI(nameValuePairs);
@@ -41,7 +41,7 @@ public class RateService extends BaseService
         ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
         nameValuePairs.add(new BasicNameValuePair("UserId", userId));
         nameValuePairs.add(new BasicNameValuePair("JobId", idJob));
-        nameValuePairs.add(new BasicNameValuePair("rate", rate));
+        nameValuePairs.add(new BasicNameValuePair("Rate", rate));
         boolean rerult;
         try {
             rerult = connect.DUI(nameValuePairs);
@@ -65,7 +65,7 @@ public class RateService extends BaseService
         try {
             jsonObject = connect.getObject(nameValuePairs);
             if(jsonObject!=null&&jsonObject.getInt("success")>0){
-                rate= (float) jsonObject.getDouble("rate");
+                rate= (float) jsonObject.getDouble("Rate");
             }else {
                 rate= 0;
             }

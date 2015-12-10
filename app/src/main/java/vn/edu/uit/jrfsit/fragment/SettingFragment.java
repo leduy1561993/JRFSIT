@@ -79,7 +79,7 @@ public class SettingFragment extends BaseFragment
         account = accountPreferences.getAccount();
         String[] array_skill = this.getResources().getStringArray(R.array.specialy_array);
         final ArrayAdapter<CharSequence>  tempAdapterSkill = new ArrayAdapter(activity
-                ,R.layout.spinner_item, array_skill) {
+                ,R.layout.spinner_item1, array_skill) {
             @Override
             public boolean isEnabled(int position) {
                 if (position == 0) {
@@ -105,11 +105,11 @@ public class SettingFragment extends BaseFragment
                 return view;
             }
         };
-        tempAdapterSkill.setDropDownViewResource(R.layout.spinner_item);
+        tempAdapterSkill.setDropDownViewResource(R.layout.spinner_item1);
         snSpecicaly.setAdapter(tempAdapterSkill);
-        String[] array_experience = this.getResources().getStringArray(R.array.experience_array);
+        String[] array_number_rec = this.getResources().getStringArray(R.array.number_rec_array);
         final ArrayAdapter<CharSequence> tempAdapterNumberJob = new ArrayAdapter(activity
-                ,R.layout.spinner_item, array_experience) {
+                ,R.layout.spinner_item1, array_number_rec) {
             @Override
             public boolean isEnabled(int position) {
                 if (position == 0) {
@@ -135,12 +135,12 @@ public class SettingFragment extends BaseFragment
                 return view;
             }
         };
-        tempAdapterNumberJob.setDropDownViewResource(R.layout.spinner_item);
+        tempAdapterNumberJob.setDropDownViewResource(R.layout.spinner_item1);
         snNumberJob.setAdapter(tempAdapterNumberJob);
 
         String[] array_time_rec = this.getResources().getStringArray(R.array.time_rec_array);
         final ArrayAdapter<CharSequence> tempAdapterTimeRec = new ArrayAdapter(activity
-                ,R.layout.spinner_item, array_time_rec) {
+                ,R.layout.spinner_item1, array_time_rec) {
             @Override
             public boolean isEnabled(int position) {
                 if (position == 0) {
@@ -166,7 +166,7 @@ public class SettingFragment extends BaseFragment
                 return view;
             }
         };
-        tempAdapterTimeRec.setDropDownViewResource(R.layout.spinner_item);
+        tempAdapterTimeRec.setDropDownViewResource(R.layout.spinner_item1);
         snTimeCommend.setAdapter(tempAdapterTimeRec);
         (new Thread(new Runnable() {
             @Override

@@ -42,7 +42,7 @@
                         android:singleLine="true"
                         android:text="Thông tin cá nhân"
                         android:textColor="#ff3d5afe"
-                        android:textSize="18.0dip" />
+                        android:textSize="@dimen/title_text_size" />
 
                     <ImageButton
                         android:id="@+id/bt_edit_personal_job_profile"
@@ -66,7 +66,7 @@
                         android:singleLine="true"
                         android:text="Email ID"
                         android:textColor="@color/colorText"
-                        android:textSize="15.0dip" />
+                        android:textSize="@dimen/sub_title_text_size" />
 
                     <android.support.v7.widget.AppCompatTextView
                         android:id="@+id/tv_ps_email_job_profile"
@@ -92,7 +92,7 @@
                         android:singleLine="true"
                         android:text="Điện thoại"
                         android:textColor="@color/colorText"
-                        android:textSize="15.0dip" />
+                        android:textSize="@dimen/sub_title_text_size"  />
 
                     <android.support.v7.widget.AppCompatTextView
                         android:id="@+id/tv_ps_sdt_job_profile"
@@ -118,7 +118,7 @@
                         android:singleLine="true"
                         android:text="Địa chỉ"
                         android:textColor="@color/colorText"
-                        android:textSize="15.0dip" />
+                        android:textSize="@dimen/sub_title_text_size"  />
 
                     <android.support.v7.widget.AppCompatTextView
                         android:id="@+id/tv_ps_address_job_profile"
@@ -144,7 +144,7 @@
                         android:singleLine="true"
                         android:text="Ngày sinh"
                         android:textColor="@color/colorText"
-                        android:textSize="15.0dip" />
+                        android:textSize="@dimen/sub_title_text_size"  />
 
                     <android.support.v7.widget.AppCompatTextView
                         android:id="@+id/tv_ps_birthday_job_profile"
@@ -170,7 +170,7 @@
                         android:singleLine="true"
                         android:text="Giới tính"
                         android:textColor="@color/colorText"
-                        android:textSize="15.0dip" />
+                        android:textSize="@dimen/sub_title_text_size"  />
 
                     <android.support.v7.widget.AppCompatTextView
                         android:id="@+id/tv_ps_gender_job_profile"
@@ -205,17 +205,15 @@
                         android:singleLine="true"
                         android:text="Khả năng"
                         android:textColor="#ff3d5afe"
-                        android:textSize="18.0dip" />
+                        android:textSize="@dimen/title_text_size" />
 
                     <android.support.v7.widget.AppCompatButton
                         android:id="@+id/bt_add_skill_job_profile"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
+                        android:background="@drawable/ripple"
                         android:layout_weight="80.0"
-                        android:background="@drawable/ic_add_skill"
-                        android:padding="5.0dip"
-                        android:scaleX="0.7"
-                        android:scaleY="0.7"
+                        android:text="Thêm"
                         android:textColor="@color/colorTextSub" />
                 </LinearLayout>
 
@@ -254,7 +252,7 @@
                         android:singleLine="true"
                         android:text="Nguyện vọng công việc"
                         android:textColor="#ff3d5afe"
-                        android:textSize="17.0dip" />
+                        android:textSize="@dimen/title_text_size" />
 
                     <ImageButton
                         android:id="@+id/bt_edit_expect_user"

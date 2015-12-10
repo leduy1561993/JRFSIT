@@ -25,7 +25,7 @@ public class HelpFragment extends BaseFragment
 
     private void load()
     {
-        super.loadActivity(0x7f070042);
+        super.loadActivity(R.string.title_activity_help);
         initControlOnView();
         initListener();
     }
@@ -40,7 +40,7 @@ public class HelpFragment extends BaseFragment
 
     public View onCreateView(LayoutInflater layoutinflater, ViewGroup viewgroup, Bundle bundle)
     {
-        v = layoutinflater.inflate(R.layout.content_about, viewgroup, false);
+        v = layoutinflater.inflate(R.layout.content_help, viewgroup, false);
         load();
         return v;
     }

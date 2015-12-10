@@ -81,7 +81,6 @@ public class MainActivity extends AppCompatActivity
 
     private void initLoad() {
         accountPreferences = new AccountPreferences(this);
-        accountPreferences.putAccount("53","leduy15@gmail.com","e10adc3949ba59abbe56e057f20f883e",false,null);
         account = accountPreferences.getAccount();
         bitmapUtil = new BitmapUtil();
         bitmapService = new BitmapService();
@@ -116,8 +115,8 @@ public class MainActivity extends AppCompatActivity
                 .addScope(Plus.SCOPE_PLUS_LOGIN)
                 .build();
         mGoogleApiClient.connect();
-        setFragment(new ProfileUserFragment());
-        //navigationView.setCheckedItem(0);
+        setFragment(new SearchFragment());
+        navigationView.setCheckedItem(0);
     }
 
     private void setFragment(Fragment fragment) {

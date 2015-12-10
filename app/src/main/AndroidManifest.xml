@@ -26,10 +26,6 @@
             android:name="vn.edu.uit.jrfsit.activity.MainActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
             </activity>
         <activity
             android:name="vn.edu.uit.jrfsit.activity.DetailJobActivity"
@@ -42,6 +38,10 @@
         <activity
             android:name="vn.edu.uit.jrfsit.activity.LoginActivity"
             android:label="@string/title_activity_login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name="vn.edu.uit.jrfsit.activity.ResultJobSearchActivity"
@@ -72,9 +72,6 @@
             android:label="@string/title_activity_register"
             android:theme="@style/AppTheme.NoActionBar" />
 
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_api_key" />
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_api_key" />

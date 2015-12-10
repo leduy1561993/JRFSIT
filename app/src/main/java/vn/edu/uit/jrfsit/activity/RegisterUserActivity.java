@@ -48,7 +48,7 @@ public class RegisterUserActivity extends AppCompatActivity
 
     static final int DATE_DIALOG_ID = 999;
     public static final String PARAM_EXTRA_QUERY = "place_picker_extra_query";
-    int PLACE_PICKER_REQUEST;
+    int PLACE_PICKER_REQUEST = 1;
     ProgressDialog dialog;
     AppCompatAutoCompleteTextView mAcAddress;
     AppCompatButton mBtLocation;
@@ -105,7 +105,6 @@ public class RegisterUserActivity extends AppCompatActivity
 
             @Override
             public void onClick(View v) {
-                int PLACE_PICKER_REQUEST = 1;
                 PlacePicker.IntentBuilder builder = new PlacePicker.IntentBuilder();
                 try {
                     Intent intent = builder.build(getApplicationContext());
@@ -165,7 +164,12 @@ public class RegisterUserActivity extends AppCompatActivity
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         mRbMale.setChecked(true);
         AutoCompleteAdapter autocompleteadapter = new AutoCompleteAdapter(this);
-        mGoogleApiClient = (new com.google.android.gms.common.api.GoogleApiClient.Builder(this)).addApi(Places.GEO_DATA_API).addApi(Places.PLACE_DETECTION_API).addConnectionCallbacks(this).addOnConnectionFailedListener(this).build();
+        mGoogleApiClient = (new
+                com.google.android.gms.common.api.GoogleApiClient.Builder(this))
+                .addApi(Places.GEO_DATA_API)
+                .addApi(Places.PLACE_DETECTION_API)
+                .addConnectionCallbacks(this)
+                .addOnConnectionFailedListener(this).build();
         mGoogleApiClient.connect();
         autocompleteadapter.setGoogleApiClient(mGoogleApiClient);
         mAcAddress.setAdapter(autocompleteadapter);
@@ -304,9 +308,9 @@ public class RegisterUserActivity extends AppCompatActivity
         String careerObjective;
         String imageUrl;
         if (fullName.length() > 5 || "".equals(fullName)) {
-            if (email.length() > 13 && mEtEmail.getTag().equals("1")) {
+            if (email.length() > 13 && "1".equals(mEtEmail.getTag())) {
                 if ("1".equals(mEtRePassword.getTag())) {
-                    boolean flag = userService.insertUser(fullName, email, password, birthday, address, phone, gender, "", "");
+                    boolean flag = userService.insertUser(fullName, email, password, birthday, gender, address, phone,  "", "");
                     dialog.dismiss();
                     if (flag) {
                         runOnUiThread(new Runnable() {
@@ -317,7 +321,6 @@ public class RegisterUserActivity extends AppCompatActivity
                                 startActivity(new Intent(getApplicationContext(), LoginActivity.class));
                             }
                         });
-                        return;
                     } else {
                         runOnUiThread(new Runnable() {
                             @Override
@@ -326,7 +329,6 @@ public class RegisterUserActivity extends AppCompatActivity
                                 dialog.dismiss();
                             }
                         });
-                        return;
                     }
                 } else {
                     runOnUiThread(new Runnable() {
@@ -336,7 +338,6 @@ public class RegisterUserActivity extends AppCompatActivity
                             dialog.dismiss();
                         }
                     });
-                    return;
                 }
             } else {
                 runOnUiThread(new Runnable() {
@@ -346,7 +347,6 @@ public class RegisterUserActivity extends AppCompatActivity
                         dialog.dismiss();
                     }
                 });
-                return;
             }
         } else {
             runOnUiThread(new Runnable() {
@@ -356,7 +356,6 @@ public class RegisterUserActivity extends AppCompatActivity
                     dialog.dismiss();
                 }
             });
-            return;
         }
 
     }

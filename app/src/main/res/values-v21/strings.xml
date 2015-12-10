@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">Layout</string>
-
+    <string name="app_name">JRIT</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="google_api_key">AIzaSyDPfwX75tM_7f7FdOPLrsoG5WkLoqvodt4</string>
@@ -24,6 +23,7 @@
     <string name="title_activity_save_job">Công việc đã lưu</string>
     <string name="title_activity_setting">Cài đặt</string>
     <string name="title_activity_person">Thông tin cá nhân</string>
+    <string name="title_activity_help">Trợ giúp</string>
 
     <!-- -->
     <string name="connect_fail">Cập nhật thất bại, kiểm tra kết nối</string>

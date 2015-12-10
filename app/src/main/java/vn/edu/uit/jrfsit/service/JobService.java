@@ -21,13 +21,13 @@ import vn.edu.uit.jrfsit.entity.JobSearch;
 
 public class JobService extends BaseService
 {
-    public Job getJob(String JobId, String idUser) throws JSONException {
+    public Job getJob(String JobId, String userId) throws JSONException {
 
         Connect connect = super.initConnection("doan/getJobDetail.php");
 
         ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
         nameValuePairs.add(new BasicNameValuePair("JobId", JobId));
-        nameValuePairs.add(new BasicNameValuePair("idUser", idUser));
+        nameValuePairs.add(new BasicNameValuePair("UserId", userId));
         JSONObject jsonObject = null;
         Job job;
         try {
@@ -46,14 +46,14 @@ public class JobService extends BaseService
                 job.setCompany(jsonObject.getString("Company"));
                 job.setLogo(jsonObject.getString("Logo"));
 
-                if (jsonObject.getString("rate").equals("null")) {
+                if (jsonObject.getString("Rate").equals("null")) {
                     job.setRate(-1);
                 } else {
-                    job.setRate((float) jsonObject.getDouble("rate"));
+                    job.setRate((float) jsonObject.getDouble("Rate"));
                 }
-                if (jsonObject.getString("isSave").equals("null")) {
+                if (jsonObject.getString("IsSave").equals("null")) {
                     job.setIsSave(0);
-                } else if (jsonObject.getInt("isSave") == 0) {
+                } else if (jsonObject.getInt("IsSave") == 0) {
                     job.setIsSave(1);
                 } else {
                     job.setIsSave(2);
@@ -69,10 +69,10 @@ public class JobService extends BaseService
         return job;
     }
 
-    public ArrayList<JobSearch> getSaveJob(String idUser, String offset) {
+    public ArrayList<JobSearch> getSaveJob(String UserId, String offset) {
         Connect connect = super.initConnection("doan/getSaveJob.php");
         ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
-        nameValuePairs.add(new BasicNameValuePair("idUser", idUser));
+        nameValuePairs.add(new BasicNameValuePair("UserId", UserId));
         nameValuePairs.add(new BasicNameValuePair("offset", offset));
         JSONArray array = null;
         ArrayList<JobSearch> list;
@@ -105,12 +105,12 @@ public class JobService extends BaseService
         return list;
     }
 
-    public boolean updateSaveJob(String idUser, String idJob, String isSave) {
+    public boolean updateSaveJob(String UserId, String idJob, String isSave) {
         Connect connect = super.initConnection("doan/updateSaveJob.php");
         ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
-        nameValuePairs.add(new BasicNameValuePair("idUser", idUser));
+        nameValuePairs.add(new BasicNameValuePair("UserId", UserId));
         nameValuePairs.add(new BasicNameValuePair("JobId", idJob));
-        nameValuePairs.add(new BasicNameValuePair("isSave", isSave));
+        nameValuePairs.add(new BasicNameValuePair("IsSave", isSave));
         String check;
         boolean result;
         try {
@@ -124,10 +124,10 @@ public class JobService extends BaseService
         }
         return result;
     }
-    public boolean insertSaveJob(String idUser, String idJob) {
+    public boolean insertSaveJob(String UserId, String idJob) {
         Connect connect = super.initConnection("doan/insertSaveJob.php");
         ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
-        nameValuePairs.add(new BasicNameValuePair("idUser", idUser));
+        nameValuePairs.add(new BasicNameValuePair("UserId", UserId));
         nameValuePairs.add(new BasicNameValuePair("JobId", idJob));
         boolean result;
         String check;

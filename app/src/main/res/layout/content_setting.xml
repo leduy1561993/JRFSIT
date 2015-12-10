@@ -54,7 +54,7 @@
                     android:singleLine="false"
                     android:text="Chọn chuyên ngành giới thiệu"
                     android:textColor="@color/colorText"
-                    android:textSize="18.0dip"
+                    android:textSize="@dimen/sub_title_text_size"
                     android:textStyle="bold" />
 
                 <android.support.v7.widget.AppCompatSpinner
@@ -79,7 +79,7 @@
                         android:singleLine="false"
                         android:text="Chọn địa điểm muốn giới thiệu"
                         android:textColor="@color/colorText"
-                        android:textSize="18.0dip"
+                        android:textSize="@dimen/sub_title_text_size"
                         android:textStyle="bold" />
                 </LinearLayout>
 
@@ -119,7 +119,7 @@
                     android:singleLine="false"
                     android:text="Chọn số công việc giới thiệu"
                     android:textColor="@color/colorText"
-                    android:textSize="18.0dip"
+                    android:textSize="@dimen/sub_title_text_size"
                     android:textStyle="bold" />
 
                 <android.support.v7.widget.AppCompatSpinner
@@ -127,6 +127,7 @@
                     style="@style/Base.Widget.AppCompat.Spinner.Underlined"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
+                    android:padding="5dp"
                     android:paddingTop="15.0dip"
                     android:spinnerMode="dropdown" />
 
@@ -138,7 +139,7 @@
                     android:singleLine="false"
                     android:text="Chọn thời gian giới thiệu"
                     android:textColor="@color/colorText"
-                    android:textSize="18.0dip"
+                    android:textSize="@dimen/sub_title_text_size"
                     android:textStyle="bold" />
 
                 <android.support.v7.widget.AppCompatSpinner
@@ -146,7 +147,6 @@
                     style="@style/Base.Widget.AppCompat.Spinner.Underlined"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:paddingTop="15.0dip"
                     android:spinnerMode="dropdown" />
 
                 <LinearLayout
@@ -155,16 +155,18 @@
                     android:background="@drawable/ripple">
 
                     <android.support.v7.widget.AppCompatButton
+                        android:layout_marginTop="5sp"
                         android:id="@+id/btSetting_save"
                         android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5.0dip"
+                        android:layout_height="35sp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:drawableLeft="@drawable/ic_save_ac"
                         android:background="@drawable/border_linear"
-                        android:drawableLeft="@drawable/ic_save_job"
                         android:gravity="center"
                         android:text="Lưu thay đổi"
                         android:textColor="@color/colorPrimary"
-                        android:textSize="13.0dip" />
+                        android:textSize="12.0dip" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
@@ -198,14 +200,16 @@
 
                     <android.support.v7.widget.AppCompatButton
                         android:id="@+id/btSetting_change_pass"
+                        android:layout_marginTop="5sp"
                         android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5.0dip"
+                        android:layout_height="35sp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
                         android:background="@drawable/border_linear"
                         android:drawableLeft="@drawable/ic_change_pass"
                         android:text="Đổi mật khẩu"
                         android:textColor="@color/colorPrimary"
-                        android:textSize="14.0dip" />
+                        android:textSize="12.0dip" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>

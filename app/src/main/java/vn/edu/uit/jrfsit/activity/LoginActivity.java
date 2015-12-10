@@ -5,29 +5,23 @@
 package vn.edu.uit.jrfsit.activity;
 
 import android.app.Activity;
-import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.IntentSender;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatAutoCompleteTextView;
 import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.AppCompatEditText;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.plus.People;
 import com.google.android.gms.plus.Plus;
 import com.google.android.gms.plus.model.people.Person;
 
@@ -87,7 +81,6 @@ public class LoginActivity extends AppCompatActivity
                 final String email =Plus.AccountApi.getAccountName(mGoogleApiClient);
                 final String birthday =currentPerson.getBirthday();
                 final String address = currentPerson.getCurrentLocation();
-                final ProgressDialog dialog =progressdialog;
                 final String gender;
                 if (currentPerson.getGender() == 0) {
                     gender = "Nam";
@@ -97,7 +90,7 @@ public class LoginActivity extends AppCompatActivity
                     gender ="Không rõ";
                 }
                 final String imageUrl = currentPerson.getImage().getUrl();
-
+                progressdialog.show();
                 new Thread(new Runnable() {
                     public void run() {
                         String userId = userService.insertUserGoogle(fullName, email, "0", birthday, gender, address, "", "", imageUrl);
@@ -112,7 +105,7 @@ public class LoginActivity extends AppCompatActivity
                                 }
                             });
                         }
-                        dismissDialog(dialog);
+                        dismissDialog(progressdialog);
                     }
                 }).start();
             } else {
