@@ -23,7 +23,6 @@ import vn.edu.uit.jrfsit.utils.Utils;
 
 public class AddSkillActivity extends AppCompatActivity
 {
-
     private AppCompatButton btCancel;
     private AppCompatButton btSave;
     protected AppCompatSpinner pnExperence;
