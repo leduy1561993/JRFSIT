@@ -24,17 +24,14 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
             android:name="vn.edu.uit.jrfsit.activity.MainActivity"
-            android:label="@string/title_activity_main"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:label="@string/title_activity_main">
             </activity>
         <activity
             android:name="vn.edu.uit.jrfsit.activity.DetailJobActivity"
-            android:label="Công việc"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:label="Công việc" />
         <activity
             android:name="vn.edu.uit.jrfsit.Demo"
-            android:label="Công việc"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:label="Công việc"/>
         <activity
             android:name="vn.edu.uit.jrfsit.activity.LoginActivity"
             android:label="@string/title_activity_login">
@@ -45,8 +42,7 @@
         </activity>
         <activity
             android:name="vn.edu.uit.jrfsit.activity.ResultJobSearchActivity"
-            android:label="@string/title_activity_search_result"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:label="@string/title_activity_search_result"/>
         <activity
             android:name="vn.edu.uit.jrfsit.activity.AddSkillActivity"
             android:label="@string/title_activity_job_skill"
@@ -69,8 +65,7 @@
             android:theme="@style/Base.V7.Theme.AppCompat.Light.Dialog" />
         <activity
             android:name="vn.edu.uit.jrfsit.activity.RegisterUserActivity"
-            android:label="@string/title_activity_register"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:label="@string/title_activity_register"/>
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"

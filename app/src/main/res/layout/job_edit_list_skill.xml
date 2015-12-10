@@ -5,6 +5,7 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
+    android:background="@color/colorbackgroupwhite"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
     <android.support.v7.internal.widget.ListViewCompat
@@ -35,7 +36,7 @@
             android:padding="10.0dip"
             android:paddingTop="5.0dip"
             android:text="Hủy"
-            android:textColor="#ffff5722"
+            android:textColor="@color/colorPrimary"
             android:textSize="20.0dip" />
 
         <android.support.v7.widget.AppCompatButton
@@ -48,7 +49,7 @@
             android:padding="10.0dip"
             android:paddingTop="5.0dip"
             android:text="Lưu"
-            android:textColor="#ffff5722"
+            android:textColor="@color/colorPrimary"
             android:textSize="20.0dip" />
     </LinearLayout>
 </LinearLayout>

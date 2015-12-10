@@ -17,6 +17,8 @@
         android:layout_height="fill_parent"
         android:layout_gravity="left"
         android:fitsSystemWindows="true"
+        app:itemTextColor="@drawable/state_list"
+        app:itemIconTint="@drawable/state_list"
         app:headerLayout="@layout/nav_header_main"
         app:menu="@menu/activity_main_drawer" />
 </android.support.v4.widget.DrawerLayout>

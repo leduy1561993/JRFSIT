@@ -5,6 +5,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
+    android:background="@color/colorbackgroupwhite"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
     <LinearLayout
@@ -41,7 +42,7 @@
                         android:layout_weight="20.0"
                         android:singleLine="true"
                         android:text="Thông tin cá nhân"
-                        android:textColor="#ff3d5afe"
+                        android:textColor="@color/colorPrimary"
                         android:textSize="@dimen/title_text_size" />
 
                     <ImageButton
@@ -204,7 +205,7 @@
                         android:layout_weight="20.0"
                         android:singleLine="true"
                         android:text="Khả năng"
-                        android:textColor="#ff3d5afe"
+                        android:textColor="@color/colorPrimary"
                         android:textSize="@dimen/title_text_size" />
 
                     <android.support.v7.widget.AppCompatButton
@@ -213,8 +214,9 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/ripple"
                         android:layout_weight="80.0"
+                        android:clickable="true"
                         android:text="Thêm"
-                        android:textColor="@color/colorTextSub" />
+                        android:textColor="@color/colorPrimary" />
                 </LinearLayout>
 
                 <android.support.v7.internal.widget.ListViewCompat
@@ -251,7 +253,7 @@
                         android:layout_weight="20.0"
                         android:singleLine="true"
                         android:text="Nguyện vọng công việc"
-                        android:textColor="#ff3d5afe"
+                        android:textColor="@color/colorPrimary"
                         android:textSize="@dimen/title_text_size" />
 
                     <ImageButton

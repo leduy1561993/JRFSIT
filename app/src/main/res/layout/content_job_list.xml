@@ -5,6 +5,7 @@
     android:id="@+id/job_search_true"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:background="@color/colorbackgroupwhite"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
     <android.support.v7.internal.widget.ListViewCompat

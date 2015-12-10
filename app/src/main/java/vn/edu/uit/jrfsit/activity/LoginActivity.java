@@ -58,13 +58,12 @@ public class LoginActivity extends AppCompatActivity
     AppCompatButton signInButton;
     UserService userService;
     ProgressDialog progressdialog;
-    LinearLayout lnFlash;
     LinearLayout lnLogin;
 
     @Override
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.content_screen_login);
         accountPreferences = new AccountPreferences(this);
         if (!accountPreferences.getAccount().getEmail().equals("")) {
             finish();
@@ -94,7 +93,6 @@ public class LoginActivity extends AppCompatActivity
                     gender ="Không rõ";
                 }
                 final String imageUrl = currentPerson.getImage().getUrl();
-                progressdialog.show();
                 new Thread(new Runnable() {
                     public void run() {
                         String userId = userService.insertUserGoogle(fullName, email, "0", birthday, gender, address, "", "", imageUrl);
@@ -163,7 +161,6 @@ public class LoginActivity extends AppCompatActivity
         btLogin = (AppCompatButton) findViewById(R.id.btLogin_login);
         btRegister = (AppCompatButton) findViewById(R.id.btRegister_login);
         signInButton = (AppCompatButton) findViewById(R.id.btLoginGoogle);
-        lnFlash = (LinearLayout) findViewById(R.id.ln_login_flash);
         lnLogin = (LinearLayout) findViewById(R.id.ln_login);
     }
 
@@ -218,13 +215,6 @@ public class LoginActivity extends AppCompatActivity
         userService = new UserService();
         setupUI(findViewById(R.id.ln_login));
         initListener();
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        lnFlash.setVisibility(View.INVISIBLE);
-        lnLogin.setVisibility(View.VISIBLE);
     }
 
     void login() {
@@ -281,7 +271,7 @@ public class LoginActivity extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
-        if (mBackPressed + 2000L > System.currentTimeMillis()) {
+        if (mBackPressed + TIME_INTERVAL > System.currentTimeMillis()) {
             super.onBackPressed();
             return;
         } else {
@@ -293,6 +283,7 @@ public class LoginActivity extends AppCompatActivity
 
     @Override
     public void onConnected(Bundle bundle) {
+        progressdialog.show();
         mSignInClicked = false;
         getProfileInformation();
     }

@@ -142,15 +142,12 @@ public class MainActivity extends AppCompatActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
-        }
-        if (mBackPressed + 2000L > System.currentTimeMillis()) {
-            super.onBackPressed();
-            return;
-        } else {
-            Toast.makeText(getBaseContext(), "Nhấn Back lần nưa để thoát", Toast.LENGTH_SHORT).show();
-            mBackPressed = System.currentTimeMillis();
-            return;
+            if (mBackPressed + 2000L > System.currentTimeMillis()) {
+                super.onBackPressed();
+            } else {
+                Toast.makeText(getBaseContext(), "Nhấn Back lần nưa để thoát", Toast.LENGTH_SHORT).show();
+                mBackPressed = System.currentTimeMillis();
+            }
         }
     }
 

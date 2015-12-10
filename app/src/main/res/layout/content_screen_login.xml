@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
     android:id="@+id/ln_login"
-    android:visibility="invisible"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorbackgroupwhite"
+    android:gravity="center"
+    android:orientation="vertical">
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingLeft="24.0dip"
-        android:paddingRight="24.0dip"
-        android:paddingTop="56.0dip">
+        android:padding="20sp">
 
         <ImageView
             android:layout_width="wrap_content"
@@ -30,14 +31,15 @@
                 android:layout_height="wrap_content"
                 android:text="Email:"
                 android:textSize="@dimen/title_text_size" />
+
             <android.support.v7.widget.AppCompatEditText
                 android:id="@+id/etEmail_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5.0dip"
-                android:textSize="@dimen/text_size_normal"
                 android:hint="abc@gmail.com"
-                android:inputType="textEmailAddress" />
+                android:inputType="textEmailAddress"
+                android:textSize="@dimen/text_size_normal" />
         </LinearLayout>
 
         <LinearLayout
@@ -57,53 +59,65 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5.0dip"
-                android:textSize="@dimen/text_size_normal"
                 android:hint="Nhập mật khẩu"
-                android:inputType="textPassword" />
+                android:inputType="textPassword"
+                android:textSize="@dimen/text_size_normal" />
         </LinearLayout>
 
-        <android.support.v7.widget.AppCompatButton
-            android:id="@+id/btLogin_login"
-            style="SignIn"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30sp"
             android:layout_marginLeft="30.0dip"
             android:layout_marginRight="50.0dip"
             android:layout_marginTop="15.0dip"
-            android:background="@drawable/ripple"
-            android:clickable="true"
-            android:textSize="@dimen/text_size_normal"
-            android:drawableLeft="@drawable/ic_login"
-            android:shadowRadius="10.0"
-            android:text="Đăng nhập"
-            android:textColor="@color/colorTextSub" />
+            android:background="@drawable/border_linear">
 
-        <android.support.v7.widget.AppCompatButton
-            android:id="@+id/btRegister_login"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btLogin_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ripple"
+                android:text="Đăng nhập"
+                android:textColor="@color/colorTextSub"
+                android:textSize="@dimen/button_text_size" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30sp"
             android:layout_marginLeft="30.0dip"
             android:layout_marginRight="50.0dip"
             android:layout_marginTop="5.0dip"
-            android:background="@drawable/ripple"
-            android:textSize="@dimen/text_size_normal"
-            android:clickable="true"
-            android:drawableLeft="@drawable/ic_create_user"
-            android:text="Đăng kí"
-            android:textColor="@color/colorTextSub" />
+            android:background="@drawable/border_linear">
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btRegister_login"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ripple"
+                android:clickable="true"
+                android:text="Đăng kí"
+                android:textColor="@color/colorTextSub"
+                android:textSize="@dimen/button_text_size" />
+        </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30sp"
+            android:layout_marginLeft="30.0dip"
+            android:layout_marginRight="50.0dip"
+            android:layout_marginTop="5.0dip"
+            android:background="@drawable/border_linear">
         <android.support.v7.widget.AppCompatButton
             android:id="@+id/btLoginGoogle"
             android:layout_width="fill_parent"
-            android:textSize="@dimen/text_size_normal"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30.0dip"
-            android:layout_marginRight="50.0dip"
-            android:layout_marginTop="5.0dip"
             android:background="@drawable/ripple"
             android:clickable="true"
             android:drawableLeft="@drawable/ic_google_plus"
             android:text="Đăng nhập với Google+"
-            android:textColor="@color/colorTextSub" />
+            android:textColor="@color/colorTextSub"
+            android:textSize="@dimen/button_text_size" />
+            </LinearLayout>
     </LinearLayout>
 </LinearLayout>
