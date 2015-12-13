@@ -25,20 +25,17 @@
         <activity
             android:name="vn.edu.uit.jrfsit.activity.MainActivity"
             android:label="@string/title_activity_main">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
             </activity>
         <activity
             android:name="vn.edu.uit.jrfsit.activity.DetailJobActivity"
             android:label="Công việc" />
         <activity
-            android:name="vn.edu.uit.jrfsit.Demo"
-            android:label="Công việc"/>
-        <activity
             android:name="vn.edu.uit.jrfsit.activity.LoginActivity"
             android:label="@string/title_activity_login">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name="vn.edu.uit.jrfsit.activity.ResultJobSearchActivity"

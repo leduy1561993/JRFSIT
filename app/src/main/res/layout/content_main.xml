@@ -6,7 +6,6 @@
     android:layout_height="fill_parent"
     android:background="@color/colorbackgroupwhite"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
-
     <FrameLayout
         android:id="@+id/main_frame"
         android:layout_width="fill_parent"

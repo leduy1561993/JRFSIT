@@ -86,6 +86,7 @@ public class MainActivity extends AppCompatActivity
         bitmapService = new BitmapService();
         initControlOnView();
         setSupportActionBar(toolbar);
+
         toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
@@ -115,8 +116,9 @@ public class MainActivity extends AppCompatActivity
                 .addScope(Plus.SCOPE_PLUS_LOGIN)
                 .build();
         mGoogleApiClient.connect();
-        setFragment(new SearchFragment());
-        navigationView.setCheckedItem(0);
+        //setFragment(new SearchFragment());
+        //navigationView.setCheckedItem(0);
+        setFragment(new HelpFragment());
     }
 
     private void setFragment(Fragment fragment) {
@@ -166,7 +168,6 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main, menu);
-
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -190,15 +191,11 @@ public class MainActivity extends AppCompatActivity
         } else if (i ==  R.id.nav_logout) {
             signOutFromGplus();
         }
+        item.setCheckable(true);
+        item.setChecked(true);
         navigationView.setCheckedItem(i);
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        navigationView.setItemBackground(getResources().getDrawable(R.drawable.ripple1));
         drawer.closeDrawer(GravityCompat.START);
         return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem menuitem) {
-        menuitem.getItemId();
-        return super.onOptionsItemSelected(menuitem);
     }
 }
