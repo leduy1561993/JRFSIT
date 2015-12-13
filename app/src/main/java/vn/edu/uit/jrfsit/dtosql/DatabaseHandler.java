@@ -17,7 +17,7 @@ public class DatabaseHandler extends SQLiteOpenHelper
 {
 
     private static final String DATABASE_NAME = "jobSearchRecently";
-    private static final int DATABASE_VERSION = 2;
+    private static final int DATABASE_VERSION = 1;
     private static final String DATE_TIME = "DateTime";
     private static final String KEYWORD = "keyword";
     private static final String KEY_ID = "id";

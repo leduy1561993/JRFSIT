@@ -63,6 +63,7 @@ public class LoginActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
+        getApplicationContext().deleteDatabase("jobSearchRecently");
         setContentView(R.layout.content_screen_login);
         accountPreferences = new AccountPreferences(this);
         if (!accountPreferences.getAccount().getEmail().equals("")) {
@@ -233,6 +234,7 @@ public class LoginActivity extends AppCompatActivity
                             }
                             accountPreferences.putAccount(account.getUserId(), account.getEmail(), account.getPassword(), account.isGoogle(), imageUrl);
                             finish();
+                            getApplicationContext().deleteDatabase("jobSearchRecently");
                             startActivity(new Intent(getApplicationContext(),MainActivity.class));
                         } else {
                             runOnUiThread(new Runnable() {

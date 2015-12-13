@@ -116,9 +116,8 @@ public class MainActivity extends AppCompatActivity
                 .addScope(Plus.SCOPE_PLUS_LOGIN)
                 .build();
         mGoogleApiClient.connect();
-        //setFragment(new SearchFragment());
-        //navigationView.setCheckedItem(0);
-        setFragment(new HelpFragment());
+        setFragment(new SearchFragment());
+        navigationView.setCheckedItem(0);
     }
 
     private void setFragment(Fragment fragment) {

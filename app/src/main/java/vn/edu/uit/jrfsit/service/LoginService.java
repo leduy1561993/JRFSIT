@@ -33,6 +33,7 @@ public class LoginService extends BaseService
             if (jsonObject != null && jsonObject.getInt("success") > 0) {
                 account = new Account();
                 account.setUserId(jsonObject.getString("UserId"));
+                account.setEmail(jsonObject.getString("Email"));
                 account.setPassword(jsonObject.getString("Password"));
                 account.setImageUrl(jsonObject.getString("imageUrl"));
                 account.setIsGoogle(false);
