@@ -46,6 +46,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:layout_gravity="center_horizontal"
                 android:padding="10sp">
 
                 <android.support.v7.widget.AppCompatTextView
@@ -56,12 +57,13 @@
                     android:singleLine="false"
                     android:text="Chọn chuyên ngành giới thiệu"
                     android:textColor="@color/colorText"
-                    android:textSize="@dimen/sub_title_text_size"
-                    android:textStyle="bold" />
+                    android:textSize="@dimen/sub_title_text_size"/>
 
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/snSetting_specicaly"
                     style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    android:layout_marginLeft="15sp"
+                    android:layout_marginRight="15sp"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:paddingTop="15.0dip"
@@ -81,8 +83,7 @@
                         android:singleLine="false"
                         android:text="Chọn địa điểm muốn giới thiệu"
                         android:textColor="@color/colorText"
-                        android:textSize="@dimen/sub_title_text_size"
-                        android:textStyle="bold" />
+                        android:textSize="@dimen/sub_title_text_size"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -94,7 +95,7 @@
                         android:id="@+id/acSetting_location"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="5.0dip"
+                        android:layout_marginLeft="15sp"
                         android:layout_weight="2.0"
                         android:autoText="true"
                         android:ems="10"
@@ -121,14 +122,15 @@
                     android:singleLine="false"
                     android:text="Chọn số công việc giới thiệu"
                     android:textColor="@color/colorText"
-                    android:textSize="@dimen/sub_title_text_size"
-                    android:textStyle="bold" />
+                    android:textSize="@dimen/sub_title_text_size"/>
 
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/snSetting_number_job"
                     style="@style/Base.Widget.AppCompat.Spinner.Underlined"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="15sp"
+                    android:layout_marginRight="15sp"
                     android:padding="5dp"
                     android:paddingTop="15.0dip"
                     android:spinnerMode="dropdown" />
@@ -141,25 +143,27 @@
                     android:singleLine="false"
                     android:text="Chọn thời gian giới thiệu"
                     android:textColor="@color/colorText"
-                    android:textSize="@dimen/sub_title_text_size"
-                    android:textStyle="bold" />
+                    android:textSize="@dimen/sub_title_text_size"/>
 
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/snSetting_time_recommend"
                     style="@style/Base.Widget.AppCompat.Spinner.Underlined"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="15sp"
+                    android:layout_marginRight="15sp"
                     android:spinnerMode="dropdown" />
 
                 <LinearLayout
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
                     android:background="@drawable/ripple">
 
                     <android.support.v7.widget.AppCompatButton
                         android:layout_marginTop="5sp"
                         android:id="@+id/btSetting_save"
-                        android:layout_width="fill_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="35sp"
                         android:layout_marginLeft="30dp"
                         android:layout_marginRight="30dp"
@@ -200,12 +204,13 @@
                 <LinearLayout
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
                     android:background="@drawable/ripple">
 
                     <android.support.v7.widget.AppCompatButton
                         android:id="@+id/btSetting_change_pass"
                         android:layout_marginTop="5sp"
-                        android:layout_width="fill_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="35sp"
                         android:layout_marginLeft="30dp"
                         android:layout_marginRight="30dp"
@@ -213,7 +218,7 @@
                         android:paddingRight="50sp"
                         android:background="@drawable/border_linear"
                         android:drawableLeft="@drawable/ic_change_pass"
-                        android:text="Đổi mật khẩu"
+                        android:text="  Đổi mật khẩu"
                         android:textColor="@color/colorPrimary"
                         android:textSize="12.0dip" />
                 </LinearLayout>

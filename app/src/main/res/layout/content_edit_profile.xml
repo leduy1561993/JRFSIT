@@ -27,8 +27,8 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:text="Họ Tên:"
-                    android:textColor="@color/colorTextSub"
-                    android:textSize="@dimen/text_size_normal" />
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/title_text_size" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/et_name_profile"
@@ -36,7 +36,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5.0dip"
                     android:inputType="textPersonName"
-                    android:textColor="@color/colorText" />
+                    android:textColor="@color/colorTextSub" />
             </LinearLayout>
 
             <LinearLayout
@@ -49,8 +49,8 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:text="Email:"
-                    android:textColor="@color/colorTextSub"
-                    android:textSize="@dimen/text_size_normal" />
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/title_text_size" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/et_email_profile"
@@ -59,7 +59,7 @@
                     android:layout_marginTop="5.0dip"
                     android:enabled="false"
                     android:inputType="textEmailAddress"
-                    android:textColor="@color/colorText" />
+                    android:textColor="@color/colorTextSub" />
             </LinearLayout>
 
             <LinearLayout
@@ -72,8 +72,8 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:text="Số điện thoại"
-                    android:textColor="@color/colorTextSub"
-                    android:textSize="@dimen/text_size_normal" />
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/title_text_size" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/et_mobilenumber_profile"
@@ -81,7 +81,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5.0dip"
                     android:inputType="phone"
-                    android:textColor="@color/colorText" />
+                    android:textColor="@color/colorTextSub" />
             </LinearLayout>
 
             <LinearLayout
@@ -94,8 +94,8 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:text="Địa chỉ:"
-                    android:textColor="@color/colorTextSub"
-                    android:textSize="@dimen/text_size_normal" />
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/title_text_size" />
 
                 <LinearLayout
                     android:layout_width="fill_parent"
@@ -112,7 +112,7 @@
                         android:ems="10"
                         android:inputType="text"
                         android:padding="15.0dip"
-                        android:textColor="@color/colorText" />
+                        android:textColor="@color/colorTextSub" />
 
                     <android.support.v7.widget.AppCompatButton
                         android:id="@+id/bt_location__profile"
@@ -138,8 +138,8 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:text="Ngày sinh:"
-                    android:textColor="@color/colorTextSub"
-                    android:textSize="@dimen/text_size_normal" />
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/title_text_size" />
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/et_birthday_profile"
@@ -147,7 +147,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5.0dip"
                     android:editable="false"
-                    android:textColor="@color/colorText" />
+                    android:textColor="@color/colorTextSub" />
             </LinearLayout>
 
             <LinearLayout
@@ -160,8 +160,8 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:text="Giới tính:"
-                    android:textColor="@color/colorTextSub"
-                    android:textSize="@dimen/text_size_normal" />
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/title_text_size" />
 
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/sn_gender_profile"
@@ -170,7 +170,7 @@
                     android:layout_marginTop="5.0dip"
                     android:editable="false"
                     android:spinnerMode="dropdown"
-                    android:textColor="@color/colorText"
+                    android:textColor="@color/colorTextSub"
                     android:touchscreenBlocksFocus="false" />
             </LinearLayout>
         </LinearLayout>

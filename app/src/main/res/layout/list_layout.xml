@@ -54,7 +54,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="20.0"
                     android:text="Giam doc cong ty CCC"
-                    android:textColor="@color/colorPrimary"
+                    android:textColor="@color/colorText"
                     android:textSize="14.0sp"
                     android:textStyle="bold" />
 
