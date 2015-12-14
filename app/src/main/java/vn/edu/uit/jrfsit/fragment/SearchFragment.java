@@ -80,7 +80,7 @@ public class SearchFragment extends Fragment
         tabs.setCustomTabColorizer(new vn.edu.uit.jrfsit.layoutcomponent.SlidingTabLayout.TabColorizer() {
             @Override
             public int getIndicatorColor(int i) {
-                return getResources().getColor(R.color.colorAccent);
+                return getResources().getColor(R.color.colorPrimary);
             }
         });
     }

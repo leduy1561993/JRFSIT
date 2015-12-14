@@ -20,5 +20,6 @@
         android:layout_gravity="bottom|right|center"
         android:layout_margin="@dimen/fab_margin"
         android:src="@drawable/ic_delete_history"
-        app:rippleColor="@color/colorSelect" />
+        app:backgroundTint="@color/colorPrimary"
+        app:rippleColor="@color/colorBackground" />
 </android.support.design.widget.CoordinatorLayout>
