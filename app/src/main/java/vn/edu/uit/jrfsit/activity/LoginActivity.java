@@ -63,7 +63,6 @@ public class LoginActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        getApplicationContext().deleteDatabase("jobSearchRecently");
         setContentView(R.layout.content_screen_login);
         accountPreferences = new AccountPreferences(this);
         if (!accountPreferences.getAccount().getEmail().equals("")) {

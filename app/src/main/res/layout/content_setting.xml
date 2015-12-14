@@ -12,7 +12,6 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:orientation="vertical">
-
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -24,6 +23,7 @@
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:padding="10sp"
                 android:weightSum="10.0">
 
                 <android.support.v7.widget.AppCompatTextView
@@ -37,6 +37,7 @@
                 <android.support.v7.widget.SwitchCompat
                     android:id="@+id/scSetting"
                     android:layout_width="fill_parent"
+                    android:backgroundTint="@color/colorPrimary"
                     android:layout_height="wrap_content"
                     android:layout_weight="8.0" />
             </LinearLayout>
@@ -45,7 +46,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="5.0dip">
+                android:padding="10sp">
 
                 <android.support.v7.widget.AppCompatTextView
                     android:layout_width="fill_parent"
@@ -180,7 +181,7 @@
             android:layout_margin="5.0dip"
             android:background="@drawable/border_linear"
             android:orientation="vertical"
-            android:padding="5.0dip">
+            android:padding="10sp">
 
             <android.support.v7.widget.AppCompatTextView
                 android:layout_width="fill_parent"

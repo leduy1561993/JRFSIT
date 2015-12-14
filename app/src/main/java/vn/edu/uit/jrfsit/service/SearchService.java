@@ -68,7 +68,7 @@ public class SearchService extends BaseService
             nameValuePairs.add(new BasicNameValuePair("sortMode", sortMode));
         }
         if(checkSpecialy)
-            nameValuePairs.add(new BasicNameValuePair("specialy",special));
+            nameValuePairs.add(new BasicNameValuePair("special",special));
 
         nameValuePairs.add(new BasicNameValuePair("offset", offset));
 

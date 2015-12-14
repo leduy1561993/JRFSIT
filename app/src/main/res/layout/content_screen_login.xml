@@ -34,9 +34,11 @@
 
             <android.support.v7.widget.AppCompatEditText
                 android:id="@+id/etEmail_login"
+                android:background="@drawable/border_linear"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5.0dip"
+                android:padding="7sp"
                 android:hint="abc@gmail.com"
                 android:inputType="textEmailAddress"
                 android:textSize="@dimen/text_size_normal" />
@@ -56,8 +58,10 @@
 
             <android.support.v7.widget.AppCompatEditText
                 android:id="@+id/etPassword_login"
+                android:padding="7sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/border_linear"
                 android:layout_marginTop="5.0dip"
                 android:hint="Nhập mật khẩu"
                 android:inputType="textPassword"
@@ -69,11 +73,13 @@
             android:layout_height="30sp"
             android:layout_marginLeft="30.0dip"
             android:layout_marginRight="50.0dip"
+            android:gravity="center"
             android:layout_marginTop="15.0dip"
             android:background="@drawable/border_linear">
 
             <android.support.v7.widget.AppCompatButton
                 android:id="@+id/btLogin_login"
+                android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/ripple"
@@ -88,11 +94,13 @@
             android:layout_height="30sp"
             android:layout_marginLeft="30.0dip"
             android:layout_marginRight="50.0dip"
+            android:gravity="center"
             android:layout_marginTop="5.0dip"
             android:background="@drawable/border_linear">
             <android.support.v7.widget.AppCompatButton
                 android:id="@+id/btRegister_login"
                 android:layout_width="fill_parent"
+                android:gravity="center"
                 android:layout_height="wrap_content"
                 android:background="@drawable/ripple"
                 android:clickable="true"
@@ -111,6 +119,7 @@
         <android.support.v7.widget.AppCompatButton
             android:id="@+id/btLoginGoogle"
             android:layout_width="fill_parent"
+            android:gravity="center"
             android:layout_height="wrap_content"
             android:background="@drawable/ripple"
             android:clickable="true"

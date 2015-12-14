@@ -30,8 +30,8 @@ public class BitmapUtil {
 
     //Get Rounded Shape bit map
     public Bitmap getRoundedShape(Bitmap scaleBitmapImage) {
-        int targetWidth = 150;
-        int targetHeight = 150;
+        int targetWidth = 80;
+        int targetHeight = 80;
         Bitmap targetBitmap = Bitmap.createBitmap(targetWidth,
                 targetHeight, Bitmap.Config.ARGB_8888);
 

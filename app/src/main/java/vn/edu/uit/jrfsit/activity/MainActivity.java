@@ -117,7 +117,10 @@ public class MainActivity extends AppCompatActivity
                 .build();
         mGoogleApiClient.connect();
         setFragment(new SearchFragment());
-        navigationView.setCheckedItem(0);
+        /*MenuItem item = (MenuItem) this.findViewById(R.id.nav_search);
+        item.setCheckable(true);
+        item.setChecked(true);
+        navigationView.setCheckedItem(item.getItemId());*/
     }
 
     private void setFragment(Fragment fragment) {
@@ -128,6 +131,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void signOutFromGplus() {
+        getApplicationContext().deleteDatabase("jobSearchRecently");
         accountPreferences.clearData();
         if (mGoogleApiClient.isConnected()) {
             Plus.AccountApi.clearDefaultAccount(mGoogleApiClient);
@@ -146,7 +150,7 @@ public class MainActivity extends AppCompatActivity
             if (mBackPressed + 2000L > System.currentTimeMillis()) {
                 super.onBackPressed();
             } else {
-                Toast.makeText(getBaseContext(), "Nhấn Back lần nưa để thoát", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getBaseContext(), "Nhấn thêm lần nữa để thoát", Toast.LENGTH_SHORT).show();
                 mBackPressed = System.currentTimeMillis();
             }
         }
@@ -193,7 +197,6 @@ public class MainActivity extends AppCompatActivity
         item.setCheckable(true);
         item.setChecked(true);
         navigationView.setCheckedItem(i);
-        navigationView.setItemBackground(getResources().getDrawable(R.drawable.ripple1));
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }

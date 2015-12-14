@@ -158,6 +158,15 @@ public class RegisterUserActivity extends AppCompatActivity
         });
     }
 
+    @Override
+    public void onBackPressed() {
+        (new android.app.AlertDialog.Builder(RegisterUserActivity.this))
+                .setMessage("Cài đặt chưa được lưu, bạn thực sự muốn thoát không?")
+                .setPositiveButton("Có", dialogClickListener)
+                .setNegativeButton("Không", dialogClickListener)
+                .show();
+    }
+
     private void load() {
         initControlOnView();
         setSupportActionBar(mToolbar);

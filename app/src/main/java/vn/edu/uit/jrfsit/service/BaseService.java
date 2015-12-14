@@ -8,11 +8,10 @@ import vn.edu.uit.jrfsit.connect.Connect;
 
 public class BaseService
 {
-
-    public static String ROOT_URL;
     public static String ROOT_URL_EMULATOR = "http://10.0.3.2/";
-    public static String ROOT_URL_PHONE;
+    public static String ROOT_URL_PHONE ="http://192.168.1.12/";
     public static String ROOT_URL_PHONE_COMPANY = "http://172.16.10.243/";
+    public static String ROOT_URL  = ROOT_URL_EMULATOR;
 
     public BaseService()
     {
@@ -21,11 +20,5 @@ public class BaseService
     public Connect initConnection(String s)
     {
         return new Connect((new StringBuilder()).append(ROOT_URL).append(s).toString());
-    }
-
-    static 
-    {
-        ROOT_URL_PHONE = "http://192.168.1.12/";
-        ROOT_URL = ROOT_URL_PHONE;
     }
 }
