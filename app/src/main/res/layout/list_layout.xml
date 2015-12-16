@@ -1,22 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="#ffeeeeee"
-    android:weightSum="100.0"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorbackgroupwhite">
 
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:background="#fff5f5f5"
-        android:weightSum="100.0"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorbackgroupwhite"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
-
         <LinearLayout
             xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -25,9 +20,8 @@
             android:background="@drawable/ripple"
             android:paddingRight="@dimen/activity_horizontal_margin"
             android:paddingTop="@dimen/listItem_margin"
-            android:weightSum="100.0"
+            android:weightSum="100"
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
-
             <ProgressBar
                 android:id="@+id/progressBar1"
                 android:layout_width="wrap_content"
@@ -35,57 +29,47 @@
 
             <ImageView
                 android:id="@+id/image"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginRight="10.0dip"
+                android:scaleType="fitStart"
                 android:layout_weight="70.0" />
 
             <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="30.0"
-                android:divider="#ff03a9f4"
-                android:orientation="vertical"
-                android:weightSum="100.0">
-
+                android:paddingBottom="5sp"
+                android:orientation="vertical">
                 <android.support.v7.widget.AppCompatTextView
                     android:id="@+id/etDscv_TenCV"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="20.0"
                     android:text="Giam doc cong ty CCC"
                     android:textColor="@color/colorText"
-                    android:textSize="14.0sp"
-                    android:textStyle="bold" />
+                    android:textSize="15sp" />
 
                 <android.support.v7.widget.AppCompatTextView
                     android:id="@+id/etDscv_TenCT"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="2.0dip"
-                    android:layout_weight="20.0"
                     android:text="Cong ty CCC"
-                    android:textColor="#ff616161"
-                    android:textSize="12.0sp" />
+                    android:textColor="@color/colorTextSub"
+                    android:textSize="14sp" />
 
                 <android.support.v7.widget.AppCompatTextView
                     android:id="@+id/etDscv_ViTri"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="2.0dip"
-                    android:layout_weight="20.0"
                     android:text="Thanh pho HCM"
-                    android:textColor="#ff757575"
-                    android:textSize="12.0sp" />
-
+                    android:textColor="@color/colorTextSub"
+                    android:textSize="13sp" />
                 <android.support.v7.widget.AppCompatTextView
                     android:id="@+id/etDscv_information"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="2.0dip"
-                    android:layout_weight="20.0"
                     android:text="Rate: 1000/ Save: 1000/ See: 14255"
-                    android:textColor="#ff757575"
+                    android:textColor="@color/colorTextSub"
                     android:textSize="12.0sp" />
             </LinearLayout>
         </LinearLayout>

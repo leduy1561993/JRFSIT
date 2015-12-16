@@ -74,7 +74,7 @@
         android:layout_marginLeft="40.0dip"
         android:layout_marginTop="5.0dip"
         android:gravity="left"
-        android:text="Phạm Thị Ngọc Bích\u0009\u000911520021" />
+        android:text="Phạm Thị Ngọc Bích\t\t\t\t11520021" />
 
     <TextView
         android:layout_width="fill_parent"

@@ -29,6 +29,7 @@ public class HelpFragment extends BaseFragment {
     SubActionButton btHelpRecJob;
     SubActionButton btHelpProfile;
     SubActionButton btHelpSetting;
+    FloatingActionMenu actionMenu;
 
     @Override
     public View onCreateView(LayoutInflater layoutinflater, ViewGroup viewgroup, Bundle bundle) {
@@ -62,7 +63,7 @@ public class HelpFragment extends BaseFragment {
         itemIconSetting.setImageDrawable(getResources().getDrawable(android.R.drawable.ic_menu_manage));
         btHelpSetting = itemBuilder.setContentView(itemIconSetting).build();
 
-        FloatingActionMenu actionMenu = new FloatingActionMenu.Builder(activity)
+        actionMenu = new FloatingActionMenu.Builder(activity)
                 .addSubActionView(btHelpSearch, 200,200)
                 .addSubActionView(btHelpSaveJob,200,200)
                 .addSubActionView(btHelpRecJob,200,200)
@@ -84,6 +85,7 @@ public class HelpFragment extends BaseFragment {
             @Override
             public void onClick(View v) {
                 setFragment(new HelpSearchFragment());
+                actionMenu.close(true);
             }
         });
 
@@ -91,6 +93,7 @@ public class HelpFragment extends BaseFragment {
             @Override
             public void onClick(View v) {
                 setFragment(new HelpSaveFragment());
+                actionMenu.close(true);
             }
         });
 
@@ -98,6 +101,7 @@ public class HelpFragment extends BaseFragment {
             @Override
             public void onClick(View v) {
                 setFragment(new HelpRecFragment());
+                actionMenu.close(true);
             }
         });
 
@@ -105,6 +109,7 @@ public class HelpFragment extends BaseFragment {
             @Override
             public void onClick(View v) {
                 setFragment(new HelpProfileFragment());
+                actionMenu.close(true);
             }
         });
 
@@ -112,6 +117,7 @@ public class HelpFragment extends BaseFragment {
             @Override
             public void onClick(View v) {
                 setFragment(new HelpSettingFragment());
+                actionMenu.close(true);
             }
         });
     }

@@ -96,13 +96,15 @@ public class MainActivity extends AppCompatActivity
         new Thread(new Runnable() {
             public void run() {
                 final Bitmap bitmap = bitmapService.getBitmapFromURL(account.getImageUrl());
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        Bitmap circleBitmap = bitmapUtil.getRoundedShape(bitmap);
-                        avatar.setImageBitmap(circleBitmap);
-                    }
-                });
+                if(bitmap!=null){
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            Bitmap circleBitmap = bitmapUtil.getRoundedShape(bitmap);
+                            avatar.setImageBitmap(circleBitmap);
+                        }
+                    });
+                }
             }
         }).start();
 
@@ -115,12 +117,9 @@ public class MainActivity extends AppCompatActivity
                 .addScope(Plus.SCOPE_PLUS_PROFILE)
                 .addScope(Plus.SCOPE_PLUS_LOGIN)
                 .build();
-        mGoogleApiClient.connect();
+        if(mGoogleApiClient!=null)
+            mGoogleApiClient.connect();
         setFragment(new SearchFragment());
-        /*MenuItem item = (MenuItem) this.findViewById(R.id.nav_search);
-        item.setCheckable(true);
-        item.setChecked(true);
-        navigationView.setCheckedItem(item.getItemId());*/
     }
 
     private void setFragment(Fragment fragment) {

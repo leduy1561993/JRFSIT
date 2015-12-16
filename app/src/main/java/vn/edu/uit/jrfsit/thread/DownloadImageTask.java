@@ -17,6 +17,7 @@ import android.widget.ProgressBar;
 
 import vn.edu.uit.jrfsit.R;
 import vn.edu.uit.jrfsit.layoutcomponent.PbAndImage;
+import vn.edu.uit.jrfsit.service.BitmapService;
 
 public class DownloadImageTask extends AsyncTask<PbAndImage, Void, Bitmap> {
 
@@ -35,25 +36,20 @@ public class DownloadImageTask extends AsyncTask<PbAndImage, Void, Bitmap> {
     }
 
     protected void onPostExecute(Bitmap result) {
-        System.out.println("Downloaded " + imageView.getId());
         imageView.setVisibility(View.VISIBLE);
         pb.setVisibility(View.GONE);
-        //imageView.setImageBitmap(Utils.getRoundedShape(result));
         imageView.setImageBitmap(result);
     }
 
     /** This function downloads the image and returns the Bitmap **/
     private Bitmap getBitmapDownloaded(String url) {
-        System.out.println("String URL " + url);
-        Bitmap bitmap = BitmapFactory.decodeResource( mContext.getResources(), R.drawable.ic_profile);
-        try {
-            bitmap = BitmapFactory.decodeStream((InputStream) new URL(url)
-                    .getContent());
-            bitmap = getResizedBitmap(bitmap,60, 100);
-            return bitmap;
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        Bitmap bitmap;
+        BitmapService bitmapService =new BitmapService();
+        bitmap = bitmapService.getBitmapFromURL(url);
+       if(bitmap==null){
+           bitmap = BitmapFactory.decodeResource( mContext.getResources(), R.drawable.logo_defaut);
+       }
+        bitmap = getResizedBitmap(bitmap,100, 140);
         return bitmap;
     }
 
