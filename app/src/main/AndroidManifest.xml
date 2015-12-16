@@ -45,6 +45,10 @@
             android:label="@string/title_activity_job_skill"
             android:theme="@style/Theme.AppCompat.Light.Dialog" />
         <activity
+            android:name="vn.edu.uit.jrfsit.activity.ForgotPassActivity"
+            android:label="@string/title_activity_forgot_pass"
+            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+        <activity
             android:name="vn.edu.uit.jrfsit.activity.EditSkillActivity"
             android:label="@string/title_activity_job_edit_profile"
             android:theme="@style/Base.V7.Theme.AppCompat.Light.Dialog" />

@@ -24,23 +24,24 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
             <android.support.v7.widget.AppCompatTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorText"
                 android:text="Email:"
+                android:textColor="@color/colorText"
                 android:textSize="@dimen/title_text_size" />
 
             <android.support.v7.widget.AppCompatEditText
                 android:id="@+id/etEmail_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5.0dip"
                 android:layout_marginLeft="10sp"
                 android:layout_marginRight="10sp"
-                android:padding="10sp"
+                android:layout_marginTop="5.0dip"
                 android:hint="abc@gmail.com"
                 android:inputType="textEmailAddress"
+                android:padding="10sp"
                 android:textSize="@dimen/text_size_normal" />
         </LinearLayout>
 
@@ -52,39 +53,38 @@
             <android.support.v7.widget.AppCompatTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorText"
                 android:layout_marginTop="10.0dip"
                 android:text="Mật khẩu:"
+                android:textColor="@color/colorText"
                 android:textSize="@dimen/title_text_size" />
 
             <android.support.v7.widget.AppCompatEditText
                 android:id="@+id/etPassword_login"
-                android:padding="10sp"
-                android:layout_marginLeft="10sp"
-                android:layout_marginRight="10sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
                 android:layout_marginTop="5.0dip"
                 android:hint="Nhập mật khẩu"
                 android:inputType="textPassword"
+                android:padding="10sp"
                 android:textSize="@dimen/text_size_normal" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="30sp"
+            android:layout_height="40sp"
             android:layout_marginLeft="30.0dip"
             android:layout_marginRight="50.0dip"
-            android:gravity="center"
             android:layout_marginTop="15.0dip"
-            android:background="@drawable/border_linear">
-
+            android:background="@drawable/border_linear"
+            android:gravity="center">
             <android.support.v7.widget.AppCompatButton
                 android:id="@+id/btLogin_login"
-                android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/ripple"
+                android:gravity="center"
                 android:text="Đăng nhập"
                 android:textColor="@color/colorPrimary"
                 android:textSize="@dimen/button_text_size" />
@@ -93,19 +93,20 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="30sp"
+            android:layout_height="40sp"
             android:layout_marginLeft="30.0dip"
             android:layout_marginRight="50.0dip"
-            android:gravity="center"
             android:layout_marginTop="5.0dip"
-            android:background="@drawable/border_linear">
+            android:background="@drawable/border_linear"
+            android:gravity="center">
+
             <android.support.v7.widget.AppCompatButton
                 android:id="@+id/btRegister_login"
                 android:layout_width="fill_parent"
-                android:gravity="center"
                 android:layout_height="wrap_content"
                 android:background="@drawable/ripple"
                 android:clickable="true"
+                android:gravity="center"
                 android:text="Đăng kí"
                 android:textColor="@color/colorPrimary"
                 android:textSize="@dimen/button_text_size" />
@@ -113,24 +114,45 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="30sp"
+            android:layout_height="40sp"
             android:layout_marginLeft="30.0dip"
             android:layout_marginRight="50.0dip"
             android:layout_marginTop="5.0dip"
             android:background="@drawable/border_linear">
-        <android.support.v7.widget.AppCompatButton
-            android:id="@+id/btLoginGoogle"
-            android:layout_width="fill_parent"
-            android:gravity="center"
-            android:layout_height="wrap_content"
-            android:background="@drawable/ripple"
-            android:paddingLeft="10sp"
-            android:paddingRight="10sp"
-            android:clickable="true"
-            android:drawableStart="@drawable/ic_google_plus"
-            android:text="Đăng nhập với Google+"
-            android:textColor="@color/colorPrimary"
-            android:textSize="@dimen/button_text_size" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btLoginGoogle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ripple"
+                android:clickable="true"
+                android:drawableStart="@drawable/ic_google_plus"
+                android:gravity="center"
+                android:paddingLeft="10sp"
+                android:paddingRight="10sp"
+                android:text="Đăng nhập với Google+"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/button_text_size" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:layout_marginLeft="30.0dip"
+            android:layout_marginRight="50.0dip"
+            android:layout_marginTop="5.0dip"
+            android:background="@drawable/border_linear"
+            android:gravity="center">
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btforgot_pass_login"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ripple"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="Quên mật khẩu"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/button_text_size" />
             </LinearLayout>
     </LinearLayout>
 </LinearLayout>

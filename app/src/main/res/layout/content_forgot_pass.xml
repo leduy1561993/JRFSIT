@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:minWidth="300sp"
+    android:background="@color/colorbackgroupwhite"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10sp"
+        android:weightSum="10.0">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:text="Nhập địa chỉ email"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10.0dip"
+            android:textColor="@color/colorText"
+            android:paddingTop="15.0dip" />
+        <android.support.v7.widget.AppCompatEditText
+            android:layout_margin="10.0dip"
+            android:id="@+id/etEmail_forgot_pass"
+            android:paddingTop="5.0dip"
+            android:inputType="textEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2.0">
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btCancel_forgot_pass"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="10.0dip"
+                android:layout_weight="1.0"
+                android:background="@drawable/ripple"
+                android:drawableLeft="@drawable/ic_delete"
+                android:padding="10.0dip"
+                android:paddingTop="5.0dip"
+                android:text="Hủy"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18.0dip" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btSend_forgot_pass"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="10.0dip"
+                android:layout_weight="1.0"
+                android:background="@drawable/ripple"
+                android:drawableLeft="@drawable/ic_save_ac"
+                android:padding="10.0dip"
+                android:paddingTop="5.0dip"
+                android:text="Gửi"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

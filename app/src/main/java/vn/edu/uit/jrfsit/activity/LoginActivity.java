@@ -49,6 +49,7 @@ public class LoginActivity extends AppCompatActivity
     AppCompatButton btLogin;
     AppCompatButton btRegister;
     LoginService loginService;
+    AppCompatButton btForgotPass;
     private long mBackPressed;
     private ConnectionResult mConnectionResult;
     AppCompatEditText mEtEmail;
@@ -184,6 +185,7 @@ public class LoginActivity extends AppCompatActivity
         btRegister = (AppCompatButton) findViewById(R.id.btRegister_login);
         signInButton = (AppCompatButton) findViewById(R.id.btLoginGoogle);
         lnLogin = (LinearLayout) findViewById(R.id.ln_login);
+        btForgotPass = (AppCompatButton) findViewById(R.id.btforgot_pass_login);
     }
 
     void initListener() {
@@ -218,13 +220,18 @@ public class LoginActivity extends AppCompatActivity
                 signInWithGplus();
             }
         });
+
+        btForgotPass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),ForgotPassActivity.class));
+            }
+        });
     }
 
     void load() {
         progressdialog = new ProgressDialog(LoginActivity.this);
         progressdialog.setMessage("Đang xử lí, vui lòng đợi");
-        progressdialog.setIndeterminate(true);
-        progressdialog.setCancelable(false);
         mGoogleApiClient = (new
                 com.google.android.gms.common.api.GoogleApiClient.Builder(this))
                 .addConnectionCallbacks(this)
@@ -232,6 +239,8 @@ public class LoginActivity extends AppCompatActivity
                 ).addApi(Plus.API)
                 .addScope(Plus.SCOPE_PLUS_LOGIN).build();
         mGoogleApiClient.connect();
+        progressdialog.setIndeterminate(true);
+        progressdialog.setCancelable(false);
         initControlOnView();
         loginService = new LoginService();
         userService = new UserService();
@@ -333,7 +342,7 @@ public class LoginActivity extends AppCompatActivity
     @Override
     protected void onStart() {
         super.onStart();
-        if(checkConnect){
+            if(checkConnect){
             mGoogleApiClient.connect();
         }
     }

@@ -278,6 +278,7 @@ public class RegisterUserActivity extends AppCompatActivity
         public void onClick(DialogInterface dialog, int which) {
             switch (which) {
                 case DialogInterface.BUTTON_POSITIVE:
+                    finish();
                     onBackPressed();
                     break;
                 case DialogInterface.BUTTON_NEGATIVE:
@@ -334,7 +335,7 @@ public class RegisterUserActivity extends AppCompatActivity
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                Utils.print(RegisterUserActivity.this, "Thất bại, kiểm tra kết nối");
+                                Utils.print(RegisterUserActivity.this, "Thất bại, Tài khoản đã tồn tại");
                                 dialog.dismiss();
                             }
                         });

@@ -40,6 +40,7 @@
                     android:layout_height="fill_parent"
                     android:layout_marginLeft="15.0sp"
                     android:layout_marginRight="15.0sp"
+                    android:inputType="textPersonName"
                     android:layout_weight="40.0"
                     android:hint="Chạm để nhập"
                     android:textSize="@dimen/sub_title_text_size" />
@@ -67,6 +68,7 @@
                     android:layout_height="fill_parent"
                     android:layout_marginLeft="15.0sp"
                     android:layout_marginRight="15.0sp"
+                    android:inputType="textEmailAddress"
                     android:layout_weight="40.0"
                     android:hint="Chạm để nhập"
                     android:textSize="@dimen/sub_title_text_size" />

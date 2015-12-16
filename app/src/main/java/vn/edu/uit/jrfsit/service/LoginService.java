@@ -6,6 +6,8 @@ package vn.edu.uit.jrfsit.service;
 
 import java.io.IOException;
 import java.util.ArrayList;
+
+import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -48,5 +50,23 @@ public class LoginService extends BaseService
             account = null;
         }
         return account;
+    }
+
+    public boolean forgotPass(String email){
+        Boolean isSuccess;
+        Connect connect = super.initConnection("mail/resetpass.php");
+        ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
+        nameValuePairs.add(new BasicNameValuePair("Email", email));
+        boolean result;
+        try {
+            isSuccess = connect.DUI(nameValuePairs);
+        } catch (IOException e) {
+            e.printStackTrace();
+            isSuccess = false;
+        } catch (JSONException e) {
+            e.printStackTrace();
+            isSuccess = false;
+        }
+        return isSuccess;
     }
 }
