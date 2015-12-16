@@ -25,6 +25,10 @@
     <string name="title_activity_person">Thông tin cá nhân</string>
     <string name="title_activity_help">Trợ giúp</string>
     <string name="title_activity_help_search">Hướng dẫn tìm kiếm</string>
+    <string name="title_activity_help_job_rec">Hướng dẫn công việc giới thiệu</string>
+    <string name="title_activity_help_job_save">Hướng dẫn công việc đã lưu</string>
+    <string name="title_activity_help_profile">Hướng dẫn thông tin cá nhân</string>
+    <string name="title_activity_help_setting">Hướng dẫn cài đặt</string>
 
     <!-- -->
     <string name="connect_fail">Cập nhật thất bại, kiểm tra kết nối</string>

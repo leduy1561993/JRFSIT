@@ -45,14 +45,15 @@
                         android:textColor="@color/colorPrimary"
                         android:textSize="@dimen/title_text_size" />
 
-                    <ImageButton
+                    <android.support.v7.widget.AppCompatButton
                         android:id="@+id/bt_edit_personal_job_profile"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp"
                         android:layout_weight="80.0"
                         android:background="@drawable/ripple"
-                        android:padding="5.0dip"
-                        android:src="@drawable/ic_edit" />
+                        android:text="SỬA"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -213,6 +214,7 @@
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/ripple"
+                        android:textSize="12sp"
                         android:layout_weight="80.0"
                         android:clickable="true"
                         android:text="Thêm"
@@ -256,14 +258,16 @@
                         android:textColor="@color/colorPrimary"
                         android:textSize="@dimen/title_text_size" />
 
-                    <ImageButton
+                    <android.support.v7.widget.AppCompatButton
                         android:id="@+id/bt_edit_expect_user"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="80.0"
                         android:background="@drawable/ripple"
-                        android:padding="5.0dip"
-                        android:src="@drawable/ic_edit" />
+                        android:text="SỬA"
+                        android:padding="5.0dip"/>
                 </LinearLayout>
 
                 <android.support.v7.widget.AppCompatTextView

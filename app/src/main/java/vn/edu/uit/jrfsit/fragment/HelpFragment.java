@@ -63,12 +63,12 @@ public class HelpFragment extends BaseFragment {
         btHelpSetting = itemBuilder.setContentView(itemIconSetting).build();
 
         FloatingActionMenu actionMenu = new FloatingActionMenu.Builder(activity)
-                .addSubActionView(btHelpSearch, 80, 80)
-                .addSubActionView(btHelpSaveJob,80,80)
-                .addSubActionView(btHelpRecJob,80,80)
-                .addSubActionView(btHelpProfile,80,80)
-                .addSubActionView(btHelpSetting,80,80)
-                .setRadius(200)
+                .addSubActionView(btHelpSearch, 200,200)
+                .addSubActionView(btHelpSaveJob,200,200)
+                .addSubActionView(btHelpRecJob,200,200)
+                .addSubActionView(btHelpProfile,200,200)
+                .addSubActionView(btHelpSetting,200,200)
+                .setRadius(450)
                 .attachTo(btChooseHelp)
                 .build();
         initListener();

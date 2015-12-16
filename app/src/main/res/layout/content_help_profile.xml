@@ -1,10 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:background="@color/colorbackgroupwhite"
-    android:layout_height="match_parent">
-    <TextView
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <LinearLayout
         android:layout_width="match_parent"
-        android:text=" help profile"
-        android:layout_height="wrap_content" />
-</LinearLayout>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10sp">
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Thông tin cá nhân"
+            android:gravity="center_horizontal"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/title_text_size" />
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cho phép thiết lập thông tin cá nhân, kĩ năng, nguyện vọng công việc  "
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/sub_title_text_size" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="400sp"
+            android:padding="10sp"
+            android:src="@drawable/sr_profile" />
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bạn có thể sửa thông tin bằng cách nhấp vào nút sửa và chỉnh sửa thông tin của bạn sau đó bấm nút lưu lại"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/sub_title_text_size" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="400sp"
+            android:padding="10sp"
+            android:src="@drawable/sr_editprofile" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chỉnh sửa kĩ năng bằng cách bấm vào kĩ năng muốn sửa, thực hiện chỉnh sửa và lưu lại"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/sub_title_text_size" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="400sp"
+            android:padding="10sp"
+            android:src="@drawable/sr_editskill" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Thêm kĩ năng bằng cách bấm vào nút thêm, thực hiện thêm và lưu lại"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/sub_title_text_size" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="400sp"
+            android:padding="10sp"
+            android:src="@drawable/sr_addskill" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Xóa kĩ năng bằng cách chạm kĩ năng muốn xóa cho đến khi xuất hiện cửa sổ, chọn 'có' để xóa"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/sub_title_text_size" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="400sp"
+            android:padding="10sp"
+            android:src="@drawable/sr_delete_skill" />
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chỉnh sửa nguyện vọng công việc bằng cách bấm vào nút sửa, thực hiện chỉnh sửa và lưu lại"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/sub_title_text_size" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="400sp"
+            android:padding="10sp"
+            android:src="@drawable/sr_editspec" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mẹo:"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/sub_title_text_size" />
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="   Nhập thông tin càng chính xác thì bạn sẽ được giới thiệu công việc càng phù hợp"
+                android:textColor="@color/colorTextSub"
+                android:textSize="@dimen/sub_title_text_size" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

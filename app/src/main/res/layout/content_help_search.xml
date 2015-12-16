@@ -1,10 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:background="@color/colorbackgroupwhite"
-    android:layout_height="match_parent">
-    <TextView
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <LinearLayout
         android:layout_width="match_parent"
-        android:text=" help search"
-        android:layout_height="wrap_content" />
-</LinearLayout>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10sp">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tìm kiếm công việc"
+            android:gravity="center_horizontal"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/title_text_size" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chức năng này cho phép bạn tìm kiếm công việc theo yêu cầu cầu của bạn "
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/sub_title_text_size" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="400sp"
+            android:padding="10sp"
+            android:src="@drawable/search_screen" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nhập tên công việc cần tìm (Ví dụ: senior IOS)"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/sub_title_text_size" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:src="@drawable/search_cp_keyword"/>
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chọn địa diểm nơi bạn muốn làm việc, tỉnh hoặc thành phố"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/sub_title_text_size" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:src="@drawable/search_cp_location"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:padding="20sp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Có thể nhập tỉnh hoặc thành phố hoặc chọn từ bản đồ"
+                android:textColor="@color/colorTextSub"
+                android:textSize="@dimen/sub_title_text_size" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200sp"
+                android:src="@drawable/sr_getplace"/>
+        </LinearLayout>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" Chọn chuyên ngành bạn cần tìm việc"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/sub_title_text_size" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:src="@drawable/search_cp_specical"/>
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" Chọn chế độ sắp xếp hiển thị kết quả"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/sub_title_text_size" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:src="@drawable/search_cp_sortmode"/>
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" Bấm vào đây để bắt đầu tìm kiếm"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/sub_title_text_size" />
+        <ImageView
+            android:layout_width="300sp"
+            android:layout_height="40sp"
+            android:layout_gravity="center"
+            android:src="@drawable/search_cp_btsearch"/>
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" Hiển thị danh sách công việc phù hợp"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/sub_title_text_size" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300sp"
+            android:layout_gravity="center"
+            android:src="@drawable/sr_search_job"/>
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text=" Khi chọn 1 công việc, sẽ hiển thị màn chi tiết"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/sub_title_text_size" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300sp"
+            android:layout_gravity="center"
+            android:src="@drawable/sr_jobdetail"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:padding="30sp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tại đây bạn có thể đánh giá độ phù hợp của công việc với bạn, chia sẻ bạn bè hoặc lưu công việc này lại"
+                android:textColor="@color/colorTextSub"
+                android:textSize="@dimen/sub_title_text_size" />
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+               <android.support.v7.widget.AppCompatTextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Mẹo:"
+                   android:textColor="@color/colorText"
+                   android:textSize="@dimen/sub_title_text_size" />
+               <android.support.v7.widget.AppCompatTextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="   Khi đánh giá công việc càng chính xác thì bạn sẽ được giới thiệu công việc càng phù hợp"
+                   android:textColor="@color/colorTextSub"
+                   android:textSize="@dimen/sub_title_text_size" />
+           </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

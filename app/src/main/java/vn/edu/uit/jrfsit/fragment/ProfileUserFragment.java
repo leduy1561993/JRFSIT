@@ -54,8 +54,8 @@ public class ProfileUserFragment extends BaseFragment
     AccountPreferences accountPreferences;
     ArrayAdapter<Skill> adapter;
     AppCompatButton btAddSkill;
-    ImageButton btEditExpect;
-    ImageButton btEditProfile;
+    AppCompatButton btEditExpect;
+    AppCompatButton btEditProfile;
     android.content.DialogInterface.OnClickListener dialogClickListener;
     private List<Skill> list;
     ListViewUtil listViewUtil;
@@ -130,14 +130,14 @@ public class ProfileUserFragment extends BaseFragment
 
     public void initControlOnView()
     {
-        btEditProfile = (ImageButton) v.findViewById(R.id.bt_edit_personal_job_profile);
+        btEditProfile = (AppCompatButton) v.findViewById(R.id.bt_edit_personal_job_profile);
         tvPsEmail = (AppCompatTextView) v.findViewById(R.id.tv_ps_email_job_profile);
         tvPsTNumber = (AppCompatTextView) v.findViewById(R.id.tv_ps_sdt_job_profile);
         tvPsAddress = (AppCompatTextView) v.findViewById(R.id.tv_ps_address_job_profile);
         tvPsBirhday = (AppCompatTextView) v.findViewById(R.id.tv_ps_birthday_job_profile);
         tvPsGender = (AppCompatTextView) v.findViewById(R.id.tv_ps_gender_job_profile);
 
-        btEditExpect = (ImageButton) v.findViewById(R.id.bt_edit_expect_user);
+        btEditExpect = (AppCompatButton) v.findViewById(R.id.bt_edit_expect_user);
         tvUserEx = (AppCompatTextView) v.findViewById(R.id.tv_user_expect);
 
         btAddSkill = (AppCompatButton) v.findViewById(R.id.bt_add_skill_job_profile);

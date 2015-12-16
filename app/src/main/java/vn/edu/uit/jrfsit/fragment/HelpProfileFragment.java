@@ -29,6 +29,6 @@ public class HelpProfileFragment extends BaseFragment {
     }
 
     private void load() {
-        super.loadActivity(R.string.title_activity_help_search);
+        super.loadActivity(R.string.title_activity_help_profile);
     }
 }

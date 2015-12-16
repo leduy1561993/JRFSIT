@@ -6,6 +6,7 @@ package vn.edu.uit.jrfsit.activity;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentSender;
 import android.os.Bundle;
@@ -59,22 +60,43 @@ public class LoginActivity extends AppCompatActivity
     UserService userService;
     ProgressDialog progressdialog;
     LinearLayout lnLogin;
+    Boolean checkConnect;
 
     @Override
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         setContentView(R.layout.content_screen_login);
-        accountPreferences = new AccountPreferences(this);
-        if (!accountPreferences.getAccount().getEmail().equals("")) {
-            finish();
-            startActivity(new Intent(getApplicationContext(),MainActivity.class));
-            return;
-        } else {
-            load();
-            return;
+        checkConnect= false;
+        if(Utils.isOnline(this)){
+            checkConnect =true;
+            accountPreferences = new AccountPreferences(this);
+            if (!accountPreferences.getAccount().getEmail().equals("")) {
+                finish();
+                startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                return;
+            } else {
+                load();
+                return;
+            }
+        }else {
+            (new android.app.AlertDialog.Builder(this))
+                    .setMessage("Hiện không có kết nối mạng, vui lòng kết nối và thử lại sau")
+                    .setPositiveButton("Thoát", dialogClickListener)
+                    .show();
         }
     }
 
+    DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
+        @Override
+        public void onClick(DialogInterface dialog, int which) {
+            switch (which) {
+                case DialogInterface.BUTTON_POSITIVE:
+                    finishAndRemoveTask();
+                    System.exit(0);
+                    break;
+            }
+        }
+    };
     private void getProfileInformation() {
         try {
             if (Plus.PeopleApi.getCurrentPerson(mGoogleApiClient) != null) {
@@ -185,7 +207,6 @@ public class LoginActivity extends AppCompatActivity
                     mEtEmail.setTag("1");
                 } else {
                     mEtEmail.setCompoundDrawablesWithIntrinsicBounds(null, null, getResources().getDrawable(R.drawable.ic_delete), null);
-                    Utils.print(LoginActivity.this, "Email không hợp lệ");
                     mEtEmail.setTag("0");
                 }
                 return false;
@@ -210,6 +231,7 @@ public class LoginActivity extends AppCompatActivity
                 .addOnConnectionFailedListener(this
                 ).addApi(Plus.API)
                 .addScope(Plus.SCOPE_PLUS_LOGIN).build();
+        mGoogleApiClient.connect();
         initControlOnView();
         loginService = new LoginService();
         userService = new UserService();
@@ -311,7 +333,9 @@ public class LoginActivity extends AppCompatActivity
     @Override
     protected void onStart() {
         super.onStart();
-        mGoogleApiClient.connect();
+        if(checkConnect){
+            mGoogleApiClient.connect();
+        }
     }
 
     @Override
@@ -339,5 +363,4 @@ public class LoginActivity extends AppCompatActivity
 
         }
     }
-
 }

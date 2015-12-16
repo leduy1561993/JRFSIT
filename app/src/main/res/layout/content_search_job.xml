@@ -34,7 +34,7 @@
                 android:layout_margin="10.0dip"
                 android:autoText="true"
                 android:ems="10"
-                android:hint="Tên công việc"
+                android:hint="Từ khóa - Tên công việc"
                 android:imeOptions="actionNext"
                 android:inputType="text"
                 android:padding="10.0dip"
@@ -53,7 +53,7 @@
                     android:layout_weight="2.0"
                     android:autoText="true"
                     android:ems="10"
-                    android:hint="Địa điểm"
+                    android:hint="Địa điểm - Tỉnh, thành phố"
                     android:inputType="text"
                     android:padding="15.0dip"
                     android:textColor="@color/colorText" />

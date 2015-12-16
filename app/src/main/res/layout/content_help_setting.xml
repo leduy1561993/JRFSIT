@@ -1,10 +1,172 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:background="@color/colorbackgroupwhite"
-    android:layout_height="match_parent">
-    <TextView
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:text=" help setting"
-        android:layout_height="wrap_content" />
-</LinearLayout>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10sp">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Cài đặt"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/title_text_size" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chức năng này cho phép tùy chọn về nội dung giới thiệu công việc, thiết lập gửi thư và thay đổi mật khẩu tài khoản "
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/sub_title_text_size" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="400sp"
+            android:padding="10sp"
+            android:src="@drawable/sr_setting" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:text="Cài đặt giới thiệu công việc"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/sub_title_text_size" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10sp">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5sp"
+                android:text="Cho phép bật tắt có nhận thư giới thiệu từ hệ thống hay không (gạt sang trái dể tắt, sang phải để mở)"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/sub_title_text_size" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="30sp"
+                android:src="@drawable/st_sr_power" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chọn kĩ năng muốn được giới thiệu, nếu không chọn hệ thống sẽ mặc định là bất kì"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/sub_title_text_size" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="50sp"
+                android:padding="10sp"
+                android:src="@drawable/st_sr_select_spec" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chọn địa diểm muốn được giới thiệu, nếu không chọn hệ thống sẽ mặc định là bất kì"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/sub_title_text_size" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="50sp"
+                android:padding="10sp"
+                android:src="@drawable/st_sr_select_location" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Thiết lập số công việc mỗi lần nhận qua gmail"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/sub_title_text_size" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="50sp"
+                android:padding="10sp"
+                android:src="@drawable/st_sr_select_number_rec" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Thiết lập khoảng cách thời gian công việc mỗi lần nhận qua gmail"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/sub_title_text_size" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="50sp"
+                android:padding="10sp"
+                android:src="@drawable/st_sr_select_time_rec" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sau cùng bấm nút 'LƯU THAY ĐỔI' để lưu để lưu thay đổi"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/sub_title_text_size" />
+        </LinearLayout>
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:text="Cài đặt tài khoản"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/sub_title_text_size" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10sp">
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bấm vào 'ĐỔI MẬT KHẨU' để thay đổi mật khẩu tài khoản"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/sub_title_text_size" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="300sp"
+                android:padding="10sp"
+                android:src="@drawable/sr_changepass" />
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Điền thông tin cần thiết và bấm 'LƯU' để thay đổi mật khẩu"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/sub_title_text_size" />
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chứ ý: nếu đăng nhập bằng google + thì không cần nhập mật khẩu cữ"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/sub_title_text_size" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mẹo:"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/sub_title_text_size" />
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hãy sử dụng cài đặt để nhanh chóng tìm được việc làm thích hợp với bạn"
+                android:textColor="@color/colorTextSub"
+                android:textSize="@dimen/sub_title_text_size" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
