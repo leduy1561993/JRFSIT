@@ -322,7 +322,7 @@ public class SettingFragment extends BaseFragment
                 {
                     temSkillId = null;
                 }else {
-                    temSkillId= String.valueOf(snSpecicaly.getSelectedItemPosition());
+                    temSkillId= String.valueOf(snSpecicaly.getSelectedItemPosition()-1);
                 }
                 if (scSetting.isChecked())
                 {

@@ -56,7 +56,6 @@ public class ProfileUserFragment extends BaseFragment
     AppCompatButton btAddSkill;
     AppCompatButton btEditExpect;
     AppCompatButton btEditProfile;
-    android.content.DialogInterface.OnClickListener dialogClickListener;
     private List<Skill> list;
     ListViewUtil listViewUtil;
     ListViewCompat lvSkill;
@@ -182,6 +181,27 @@ public class ProfileUserFragment extends BaseFragment
             }
         });
     }
+
+    DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
+        @Override
+        public void onClick(DialogInterface dialog, int which) {
+            switch (which) {
+                case DialogInterface.BUTTON_POSITIVE:
+                    new Thread(new Runnable() {
+                        public void run() {
+                            final boolean check =skillService.deleteSkill(account.getUserId(),lvSkill.getTag().toString());
+                            if (check) {
+                            } else {
+                                Utils.print(activity, "Cập nhật thất bại, kiểm tra kết nối");
+                            }
+                        }
+                    }).start();
+                    break;
+                case DialogInterface.BUTTON_NEGATIVE:
+                    break;
+            }
+        }
+    };
 
     @Override
     public void onActivityResult(final int requestCode, int resultCode, Intent data)

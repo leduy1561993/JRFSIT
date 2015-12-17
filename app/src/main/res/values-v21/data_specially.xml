@@ -3,66 +3,569 @@
     <string-array name="specialy_array">
         <item>Chọn chuyên ngành</item>
         <item>Mặc định</item>
-        <item>Agile</item>
-        <item>Android</item>
-        <item>AngularJS</item>
-        <item>ASP.NET</item>
-        <item>Bridge Engineer</item>
-        <item>Business Analyst</item>
-        <item>C</item>
-        <item>C++</item>
-        <item>C language</item>
-        <item>CSS</item>
-        <item>Database</item>
-        <item>Designer</item>
-        <item>Django</item>
-        <item>Drupal</item>
-        <item>Embedded</item>
-        <item>English</item>
-        <item>ERP</item>
-        <item>Flash</item>
-        <item>Games</item>
-        <item>HTML5</item>
-        <item>iOS</item>
-        <item>IT Support</item>
-        <item>J2EE</item>
-        <item>Japanese</item>
-        <item>Java</item>
-        <item>JavaScript</item>
-        <item>JQuery</item>
-        <item>JSON</item>
-        <item>Linux</item>
-        <item>Magento</item>
-        <item>Manager</item>
-        <item>Mobile Apps</item>
-        <item>MVC</item>
-        <item>MySQL</item>
         <item>.NET</item>
+        <item>10 Base - T Switching</item>
+        <item>3D Max</item>
+        <item>ABAP</item>
+        <item>Abinitio</item>
+        <item>Active Directory</item>
+        <item>Active X</item>
+        <item>ADO.NET</item>
+        <item>Adobe CQ5</item>
+        <item>Adobe Illustrator</item>
+        <item>Adobe Indesign</item>
+        <item>Adobe Pagemaker</item>
+        <item>Adobe Photoshop</item>
+        <item>Agile</item>
+        <item>Agile PLM</item>
+        <item>AIX</item>
+        <item>AJAX</item>
+        <item>ALE</item>
+        <item>Android</item>
+        <item>Anglais</item>
+        <item>AngularJS</item>
+        <item>Ansys</item>
+        <item>Apache</item>
+        <item>Apache Solr</item>
+        <item>Apache Tomcat</item>
+        <item>Apex</item>
+        <item>Apple iOS</item>
+        <item>Aqualogic Service bus</item>
+        <item>Ariba</item>
+        <item>Artpro</item>
+        <item>AS400</item>
+        <item>ASIC</item>
+        <item>ASP</item>
+        <item>ASP.NET</item>
+        <item>ASSEMBLER</item>
+        <item>Assembly Language</item>
+        <item>Asynchronous Transfer Mode</item>
+        <item>ATG - Commerce</item>
+        <item>ATL</item>
+        <item>Auto CAD</item>
+        <item>Automation Testing</item>
+        <item>Autosys</item>
+        <item>Axapta</item>
+        <item>BAAN</item>
+        <item>Base24</item>
+        <item>BASIC</item>
+        <item>BGP</item>
+        <item>Bigdata</item>
+        <item>BizTalk Server</item>
+        <item>Blue Coat</item>
+        <item>BlueTooth</item>
+        <item>BMC CLM</item>
+        <item>BPCS</item>
+        <item>BPEL</item>
+        <item>Bridge Engineer</item>
+        <item>BSCS</item>
+        <item>Business Analyst</item>
+        <item>Business Continuty Planning</item>
+        <item>Business Objects</item>
+        <item>Business Process Modeling</item>
+        <item>C</item>
+        <item>C#</item>
+        <item>C#.NET</item>
+        <item>C++</item>
+        <item>CA Identity Manager</item>
+        <item>CAD/CAM</item>
+        <item>Calypso</item>
+        <item>CATI</item>
+        <item>CATIA</item>
+        <item>CATV</item>
+        <item>CCIE</item>
+        <item>CDMA</item>
+        <item>CGI</item>
+        <item>Checkpoint</item>
+        <item>CICS</item>
+        <item>CIN</item>
+        <item>CISCO</item>
+        <item>Citrix</item>
+        <item>C Language</item>
+        <item>Cloud computing</item>
+        <item>CMTS</item>
+        <item>Cobol</item>
+        <item>Codeigniter</item>
+        <item>Cognos</item>
+        <item>Cold Fusion</item>
+        <item>COM/COM+/DCOM</item>
+        <item>Communique</item>
+        <item>Confirmit</item>
+        <item>CORBA</item>
+        <item>Core PHP</item>
+        <item>Core Java</item>
+        <item>Corel Draw</item>
+        <item>Coremetrics</item>
+        <item>CQ</item>
+        <item>CRM</item>
+        <item>Cryptography (encrypition, VPN, SSL/TLS.Hybrids)</item>
+        <item>Crystal Report</item>
+        <item>CSS</item>
+        <item>Data Mining</item>
+        <item>Data Modeling</item>
+        <item>Data Phone</item>
+        <item>Data Structures</item>
+        <item>Database</item>
+        <item>Data Developer</item>
+        <item>Datastage</item>
+        <item>Data warehousing</item>
+        <item>DB2</item>
+        <item>DBASE</item>
+        <item>DBMS</item>
+        <item>Dbus</item>
+        <item>DCA</item>
+        <item>Delphi</item>
+        <item>Demontra</item>
+        <item>Designer</item>
+        <item>Developer 2000</item>
+        <item>DHCP</item>
+        <item>Dimensions</item>
+        <item>Disaster Recovery Planning</item>
+        <item>DJANGO</item>
+        <item>DNS</item>
+        <item>Documentum</item>
+        <item>DOJO</item>
+        <item>Downstream</item>
+        <item>Dreamweaver</item>
+        <item>Drools developer</item>
+        <item>Drupal</item>
+        <item>DSP</item>
+        <item>DTP</item>
+        <item>Duck Creek</item>
+        <item>DWDM</item>
+        <item>Dynamics CRM</item>
+        <item>Eclipse</item>
+        <item>EIGRP</item>
+        <item>EJB</item>
+        <item>Embedded C</item>
+        <item>English</item>
+        <item>Enovia</item>
+        <item>Enterprise Asset</item>
+        <item>Management</item>
+        <item>Entity Framework</item>
+        <item>ERP</item>
+        <item>Ethernet</item>
+        <item>Expeditor</item>
+        <item>ExtJS</item>
+        <item>Fast Ethernet</item>
+        <item>Fatwire</item>
+        <item>FileNet</item>
+        <item>Finade</item>
+        <item>Finagle</item>
+        <item>Firewall</item>
+        <item>FireWorks</item>
+        <item>Flash</item>
+        <item>Flex</item>
+        <item>Flexcube</item>
+        <item>Focus</item>
+        <item>ForTran</item>
+        <item>FoxPro</item>
+        <item>FPGA</item>
+        <item>FreeBSD</item>
+        <item>Front End Development</item>
+        <item>FIP</item>
+        <item>Fusion Middleware</item>
+        <item>Games</item>
+        <item>Groovy/Groovy on Grails</item>
+        <item>GSM</item>
+        <item>GUI design</item>
+        <item>H.323</item>
+        <item>Hadoop</item>
+        <item>Hbase</item>
+        <item>HDLC</item>
+        <item>Hibernate</item>
+        <item>Hiper v</item>
+        <item>Hitachi</item>
+        <item>HOGN</item>
+        <item>HP UNIX</item>
+        <item>HSRP</item>
+        <item>HTML5</item>
+        <item>HTML/DHTML</item>
+        <item>HTTP</item>
+        <item>Hybris</item>
+        <item>Hyperion</item>
+        <item>Ibatis</item>
+        <item>Ideas</item>
+        <item>IIS</item>
+        <item>Impromptu</item>
+        <item>IMS</item>
+        <item>IMSDB</item>
+        <item>Informatica</item>
+        <item>Input Accel</item>
+        <item>Installshield</item>
+        <item>Insteon</item>
+        <item>Intershop Enfinity</item>
+        <item>Intrusion prevention/detection systems</item>
+        <item>iOS</item>
+        <item>Ipad/Iphone</item>
+        <item>iPhone</item>
+        <item>IPSec</item>
+        <item>IPV</item>
+        <item>iRise</item>
+        <item>Iron Port</item>
+        <item>ISA Server</item>
+        <item>ISDN</item>
+        <item>IT architecture</item>
+        <item>IT security</item>
+        <item>IT Support</item>
+        <item>ITIL</item>
+        <item>ITSM</item>
+        <item>J.D.Edwards</item>
+        <item>J2EE</item>
+        <item>J2ME</item>
+        <item>J2SE</item>
+        <item>Japanese</item>
+        <item>Japanese Bilingual SAP</item>
+        <item>Java</item>
+        <item>Java Database Connectivity</item>
+        <item>Java EE</item>
+        <item>Java Swing</item>
+        <item>Java Beans/EJB 3.0</item>
+        <item>Java FX</item>
+        <item>JavaScript</item>
+        <item>Jax - rs</item>
+        <item>Jax - ws</item>
+        <item>JBoss</item>
+        <item>JBoss Enterprise</item>
+        <item>JCL</item>
+        <item>JDBC</item>
+        <item>JIRA</item>
+        <item>Joomla</item>
+        <item>JPA</item>
+        <item>Jprofiler</item>
+        <item>JQuery</item>
+        <item>JSF</item>
+        <item>JSON</item>
+        <item>JSP</item>
+        <item>Juniper</item>
+        <item>Kabira Action Language</item>
+        <item>KBE (Knowledge based Engineering)</item>
+        <item>LabVIEW</item>
+        <item>LAMP</item>
+        <item>LAN</item>
+        <item>Lawson</item>
+        <item>LDAP</item>
+        <item>Life400</item>
+        <item>Liferay</item>
+        <item>LINQ</item>
+        <item>Linux</item>
+        <item>LIS</item>
+        <item>Loadrunner</item>
+        <item>Loan IQ</item>
+        <item>Lotus Domino Developer</item>
+        <item>Lotus Notes</item>
+        <item>LTE/WiMAX</item>
+        <item>Mac OS</item>
+        <item>Magento</item>
+        <item>Mainframes</item>
+        <item>Manager</item>
+        <item>Manual Testing</item>
+        <item>Manufacturing execution system</item>
+        <item>MATLAB</item>
+        <item>Maven</item>
+        <item>Maximo</item>
+        <item>Maya</item>
+        <item>MCP</item>
+        <item>MCSA</item>
+        <item>MCSE</item>
+        <item>Message Broker</item>
+        <item>MFC</item>
+        <item>Microsoft Access</item>
+        <item>Microsoft Excel</item>
+        <item>Microsoft Exchange</item>
+        <item>Microsoft Hyper - V</item>
+        <item>Microsoft Identity Integration Server (MIIS)</item>
+        <item>Microsoft NT Server</item>
+        <item>Microsoft Office</item>
+        <item>Microsoft Outlook</item>
+        <item>Microsoft Virtual Server</item>
+        <item>Microsoft - Deployment Toolkit</item>
+        <item>Micro Station</item>
+        <item>Mobile Apps</item>
+        <item>MongoDB</item>
+        <item>MPLS</item>
+        <item>MQ</item>
+        <item>MQ Admin</item>
+        <item>MS Access</item>
+        <item>MS Excel</item>
+        <item>MS Powerpoint</item>
+        <item>MS Project</item>
+        <item>MS SQL</item>
+        <item>MS Visio</item>
+        <item>MS - dos</item>
+        <item>MSCIT</item>
+        <item>Multimedia</item>
+        <item>Multithreading</item>
+        <item>MVC</item>
+        <item>MVS</item>
+        <item>MVS Assembler</item>
+        <item>MySQL</item>
+        <item>NAS/Network Attached Storage</item>
+        <item>Natural Adabas</item>
+        <item>Nebu</item>
+        <item>Netcool</item>
+        <item>Netsol</item>
+        <item>Network security</item>
         <item>Networking</item>
         <item>NodeJS</item>
-        <item>Objective C</item>
+        <item>Nortel</item>
+        <item>NoSQL</item>
+        <item>Novell</item>
+        <item>Objective - C</item>
+        <item>Omniture</item>
         <item>OOP</item>
+        <item>OOPS</item>
+        <item>Operating Systems</item>
+        <item>Optimax</item>
         <item>Oracle</item>
+        <item>Oracle Apps</item>
+        <item>Oracle BPM</item>
+        <item>Oracle Database</item>
+        <item>Oracle Function Middleware</item>
+        <item>Oracle SOA</item>
+        <item>Oracle WareHouse Builder</item>
+        <item>Orbeon</item>
+        <item>ORCAD</item>
+        <item>Page Maker</item>
+        <item>PASCAL</item>
+        <item>PDH</item>
+        <item>PEGA PRPC</item>
+        <item>Peoplesoft</item>
+        <item>Perl</item>
         <item>PHP</item>
-        <item>PostgreSql</item>
+        <item>PTM</item>
+        <item>Picanol Gammex</item>
+        <item>PL/1</item>
+        <item>PLC Programming</item>
+        <item>Polyurea Sprayer</item>
+        <item>PostgreSQL</item>
+        <item>PowerBuilder</item>
+        <item>PowerPlay</item>
+        <item>Predictive Analytics and Modeling</item>
+        <item>Primavera</item>
+        <item>Pro - C</item>
         <item>Product Manager</item>
+        <item>PRO - E</item>
         <item>Project Manager</item>
+        <item>Programming and Application Development</item>
+        <item>Progress 4GL</item>
+        <item>Puppet</item>
+        <item>PVST</item>
         <item>Python</item>
-        <item>QA QC</item>
+        <item>QA/QC</item>
+        <item>QTP</item>
+        <item>Quantum</item>
+        <item>QuarkXpress</item>
+        <item>Radius</item>
+        <item>Rapier looms</item>
+        <item>Rational Tools</item>
+        <item>RDBMS</item>
+        <item>Red Hat Enterprise Linux</item>
+        <item>Red Hat/Linux</item>
+        <item>Remedy</item>
+        <item>Remedy ITSM</item>
+        <item>Remoting</item>
+        <item>REST</item>
+        <item>RESTful</item>
+        <item>REXX</item>
+        <item>RFID (radio frequency identification)</item>
+        <item>RMI</item>
+        <item>Routing</item>
+        <item>RPG</item>
+        <item>RPGILE</item>
+        <item>RTOS</item>
+        <item>RTSP</item>
         <item>Ruby</item>
         <item>Ruby on Rails</item>
+        <item>SAAS</item>
         <item>Sales Engineer</item>
+        <item>Salesforce</item>
+        <item>SAN/Storage Area Networks</item>
+        <item>SAP</item>
+        <item>SAP ABAP</item>
+        <item>SAP AFS</item>
+        <item>SAP APO</item>
+        <item>SAP Blanking</item>
+        <item>SAP Basis</item>
+        <item>SAP BODI (Business Objects Data Integrator)</item>
+        <item>SAP BPC</item>
+        <item>SAP BSP</item>
+        <item>SAP Business One</item>
+        <item>SAP BW/BI</item>
+        <item>SAP CIM</item>
+        <item>SAP CO</item>
+        <item>SAP Controlling</item>
+        <item>SAP CRM</item>
+        <item>SAP Crystal Reports</item>
+        <item>SAP CS</item>
+        <item>SAP EP</item>
+        <item>SAP HR</item>
+        <item>SAP IM</item>
+        <item>SAP IS - Gas/Oil</item>
+        <item>SAP IS - Retail</item>
+        <item>SAP MDM</item>
+        <item>SAP MDX</item>
+        <item>SAP MI</item>
+        <item>SAP MM</item>
+        <item>SAP Mobile</item>
+        <item>SAP MRO</item>
+        <item>SAP Netweaver</item>
+        <item>SAP Netweaver Applications Server</item>
+        <item>SAP Netweaver Visual Composer</item>
+        <item>SAP PLM</item>
+        <item>SAP PM</item>
+        <item>SAP PP</item>
+        <item>SAP PS</item>
+        <item>SAP PSCD</item>
+        <item>SAP PY (Payroll)</item>
+        <item>SAP QM</item>
+        <item>SAP Retail</item>
+        <item>SAP RF/Auto - ID</item>
+        <item>SAP SCM</item>
+        <item>SAP SD</item>
+        <item>SAP SD - GTS</item>
+        <item>SAP Security</item>
+        <item>SAP SEM</item>
+        <item>SAP Service and Asset Mgt.</item>
+        <item>SAP SM</item>
+        <item>SAP Smart Forms</item>
+        <item>SAP Solution Manager</item>
+        <item>SAP SRM</item>
+        <item>SAP Testing</item>
+        <item>SAP TM</item>
+        <item>SAP Web Application Server</item>
+        <item>SAP WM</item>
+        <item>SAP WM - EWM</item>
+        <item>SAP WMS</item>
+        <item>SAP Xcelsius</item>
+        <item>SAP XI</item>
+        <item>SAP xMII</item>
+        <item>SAS</item>
+        <item>SCADA</item>
+        <item>SCCM</item>
+        <item>Scrum</item>
+        <item>SDH</item>
+        <item>SDLC</item>
+        <item>Selenium</item>
+        <item>SEO</item>
+        <item>Servlet</item>
+        <item>SFDC</item>
         <item>Sharepoint</item>
+        <item>Shell Script</item>
+        <item>Siebel</item>
+        <item>Silverlight</item>
+        <item>Singleview</item>
+        <item>SIP</item>
+        <item>Siteminder</item>
+        <item>Smartplant</item>
+        <item>SmartStream</item>
+        <item>SMARTY</item>
+        <item>SMTP</item>
+        <item>SNMP</item>
+        <item>SOA developer</item>
+        <item>SOAP</item>
         <item>Software Architect</item>
+        <item>Solaris</item>
+        <item>Solidworks</item>
+        <item>Spring</item>
+        <item>SPSS</item>
         <item>SQL</item>
+        <item>SQL Server</item>
+        <item>SSIS</item>
+        <item>SSRS</item>
+        <item>Sterling Commerce</item>
+        <item>Storage Virtualization</item>
+        <item>STP</item>
+        <item>Struts</item>
+        <item>Switching</item>
+        <item>Sybase</item>
+        <item>Symbian</item>
+        <item>SYNON</item>
         <item>System Admin</item>
         <item>System Engineer</item>
+        <item>SystemC TLM 2.0 Modeling</item>
+        <item>SystemC Virtual prototype modeling</item>
+        <item>T - SQL</item>
+        <item>Tally</item>
+        <item>Tandem</item>
+        <item>TCL/TK</item>
+        <item>TCP/IP</item>
+        <item>Teamcenter</item>
         <item>Team Leader</item>
+        <item>TELNET</item>
+        <item>Teradata</item>
         <item>Tester</item>
-        <item>UI-UX</item>
+        <item>Tibco</item>
+        <item>TIBCO - BusinessEvents</item>
+        <item>TIBCO - Business Works</item>
+        <item>TIBCO - MDM</item>
+        <item>TIBCO - Spotfire</item>
+        <item>TIBCO - Tibbr</item>
+        <item>Tivoil</item>
+        <item>TOAD</item>
+        <item>Tomcat</item>
+        <item>UML</item>
+        <item>Unified communications</item>
+        <item>Uni Graphics</item>
+        <item>Unit testing</item>
         <item>Unity</item>
+        <item>Unix</item>
+        <item>Upstream</item>
+        <item>UX/UI Design</item>
+        <item>VB.NET</item>
+        <item>Veriblog</item>
+        <item>VHDL</item>
+        <item>Vignette</item>
+        <item>Virtualization</item>
+        <item>Visio</item>
+        <item>Vision Plus</item>
+        <item>Visual Basic</item>
+        <item>Visual C++</item>
+        <item>Visual Foxpro</item>
+        <item>Visual Studio</item>
+        <item>Visual Interdev</item>
+        <item>Visual J++</item>
+        <item>Visual SQL</item>
+        <item>VLSI</item>
+        <item>VMWare</item>
+        <item>VMware vSphere</item>
+        <item>Voice XML</item>
+        <item>VOIP</item>
+        <item>VPN</item>
+        <item>VRRP</item>
+        <item>VSAM</item>
+        <item>VSAT</item>
+        <item>VxWorks</item>
+        <item>WAN</item>
+        <item>WAP</item>
+        <item>Warping</item>
+        <item>Waterfall</item>
+        <item>WCF</item>
+        <item>Web Development</item>
+        <item>Web Dynapro</item>
+        <item>Web Services</item>
+        <item>Webcenter</item>
+        <item>WebLogic</item>
+        <item>Web Methods</item>
+        <item>Web Riposte</item>
+        <item>Web Sphere</item>
+        <item>Wind chill</item>
+        <item>Windows 2K/XP</item>
+        <item>Windows CE</item>
         <item>Windows Phone</item>
+        <item>Winform</item>
+        <item>Winrunner</item>
+        <item>WML</item>
         <item>Wordpress</item>
+        <item>Workflow</item>
+        <item>Foundation</item>
+        <item>WPC</item>
+        <item>WPF</item>
+        <item>xforms</item>
+        <item>XHTML</item>
         <item>XML</item>
+        <item>XML Publisher</item>
+        <item>XSL</item>
+        <item>Yii</item>
     </string-array>
 </resources>
