@@ -39,7 +39,7 @@ public class SearchService extends BaseService
             checkKeyWord = true;
             checkLocation = false;
             checkSpecialy = true;
-        }else if(!location.equals("")&&!(special.equals("Mặc định")|| special.equals("Chọn chuyên ngành"))){
+        }else if(!(location.equals("")||location.equals("Mặc định"))&&!(special.equals("Mặc định")|| special.equals("Chọn chuyên ngành"))){
             checkKeyWord = false;
             checkLocation = true;
             checkSpecialy = true;
