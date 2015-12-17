@@ -93,10 +93,9 @@ public class SkillService extends BaseService
     public boolean deleteSkill(String idUser, String idSkill) {
         Connect connect = super.initConnection("doan/deleteSkill.php");
         ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
-        nameValuePairs.add(new BasicNameValuePair("userId", idUser));
-        nameValuePairs.add(new BasicNameValuePair("skillId", idSkill));
+        nameValuePairs.add(new BasicNameValuePair("UserId", idUser));
+        nameValuePairs.add(new BasicNameValuePair("SkillId", idSkill));
         boolean result;
-        String check;
         try {
             result = connect.DUI(nameValuePairs);
         } catch (IOException e) {

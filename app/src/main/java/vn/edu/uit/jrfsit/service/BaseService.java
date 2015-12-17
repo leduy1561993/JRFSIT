@@ -12,7 +12,7 @@ public class BaseService
     public static String ROOT_URL_PHONE ="http://192.168.1.10/";
     public static String ROOT_URL_PHONE_COMPANY_1 ="http://192.168.3.34/";
     public static String ROOT_URL_PHONE_COMPANY = "http://172.16.10.243/";
-    public static String ROOT_URL  = ROOT_URL_EMULATOR;
+    public static String ROOT_URL  = ROOT_URL_PHONE;
     public BaseService()
     {
     }

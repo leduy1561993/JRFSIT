@@ -157,8 +157,8 @@ public class ProfileUserFragment extends BaseFragment
             @Override
             public boolean onItemLongClick(AdapterView adapterview, View view, int i, long l)
             {
-                (new android.app.AlertDialog.Builder(activity)).setMessage("Bạn thực sự muốn thoát không?").setPositiveButton("Có", dialogClickListener).setNegativeButton("Không", dialogClickListener).show();
                 lvSkill.setTag(Integer.valueOf(i));
+                (new android.app.AlertDialog.Builder(activity)).setMessage("Bạn thực sự muốn xóa không?").setPositiveButton("Có", dialogClickListener).setNegativeButton("Không", dialogClickListener).show();
                 return true;
             }
         });
@@ -189,10 +189,26 @@ public class ProfileUserFragment extends BaseFragment
                 case DialogInterface.BUTTON_POSITIVE:
                     new Thread(new Runnable() {
                         public void run() {
-                            final boolean check =skillService.deleteSkill(account.getUserId(),lvSkill.getTag().toString());
+                            final String skillID = adapter.getItem(Integer.parseInt(lvSkill.getTag().toString())).getId();
+                            final boolean check =skillService.deleteSkill(account.getUserId(),skillID);
                             if (check) {
+                                activity.runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        int index = Integer.parseInt(lvSkill.getTag().toString());
+                                        adapter.remove(list.get(index));
+                                        adapter.notifyDataSetChanged();
+                                        lvSkill.setAdapter(adapter);
+                                        listViewUtil.setListViewHeightBasedOnChildrenAddSkill(lvSkill);
+                                    }
+                                });
                             } else {
-                                Utils.print(activity, "Cập nhật thất bại, kiểm tra kết nối");
+                                activity.runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        Utils.print(activity, "Cập nhật thất bại, kiểm tra kết nối");
+                                    }
+                                });
                             }
                         }
                     }).start();
@@ -361,11 +377,6 @@ public class ProfileUserFragment extends BaseFragment
 
     void setUser(User user1)
     {
-        try
-        {
-            Thread.sleep(1000L);
-        }
-        catch (InterruptedException interruptedexception) { }
         tvPsEmail.setText(user1.getEmail());
         tvPsTNumber.setText(user1.getPhone());
         tvPsAddress.setText(user1.getAddress());
