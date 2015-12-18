@@ -64,7 +64,6 @@ public class ForgotPassActivity extends AppCompatActivity {
                                      public void run() {
                                          Utils.print(ForgotPassActivity.this, "Đã đặt lại mật khẩu, vui lòng kiểm tra mail của bạn");
                                          finish();
-                                         onBackPressed();
                                      }
                                  });
                              }else {
