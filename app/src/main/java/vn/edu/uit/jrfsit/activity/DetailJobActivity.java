@@ -85,10 +85,9 @@ public class DetailJobActivity extends AppCompatActivity
     {
         mToolbar = (Toolbar) findViewById(R.id.toolbarJob);
         setSupportActionBar(mToolbar);
-        getSupportActionBar().setTitle("Công việc");
+        getSupportActionBar().setTitle(getString(R.string.title_activity_job_detail));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         mTvJobTile = (AppCompatTextView) findViewById(R.id.tvJobTile);
-        //tvJobLike = (AppCompatTextView) findViewById(R.id.tvJobLike);
         mTvJobCompany = (AppCompatTextView) findViewById(R.id.tvJobCompany);
         tvJobLocation = (AppCompatTextView) findViewById(R.id.tvJobLocation);
         tvJobSalary = (AppCompatTextView) findViewById(R.id.tvJobSalary);
@@ -130,7 +129,8 @@ public class DetailJobActivity extends AppCompatActivity
         btJobShare.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String message = "Công việc này thật là hấp đãn, hãy cũng thăm gia nào \n nguồn: leduy.com";// to do here
+                String message = "Công việc này thật là hấp đãn, hãy cũng thăm gia nào \n " +
+                        "nguồn: "+tvJob_detail_link.getText().toString();
                 Intent share = new Intent(Intent.ACTION_SEND);
                 share.setType("text/plain");
                 share.putExtra(Intent.EXTRA_TEXT, message);
