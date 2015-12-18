@@ -31,8 +31,8 @@ public class DetailJobActivity extends AppCompatActivity
 {
 
     //region defination
-    private static String RATE_FAIL = "Lưu thất bại, kiểm tra kết nối";
-    private static String RATE_SUCCESS = "Lưu thành công";
+    private static String RATE_FAIL = "Đánh giá thất bại, kiểm tra kết nối";
+    private static String RATE_SUCCESS = "Đánh giá thành công";
     Account account;
     AccountPreferences accountPreferences;
     LinearLayout btJobSave;
@@ -218,7 +218,7 @@ public class DetailJobActivity extends AppCompatActivity
                                             btJobSave.setTag("2");
                                             Utils.print(DetailJobActivity.this, "Đã lưu công việc này");
                                         } else {
-                                            Utils.print(DetailJobActivity.this, "Lưu công việc thấy bại");
+                                            Utils.print(DetailJobActivity.this, "Lưu công việc thất bại");
                                         }
                                     }
                                 });
@@ -236,7 +236,7 @@ public class DetailJobActivity extends AppCompatActivity
                                             btJobSave.setTag("2");
                                             Utils.print(DetailJobActivity.this, "Đã lưu công việc này");
                                         } else {
-                                            Utils.print(DetailJobActivity.this, "Lưu công việc thấy bại");
+                                            Utils.print(DetailJobActivity.this, "Lưu công việc thất bại");
                                         }
 
                                     }
@@ -256,7 +256,7 @@ public class DetailJobActivity extends AppCompatActivity
                                         btJobSave.setTag("1");
                                         Utils.print(DetailJobActivity.this, "Đã bỏ lưu công việc này");
                                     } else {
-                                        Utils.print(DetailJobActivity.this, "Hủy lưu công việc thấy bại");
+                                        Utils.print(DetailJobActivity.this, "Hủy lưu công việc thất bại");
                                     }
 
                                 }
@@ -275,7 +275,7 @@ public class DetailJobActivity extends AppCompatActivity
                                         btJobSave.setTag("2");
                                         Utils.print(DetailJobActivity.this, "Đã lưu công việc này");
                                     } else {
-                                        Utils.print(DetailJobActivity.this, "Lưu công việc thấy bại");
+                                        Utils.print(DetailJobActivity.this, "Lưu công việc thất bại");
                                     }
 
                                 }

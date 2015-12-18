@@ -194,7 +194,11 @@ public class MainActivity extends AppCompatActivity
             } else if (i ==  R.id.nav_setting) {
                 setFragment(new SettingFragment());
             } else if (i ==  R.id.nav_logout) {
-                signOutFromGplus();
+                (new android.app.AlertDialog.Builder(MainActivity.this))
+                        .setMessage("Bạn có muốn đăng xuất không?")
+                        .setPositiveButton("Có", dialogClickListener1)
+                        .setNegativeButton("Không", dialogClickListener1)
+                        .show();
             }
             item.setCheckable(true);
             item.setChecked(true);
@@ -209,6 +213,18 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
+    DialogInterface.OnClickListener dialogClickListener1 = new DialogInterface.OnClickListener() {
+        @Override
+        public void onClick(DialogInterface dialog, int which) {
+            switch (which) {
+                case DialogInterface.BUTTON_POSITIVE:
+                    signOutFromGplus();
+                    break;
+                case DialogInterface.BUTTON_NEGATIVE:
+                    break;
+            }
+        }
+    };
     /**
      * OnClickListener
      */

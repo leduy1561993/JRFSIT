@@ -205,7 +205,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="20.0"
                         android:singleLine="true"
-                        android:text="Khả năng"
+                        android:text="Kỹ năng"
                         android:textColor="@color/colorPrimary"
                         android:textSize="@dimen/title_text_size" />
 
