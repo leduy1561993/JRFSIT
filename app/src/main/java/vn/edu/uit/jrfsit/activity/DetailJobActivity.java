@@ -129,8 +129,8 @@ public class DetailJobActivity extends AppCompatActivity
         btJobShare.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String message = "Công việc này thật là hấp đãn, hãy cũng thăm gia nào \n " +
-                        "nguồn: "+tvJob_detail_link.getText().toString();
+                String message = "Công việc này thật là hấp dẫn, hãy cũng thăm gia nào \n " +
+                        "Nguồn: "+tvJob_detail_link.getText().toString();
                 Intent share = new Intent(Intent.ACTION_SEND);
                 share.setType("text/plain");
                 share.putExtra(Intent.EXTRA_TEXT, message);
