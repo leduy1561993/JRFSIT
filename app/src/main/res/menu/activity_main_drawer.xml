@@ -7,19 +7,19 @@
                 <item
                     android:id="@+id/nav_search"
                     android:icon="@android:drawable/ic_menu_search"
-                    android:title="Tìm kiếm" />
+                    android:title="@string/title_activity_search_job" />
                 <item
                     android:id="@+id/nav_job_recomment"
                     android:icon="@drawable/ic_recommended"
-                    android:title="Công việc giới thiệu cho bạn" />
+                    android:title="@string/title_activity_job_recommend" />
                 <item
                     android:id="@+id/nav_job_save"
                     android:icon="@drawable/ic_save_job"
-                    android:title="Công việc đã lưu" />
+                    android:title="@string/title_activity_save_job" />
                 <item
                     android:id="@+id/nav_profile"
                     android:icon="@drawable/ic_profile"
-                    android:title="Thông tin của bạn" />
+                    android:title="@string/title_activity_person" />
             </menu>
         </item>
         <item android:title="Hệ thống" android:color="@color/colorPrimary">
@@ -27,15 +27,15 @@
                 <item
                     android:id="@+id/nav_about"
                     android:icon="@drawable/ic_info"
-                    android:title="Thông tin phần mềm" />
+                    android:title="@string/title_activity_about" />
                 <item
                     android:id="@+id/nav_help"
                     android:icon="@drawable/ic_help"
-                    android:title="Hướng dẫn" />
+                    android:title="@string/title_activity_help" />
                 <item
                     android:id="@+id/nav_setting"
                     android:icon="@android:drawable/ic_menu_manage"
-                    android:title="Cài đặt" />
+                    android:title="@string/title_activity_setting" />
                 <item
                     android:id="@+id/nav_logout"
                     android:icon="@android:drawable/ic_menu_close_clear_cancel"

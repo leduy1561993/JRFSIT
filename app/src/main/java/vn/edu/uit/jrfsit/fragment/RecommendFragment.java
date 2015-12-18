@@ -62,7 +62,7 @@ public class RecommendFragment extends BaseFragment
 
     private void load()
     {
-        super.loadActivity(R.string.title_activity_recommend);
+        super.loadActivity(R.string.title_activity_job_recommend);
         pDialog = new ProgressDialog(activity);
         pDialog.setMessage("Vui lòng chờ....");
         pDialog.show();

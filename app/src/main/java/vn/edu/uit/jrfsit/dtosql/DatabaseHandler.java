@@ -15,7 +15,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import vn.edu.uit.jrfsit.entity.JobSearch;
 
 public class DatabaseHandler extends SQLiteOpenHelper {
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
     private static final String DATABASE_NAME = "jobSearchRecently";
     private static final String TABLE_SEARCH = "search";
     private static final String KEY_ID = "id";
@@ -25,7 +25,6 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     private static final String SPECIAL = "specialy";
     private static final String DATE_TIME = "DateTime";
     private static final String TIME_SAVE = "604800000";
-    private static String DB_PATH = "";
 
     public DatabaseHandler(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);

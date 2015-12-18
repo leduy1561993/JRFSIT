@@ -9,8 +9,6 @@
     <string name="title_activity_search_job">Tìm việc</string>
     <string name="title_activity_search_result">Công việc tìm thấy</string>
     <string name="title_activity_job_recommend">Công việc giới thiệu</string>
-    <string name="title_activity_job_like">Công việc bạn thích</string>
-    <string name="title_activity_job_profile">Hồ sơ của bạn</string>
     <string name="title_activity_job_skill">Thêm kĩ năng</string>
     <string name="title_activity_forgot_pass">Phục hồi mật khẩu</string>
     <string name="title_activity_job_edit_skill">Chỉnh sửa kĩ năng</string>
@@ -20,7 +18,6 @@
     <string name="title_activity_change_pass">Đổi mật khẩu</string>
     <string name="title_activity_register">Đăng ký</string>
     <string name="title_activity_about">Thông tin</string>
-    <string name="title_activity_recommend">Công việc giới thiệu cho bạn</string>
     <string name="title_activity_save_job">Công việc đã lưu</string>
     <string name="title_activity_setting">Cài đặt</string>
     <string name="title_activity_person">Thông tin cá nhân</string>

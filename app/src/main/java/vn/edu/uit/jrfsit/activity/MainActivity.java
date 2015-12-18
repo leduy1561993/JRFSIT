@@ -7,6 +7,7 @@ package vn.edu.uit.jrfsit.activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -39,6 +40,7 @@ import vn.edu.uit.jrfsit.fragment.SettingFragment;
 import vn.edu.uit.jrfsit.preferences.AccountPreferences;
 import vn.edu.uit.jrfsit.service.BitmapService;
 import vn.edu.uit.jrfsit.utils.BitmapUtil;
+import vn.edu.uit.jrfsit.utils.Utils;
 
 // Referenced classes of package vn.edu.uit.jrfsit.activity:
 //            LoginActivity
@@ -176,27 +178,49 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         int i = item.getItemId();
-        if (i == R.id.nav_search) {
-            setFragment(new SearchFragment());
-        } else if (i == R.id.nav_job_recomment) {
-            setFragment(new RecommendFragment());
-        } else if (i == R.id.nav_job_save) {
-            setFragment(new SaveFragment());
-        } else if (i ==  R.id.nav_profile) {
-            setFragment(new ProfileUserFragment());
-        } else if (i ==  R.id.nav_about) {
-            setFragment(new AboutFragment());
-        } else if (i ==  R.id.nav_help) {
-            setFragment(new HelpFragment());
-        } else if (i ==  R.id.nav_setting) {
-            setFragment(new SettingFragment());
-        } else if (i ==  R.id.nav_logout) {
-            signOutFromGplus();
+        if(Utils.isOnline(this)){
+            if (i == R.id.nav_search) {
+                setFragment(new SearchFragment());
+            } else if (i == R.id.nav_job_recomment) {
+                setFragment(new RecommendFragment());
+            } else if (i == R.id.nav_job_save) {
+                setFragment(new SaveFragment());
+            } else if (i ==  R.id.nav_profile) {
+                setFragment(new ProfileUserFragment());
+            } else if (i ==  R.id.nav_about) {
+                setFragment(new AboutFragment());
+            } else if (i ==  R.id.nav_help) {
+                setFragment(new HelpFragment());
+            } else if (i ==  R.id.nav_setting) {
+                setFragment(new SettingFragment());
+            } else if (i ==  R.id.nav_logout) {
+                signOutFromGplus();
+            }
+            item.setCheckable(true);
+            item.setChecked(true);
+            navigationView.setCheckedItem(i);
+            drawer.closeDrawer(GravityCompat.START);
+        }else {
+            (new android.app.AlertDialog.Builder(this))
+                    .setMessage("Hiện không có kết nối mạng, vui lòng kết nối và thử lại sau")
+                    .setPositiveButton("Thoát", dialogClickListener)
+                    .show();
         }
-        item.setCheckable(true);
-        item.setChecked(true);
-        navigationView.setCheckedItem(i);
-        drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+    /**
+     * OnClickListener
+     */
+    DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
+        @Override
+        public void onClick(DialogInterface dialog, int which) {
+            switch (which) {
+                case DialogInterface.BUTTON_POSITIVE:
+                    finishAndRemoveTask();
+                    System.exit(0);
+                    break;
+            }
+        }
+    };
 }
