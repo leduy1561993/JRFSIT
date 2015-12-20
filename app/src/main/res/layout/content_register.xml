@@ -87,7 +87,7 @@
                     android:textColor="@color/colorText"
                     android:layout_marginTop="5.0dip"
                     android:layout_weight="60.0"
-                    android:text="Password *"
+                    android:text="Mật khẩu *"
                     android:textSize="@dimen/title_text_size"/>
 
                 <android.support.v7.widget.AppCompatEditText
@@ -115,7 +115,7 @@
                     android:textColor="@color/colorText"
                     android:layout_marginTop="5.0dip"
                     android:layout_weight="60.0"
-                    android:text="Nhập lại password *"
+                    android:text="Nhập lại mật khẩu *"
                     android:textSize="@dimen/title_text_size" />
 
                 <android.support.v7.widget.AppCompatEditText
@@ -282,6 +282,14 @@
                         android:textSize="10.0dip" />
                 </LinearLayout>
             </LinearLayout>
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:textColor="@color/colorText"
+                android:layout_marginTop="5.0dip"
+                android:layout_weight="60.0"
+                android:text="* bắt buộc phải điền"
+                android:textSize="10sp"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
