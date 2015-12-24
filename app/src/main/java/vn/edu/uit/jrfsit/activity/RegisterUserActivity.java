@@ -328,6 +328,7 @@ public class RegisterUserActivity extends AppCompatActivity
                             public void run() {
                                 Utils.print(RegisterUserActivity.this, "Đăng kí thành công, vui lòng kiểm tra mail để kích hoạt tài khoản");
                                 dialog.dismiss();
+                                finish();
                                 startActivity(new Intent(getApplicationContext(), LoginActivity.class));
                             }
                         });

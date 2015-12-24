@@ -48,6 +48,7 @@ public class SaveFragment extends BaseFragment
     ListViewCompat lvDSCV;
     int offset;
     View v;
+    ProgressDialog dialog;
 
     @Override
     public View onCreateView(LayoutInflater layoutinflater, ViewGroup viewgroup, Bundle bundle)
@@ -66,33 +67,33 @@ public class SaveFragment extends BaseFragment
         initListener();
         jobService = new JobService();
         lvDSCV.addFooterView(footerView);
-        final ProgressDialog dialog = ProgressDialog.show(activity,
-                "", "Vui lòng chờ....", true);
         new Thread(new Runnable() {
             public void run()
             {
+                activity.runOnUiThread(new Runnable() {
+                    public void run() {
+                         dialog = ProgressDialog.show(activity,
+                                "", "Vui lòng chờ....", true);
+                    }
+                });
                 list = new ArrayList();
                 list = jobService.getSaveJob(account.getUserId(), String.valueOf(offset));
                 activity.runOnUiThread(new Runnable() {
-                    public void run()
-                    {
+                    public void run() {
                         adapter = new JobArrayAdapter(activity, list);
-                        if (list != null)
-                        {
-                            if (list.size() < NUMBER_JOB_GET)
-                            {
+                        if (list != null) {
+                            if (list.size() < NUMBER_JOB_GET) {
                                 footerView.setVisibility(View.INVISIBLE);
                             }
                             lvDSCV.setAdapter(adapter);
                             firtsStart = Boolean.valueOf(false);
-                        } else
-                        {
+                        } else {
                             lnJobSearchTrue.setVisibility(View.INVISIBLE);
                             lnJobSearchFailed.setVisibility(View.VISIBLE);
                         }
+                        dialog.dismiss();
                     }
                 });
-                dialog.dismiss();
             }
         }).start();
     }
@@ -147,10 +148,6 @@ public class SaveFragment extends BaseFragment
             //Reset the array that holds the new items
             listadd = new ArrayList<JobSearch>();
             //Simulate a delay, delete this on a production environment!
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-            }
             listadd = jobService.getSaveJob(account.getUserId(), String.valueOf(offset));
             if(listadd!=null&&listadd.size()>0){
                 activity.runOnUiThread(returnRes);

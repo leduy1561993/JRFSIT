@@ -71,10 +71,6 @@ public class ResultJobSearchActivity extends AppCompatActivity implements Adapte
             //Reset the array that holds the new items
             listadd = new ArrayList<JobSearch>();
             //Simulate a delay, delete this on a production environment!
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-            }
             listadd = searchService.getResultSearch(jobName, location
                     , specialy, String.valueOf(offset),styleSearch);
             if(listadd!=null&&listadd.size()>0){

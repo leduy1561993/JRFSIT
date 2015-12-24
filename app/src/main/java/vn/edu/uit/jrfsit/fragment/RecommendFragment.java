@@ -160,10 +160,6 @@ public class RecommendFragment extends BaseFragment
             //Reset the array that holds the new items
             listadd = new ArrayList<JobSearch>();
             //Simulate a delay, delete this on a production environment!
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-            }
             listadd = recService.getRecJob(account.getUserId(), String.valueOf(offset));
             if(listadd!=null&&listadd.size()>0){
                 activity.runOnUiThread(returnRes);
