@@ -5,7 +5,9 @@
 package vn.edu.uit.jrfsit.activity;
 
 import android.app.Activity;
+import android.app.NotificationManager;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentSender;
@@ -67,6 +69,7 @@ public class LoginActivity extends AppCompatActivity
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         setContentView(R.layout.content_screen_login);
+        removeNotification();
         checkConnect= false;
         if(Utils.isOnline(this)){
             checkConnect =true;
@@ -371,5 +374,20 @@ public class LoginActivity extends AppCompatActivity
             }
 
         }
+    }
+    void removeNotification(){
+        Bundle extras = getIntent().getExtras();
+        int id=111;
+        if (extras == null) {
+
+        }
+        else {
+            id = extras.getInt("notificationId");
+            NotificationManager myNotificationManager =
+                    (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+            // remove the notification with the specific id
+            myNotificationManager.cancel(id);
+        }
+
     }
 }

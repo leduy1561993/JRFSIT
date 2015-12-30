@@ -4,13 +4,17 @@
 
 package vn.edu.uit.jrfsit.activity;
 
+import android.app.AlarmManager;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -28,7 +32,10 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.plus.Plus;
 
+import java.util.Calendar;
+
 import vn.edu.uit.jrfsit.R;
+import vn.edu.uit.jrfsit.alarms.AlarmReceiver;
 import vn.edu.uit.jrfsit.entity.Account;
 import vn.edu.uit.jrfsit.fragment.AboutFragment;
 import vn.edu.uit.jrfsit.fragment.HelpFragment;
@@ -39,6 +46,7 @@ import vn.edu.uit.jrfsit.fragment.SearchFragment;
 import vn.edu.uit.jrfsit.fragment.SettingFragment;
 import vn.edu.uit.jrfsit.preferences.AccountPreferences;
 import vn.edu.uit.jrfsit.service.BitmapService;
+import vn.edu.uit.jrfsit.service.RecService;
 import vn.edu.uit.jrfsit.utils.BitmapUtil;
 import vn.edu.uit.jrfsit.utils.Utils;
 
@@ -61,12 +69,14 @@ public class MainActivity extends AppCompatActivity
     ActionBarDrawerToggle toggle;
     Toolbar toolbar;
     TextView tvEmail;
+    private PendingIntent pendingIntent;
 
     @Override
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         setContentView(R.layout.activity_main);
         initLoad();
+        startAlarm();
     }
 
     private void initControlOnView() {
@@ -239,4 +249,21 @@ public class MainActivity extends AppCompatActivity
             }
         }
     };
+
+    /**
+     * call service check notification
+     */
+    protected void startAlarm(){
+        /* Retrieve a PendingIntent that will perform a broadcast */
+        Intent alarmIntent = new Intent(MainActivity.this, AlarmReceiver.class);
+        alarmIntent.putExtra("UserId",account.getUserId());
+        pendingIntent = PendingIntent.getBroadcast(MainActivity.this, 0, alarmIntent, 0);
+        AlarmManager manager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+
+        /* Repeating on every 20 minutes interval */
+        int interval = 10000;
+        manager.setInexactRepeating(AlarmManager.ELAPSED_REALTIME,
+                SystemClock.elapsedRealtime() + interval, interval,
+                pendingIntent);
+    }
 }

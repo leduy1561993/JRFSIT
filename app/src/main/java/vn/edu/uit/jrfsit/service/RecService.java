@@ -55,4 +55,27 @@ public class RecService extends BaseService
         }
         return list;
     }
+    public int getRecNotification(String userId)  {
+        Connect connect = super.initConnection("doan/getRecNotifi.php");
+        ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
+        nameValuePairs.add(new BasicNameValuePair("UserId", userId));
+        JSONObject jsonObject = null;
+        int rate;
+        try {
+            jsonObject = connect.getObject(nameValuePairs);
+            if(jsonObject!=null&&jsonObject.getInt("success")>0){
+                rate= jsonObject.getInt("recNoti");
+            }else {
+                rate= 0;
+            }
+        }
+        catch (JSONException e) {
+            e.printStackTrace();
+            rate= 0;
+        } catch (IOException e) {
+            rate=0;
+            e.printStackTrace();
+        }
+        return rate;
+    }
 }
