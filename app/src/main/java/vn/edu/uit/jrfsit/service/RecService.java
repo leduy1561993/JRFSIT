@@ -78,4 +78,21 @@ public class RecService extends BaseService
         }
         return rate;
     }
+    public boolean updateLocationRec(String userId, String location)  {
+        Connect connect = super.initConnection("doan/updateLocation.php");
+        ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
+        nameValuePairs.add(new BasicNameValuePair("UserId", userId));
+        nameValuePairs.add(new BasicNameValuePair("Location", location));
+        boolean flag;
+        try {
+            flag = connect.DUI(nameValuePairs);
+        } catch (IOException e) {
+            e.printStackTrace();
+            flag = false;
+        } catch (JSONException e) {
+            e.printStackTrace();
+            flag = false;
+        }
+        return flag;
+    }
 }

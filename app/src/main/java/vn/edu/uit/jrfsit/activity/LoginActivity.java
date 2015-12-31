@@ -34,6 +34,7 @@ import vn.edu.uit.jrfsit.entity.Account;
 import vn.edu.uit.jrfsit.preferences.AccountPreferences;
 import vn.edu.uit.jrfsit.service.LoginService;
 import vn.edu.uit.jrfsit.service.UserService;
+import vn.edu.uit.jrfsit.utils.BadgeUtils;
 import vn.edu.uit.jrfsit.utils.Utils;
 
 import static vn.edu.uit.jrfsit.R.id.ln_login_flash;
@@ -383,11 +384,15 @@ public class LoginActivity extends AppCompatActivity
         }
         else {
             id = extras.getInt("notificationId");
-            NotificationManager myNotificationManager =
-                    (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+
             // remove the notification with the specific id
-            myNotificationManager.cancel(id);
+
         }
+        NotificationManager myNotificationManager =
+                (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        myNotificationManager.cancel(id);
+        BadgeUtils.clearBadge(this);
+        //BadgeUtils.clear(this);
 
     }
 }
