@@ -70,11 +70,13 @@ public class AlarmReceiver extends BroadcastReceiver {
                 }).start();
             } catch (IOException e) {
                 e.printStackTrace();
+            } catch (IndexOutOfBoundsException e){
+
             }
         }else{
             //gps.showSettingsAlert();
         }
-        Toast.makeText(context, "I'm running", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(context, "I'm running", Toast.LENGTH_SHORT).show();
     }
 
     protected void displayNotificationOne(Context context , int numberJob) {

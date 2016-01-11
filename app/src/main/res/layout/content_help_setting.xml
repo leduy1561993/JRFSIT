@@ -20,7 +20,7 @@
         <android.support.v7.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Chức năng này cho phép tùy chọn về nội dung giới thiệu công việc, thiết lập gửi thư và thay đổi mật khẩu tài khoản "
+            android:text="Chức năng này cho phép tùy chọn về nội dung tư vấn công việc, thiết lập gửi thư và thay đổi mật khẩu tài khoản "
             android:textColor="@color/colorText"
             android:textSize="@dimen/sub_title_text_size" />
 
@@ -34,7 +34,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5sp"
-            android:text="Cài đặt giới thiệu công việc"
+            android:text="Cài đặt tư vấn công việc"
             android:textColor="@color/colorPrimary"
             android:textSize="@dimen/sub_title_text_size" />
 
@@ -48,7 +48,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5sp"
-                android:text="Cho phép bật tắt có nhận thư giới thiệu từ hệ thống hay không (gạt sang trái dể tắt, sang phải để mở)"
+                android:text="Cho phép bật tắt có nhận thư tư vấn từ hệ thống hay không (gạt sang trái dể tắt, sang phải để mở)"
                 android:textColor="@color/colorText"
                 android:textSize="@dimen/sub_title_text_size" />
 
@@ -60,26 +60,26 @@
             <android.support.v7.widget.AppCompatTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Chọn kĩ năng muốn được giới thiệu, nếu không chọn hệ thống sẽ mặc định là bất kì"
+                android:text="Chọn kĩ năng muốn được tư vấn, nếu không chọn hệ thống sẽ mặc định là bất kì"
                 android:textColor="@color/colorText"
                 android:textSize="@dimen/sub_title_text_size" />
 
             <ImageView
                 android:layout_width="wrap_content"
-                android:layout_height="50sp"
+                android:layout_height="80sp"
                 android:padding="10sp"
                 android:src="@drawable/st_sr_select_spec" />
 
             <android.support.v7.widget.AppCompatTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Chọn địa diểm muốn được giới thiệu, nếu không chọn hệ thống sẽ mặc định là bất kì"
+                android:text="Chọn địa diểm muốn được tư vấn, nếu không chọn hệ thống sẽ mặc định là bất kì"
                 android:textColor="@color/colorText"
                 android:textSize="@dimen/sub_title_text_size" />
 
             <ImageView
                 android:layout_width="wrap_content"
-                android:layout_height="50sp"
+                android:layout_height="80sp"
                 android:padding="10sp"
                 android:src="@drawable/st_sr_select_location" />
 
@@ -92,7 +92,7 @@
 
             <ImageView
                 android:layout_width="wrap_content"
-                android:layout_height="50sp"
+                android:layout_height="80sp"
                 android:padding="10sp"
                 android:src="@drawable/st_sr_select_number_rec" />
 
@@ -105,7 +105,7 @@
 
             <ImageView
                 android:layout_width="wrap_content"
-                android:layout_height="50sp"
+                android:layout_height="80sp"
                 android:padding="10sp"
                 android:src="@drawable/st_sr_select_time_rec" />
 
@@ -148,7 +148,7 @@
             <android.support.v7.widget.AppCompatTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Chứ ý: nếu đăng nhập bằng google + thì không cần nhập mật khẩu cữ"
+                android:text="Chứ ý: nếu đăng nhập bằng google + thì không cần nhập mật khẩu cũ"
                 android:textColor="@color/colorText"
                 android:textSize="@dimen/sub_title_text_size" />
         </LinearLayout>

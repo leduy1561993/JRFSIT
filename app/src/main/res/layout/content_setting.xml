@@ -30,7 +30,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="2.0"
-                    android:text="Cài đặt khuyến nghị công việc"
+                    android:text="Cài đặt tư vấn công việc"
                     android:textColor="@color/colorPrimary"
                     android:textSize="20.0dip" />
 
@@ -54,7 +54,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5.0dip"
                     android:singleLine="false"
-                    android:text="Thiết lập nội dung khuyến nghị công việc"
+                    android:text="Thiết lập nội dung tư vấn công việc"
                     android:textColor="@color/colorText"
                     android:textSize="16sp" />
 
@@ -71,7 +71,7 @@
                         android:layout_marginTop="5.0dip"
                         android:padding="2.0dip"
                         android:singleLine="false"
-                        android:text="Chọn kỹ năng khuyến nghị"
+                        android:text="Chọn kỹ năng tư vấn"
                         android:textColor="@color/colorText"
                         android:textSize="@dimen/sub_title_text_size" />
 
@@ -97,7 +97,7 @@
                             android:layout_weight="2.0"
                             android:padding="2.0dip"
                             android:singleLine="false"
-                            android:text="Chọn địa điểm muốn khuyến nghị"
+                            android:text="Chọn địa điểm muốn tư vấn"
                             android:textColor="@color/colorText"
                             android:textSize="@dimen/sub_title_text_size" />
                     </LinearLayout>
@@ -136,7 +136,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5.0dip"
                     android:singleLine="false"
-                    android:text="Thiết lập gửi thư khuyến nghị công việc"
+                    android:text="Thiết lập gửi thư tư vấn công việc"
                     android:textColor="@color/colorText"
                     android:textSize="16sp" />
 
@@ -153,7 +153,7 @@
                         android:layout_marginTop="5.0dip"
                         android:padding="2.0dip"
                         android:singleLine="false"
-                        android:text="Chọn số công việc khuyến nghị"
+                        android:text="Chọn số công việc tư vấn"
                         android:textColor="@color/colorText"
                         android:textSize="@dimen/sub_title_text_size" />
 
@@ -169,14 +169,14 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="15sp"
                             android:layout_marginRight="15sp"
-                            android:layout_weight="3"
+                            android:layout_weight="7"
                             android:spinnerMode="dropdown" />
 
                         <android.support.v7.widget.AppCompatTextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="7.0"
-                            android:gravity="left"
+                            android:gravity="right"
                             android:text="trong 1 lần gửi"
                             android:textColor="@color/colorTextSub"
                             android:textSize="@dimen/sub_title_text_size" />
@@ -189,7 +189,7 @@
                         android:layout_marginTop="5.0dip"
                         android:padding="2.0dip"
                         android:singleLine="false"
-                        android:text="Chọn khoảng thời gian khuyến nghị"
+                        android:text="Chọn khoảng thời gian tư vấn"
                         android:textColor="@color/colorText"
                         android:textSize="@dimen/sub_title_text_size" />
 
@@ -205,13 +205,13 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="15sp"
                             android:layout_marginRight="15sp"
-                            android:layout_weight="3"
+                            android:layout_weight="7"
                             android:spinnerMode="dropdown" />
 
                         <android.support.v7.widget.AppCompatTextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:gravity="left"
+                            android:gravity="right"
                             android:layout_weight="7.0"
                             android:text="ngày 1 lần"
                             android:textColor="@color/colorTextSub"

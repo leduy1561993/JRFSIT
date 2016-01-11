@@ -8,7 +8,7 @@
     <string name="title_activity_login">Sign in</string>
     <string name="title_activity_search_job">Tìm việc</string>
     <string name="title_activity_search_result">Công việc tìm thấy</string>
-    <string name="title_activity_job_recommend">Công việc khuyến nghị</string>
+    <string name="title_activity_job_recommend">Công việc tư vấn</string>
     <string name="title_activity_job_skill">Thêm kĩ năng</string>
     <string name="title_activity_forgot_pass">Phục hồi mật khẩu</string>
     <string name="title_activity_job_edit_skill">Chỉnh sửa kĩ năng</string>
@@ -24,7 +24,7 @@
     <string name="title_activity_person">Thông tin cá nhân</string>
     <string name="title_activity_help">Trợ giúp</string>
     <string name="title_activity_help_search">Hướng dẫn tìm kiếm</string>
-    <string name="title_activity_help_job_rec">Hướng dẫn công việc khuyến nghị</string>
+    <string name="title_activity_help_job_rec">Hướng dẫn công việc tư vấn</string>
     <string name="title_activity_help_job_save">Hướng dẫn công việc đã lưu</string>
     <string name="title_activity_help_profile">Hướng dẫn thông tin cá nhân</string>
     <string name="title_activity_help_setting">Hướng dẫn cài đặt</string>

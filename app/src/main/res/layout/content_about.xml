@@ -40,7 +40,7 @@
         android:lineSpacingMultiplier="1.0"
         android:padding="15.0dip"
         android:singleLine="false"
-        android:text="PHẦN MỀM GIỚI THIỆU VIỆC LÀM CHO SINH VIÊN IT"
+        android:text="PHẦN MỀM TƯ VẤN VIỆC LÀM CHO SINH VIÊN CNTT"
         android:textColor="@color/colorPrimary"
         android:textStyle="bold" />
 
@@ -57,7 +57,7 @@
         android:layout_marginLeft="20.0dip"
         android:layout_marginTop="20.0dip"
         android:gravity="left"
-        android:text="Phần mềm giới thiệu việc làm được thực hiện bởi:"
+        android:text="Thực hiện bởi:"
         android:textStyle="bold" />
 
     <TextView
@@ -66,7 +66,7 @@
         android:layout_marginLeft="40.0dip"
         android:layout_marginTop="5.0dip"
         android:gravity="left"
-        android:text="Lê Khánh Duy\t\t\t\t\t\t\t\t\t\t11520085" />
+        android:text="Lê Khánh Duy - 11520085" />
 
     <TextView
         android:layout_width="fill_parent"
@@ -74,7 +74,7 @@
         android:layout_marginLeft="40.0dip"
         android:layout_marginTop="5.0dip"
         android:gravity="left"
-        android:text="Phạm Thị Ngọc Bích\t\t\t\t11520021" />
+        android:text="Phạm Thị Ngọc Bích - 11520021" />
 
     <TextView
         android:layout_width="fill_parent"

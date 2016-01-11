@@ -36,7 +36,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5.0dip"
                     android:inputType="textPersonName"
-                    android:textColor="@color/colorTextSub" />
+                    android:textColor="@color/colorText" />
             </LinearLayout>
 
             <LinearLayout
@@ -59,7 +59,7 @@
                     android:layout_marginTop="5.0dip"
                     android:enabled="false"
                     android:inputType="textEmailAddress"
-                    android:textColor="@color/colorTextSub" />
+                    android:textColor="@color/colorText" />
             </LinearLayout>
 
             <LinearLayout
@@ -81,7 +81,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5.0dip"
                     android:inputType="phone"
-                    android:textColor="@color/colorTextSub" />
+                    android:textColor="@color/colorText" />
             </LinearLayout>
 
             <LinearLayout
@@ -112,7 +112,7 @@
                         android:ems="10"
                         android:inputType="text"
                         android:padding="15.0dip"
-                        android:textColor="@color/colorTextSub" />
+                        android:textColor="@color/colorText" />
 
                     <android.support.v7.widget.AppCompatButton
                         android:id="@+id/bt_location__profile"
@@ -147,7 +147,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5.0dip"
                     android:editable="false"
-                    android:textColor="@color/colorTextSub" />
+                    android:textColor="@color/colorText" />
             </LinearLayout>
 
             <LinearLayout
@@ -170,7 +170,7 @@
                     android:layout_marginTop="5.0dip"
                     android:editable="false"
                     android:spinnerMode="dropdown"
-                    android:textColor="@color/colorTextSub"
+                    android:textColor="@color/colorText"
                     android:touchscreenBlocksFocus="false" />
             </LinearLayout>
         </LinearLayout>
