@@ -34,7 +34,7 @@
                 android:layout_margin="10.0dip"
                 android:autoText="true"
                 android:ems="10"
-                android:hint="Từ khóa - Tên công việc"
+                android:hint="Từ khóa - Tên công việc, công ty"
                 android:imeOptions="actionNext"
                 android:inputType="text"
                 android:padding="10.0dip"
