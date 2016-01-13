@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="specialy_array">
-        <item>Chọn chuyên ngành</item>
+        <item>Chọn kỹ năng</item>
         <item>Mặc định</item>
         <item>.NET</item>
         <item>10 Base - T Switching</item>
