@@ -320,7 +320,7 @@ public class SettingFragment extends BaseFragment
                 String temSkillId;
                 if (spec.equals("Mặc định"))
                 {
-                    temSkillId = null;
+                    temSkillId = "0";
                 }else {
                     temSkillId= String.valueOf(snSpecicaly.getSelectedItemPosition()-1);
                 }

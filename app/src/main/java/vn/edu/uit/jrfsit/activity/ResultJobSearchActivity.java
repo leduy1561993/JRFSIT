@@ -129,7 +129,7 @@ public class ResultJobSearchActivity extends AppCompatActivity implements Adapte
             styleSearch ="Mặc định";
         }
         if((specialy.equals("Mặc định")
-                || specialy.equals("Chọn chuyên ngành"))){
+                || specialy.equals("Chọn kỹ năng"))){
             specialy ="Mặc định";
         }
 

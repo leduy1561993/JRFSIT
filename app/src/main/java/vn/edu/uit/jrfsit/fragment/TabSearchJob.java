@@ -174,7 +174,7 @@ public class TabSearchJob extends Fragment implements GoogleApiClient.Connection
                         /*|| !(snSalary.getSelectedItem().toString().equals("Mặc định")
                         || snSalary.getSelectedItem().toString().equals("Tìm theo mức lương"))*/
                         || !(snspecialy.getSelectedItem().toString().equals("Mặc định")
-                        || snspecialy.getSelectedItem().toString().equals("Chọn chuyên ngành"))) {
+                        || snspecialy.getSelectedItem().toString().equals("Chọn kỹ năng"))) {
 
                     Intent intent = new Intent(activity.getApplicationContext(), ResultJobSearchActivity.class);
                     intent.putExtra("jobName",tvJob.getText().toString());

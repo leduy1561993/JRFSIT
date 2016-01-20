@@ -27,7 +27,7 @@ public class SearchService extends BaseService
         boolean checkLocation = false;
         boolean checkSpecialy = false;
         ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
-        if(!(jobName.equals("")||jobName.equals("Mặc định"))&&!(location.equals("")||location.equals("Mặc định"))&&!(special.equals("Mặc định")|| special.equals("Chọn chuyên ngành"))){
+        if(!(jobName.equals("")||jobName.equals("Mặc định"))&&!(location.equals("")||location.equals("Mặc định"))&&!(special.equals("Mặc định")|| special.equals("Chọn kỹ năng"))){
             checkKeyWord = true;
             checkLocation = true;
             checkSpecialy = true;
@@ -35,11 +35,11 @@ public class SearchService extends BaseService
             checkKeyWord = true;
             checkLocation = true;
             checkSpecialy = false;
-        }else if(!(jobName.equals("")||jobName.equals("Mặc định"))&&!(special.equals("Mặc định")|| special.equals("Chọn chuyên ngành"))){
+        }else if(!(jobName.equals("")||jobName.equals("Mặc định"))&&!(special.equals("Mặc định")|| special.equals("Chọn kỹ năng"))){
             checkKeyWord = true;
             checkLocation = false;
             checkSpecialy = true;
-        }else if(!(location.equals("")||location.equals("Mặc định"))&&!(special.equals("Mặc định")|| special.equals("Chọn chuyên ngành"))){
+        }else if(!(location.equals("")||location.equals("Mặc định"))&&!(special.equals("Mặc định")|| special.equals("Chọn kỹ năng"))){
             checkKeyWord = false;
             checkLocation = true;
             checkSpecialy = true;
@@ -47,7 +47,7 @@ public class SearchService extends BaseService
             checkKeyWord = true;
         }else if(!(location.equals("")||location.equals("Mặc định"))){
             checkLocation = true;
-        }else if(!(special.equals("Mặc định")|| special.equals("Chọn chuyên ngành"))){
+        }else if(!(special.equals("Mặc định")|| special.equals("Chọn kỹ năng"))){
             checkSpecialy = true;
         }
         if(!sortMode.equals("Mặc định")){
